@@ -1,0 +1,35 @@
+@import "../../node_modules/bootstrap/scss/variables";
+@import "./variables";
+
+.accordion-header {
+	background-color: map-get($tca-colors, "primary-tca");
+
+	.accordion-button {
+		color: $white-tca;
+		font-size: 1.5rem;
+
+		&:not(.collapse) {
+			color: map-get($tca-colors, "white-tca");
+			background-color: map-get($tca-colors, "primary-alt");
+		}
+
+		&:hover {
+			background-color: rgb(0, 47, 94);
+		}
+
+		&::after {
+			fill: map-get($tca-colors, "white-tca");
+			background-color: map-get($tca-colors, "white-tca");
+			border-radius: 20%;
+		}
+	}
+}
+
+// MEDIA QUERIES
+// SM AND DOWN
+@media only screen and (max-width: 425px) {
+	//  Increase the height so content doesn't bounce as much
+	#accordion {
+		min-height: 1000px;
+	}
+}

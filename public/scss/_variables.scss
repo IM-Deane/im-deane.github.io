@@ -1,0 +1,77 @@
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/buttons";
+
+// TCA blue: #12487b
+// TCA Brown: #939193
+
+$primary: #4663ba;
+$primary-alt: #12487b;
+$secondary: #26243d;
+$tertiary: #2e417a;
+$accent: #f2eeee;
+$accent-blue: #78b0d7;
+$white-tca: $white;
+$gray-tca: rgb(175, 175, 175);
+$tan-tca: #939193;
+
+@mixin quote-btns {
+	@extend .btn;
+}
+
+.btn-primary {
+	background-color: $primary-alt !important;
+	border-color: $primary-alt !important;
+	color: $accent;
+	@include button-variant(
+		$primary-alt,
+		darken($primary-alt, 7.5%),
+		darken($primary-alt, 10%),
+		lighten($primary-alt, 5%),
+		lighten($primary-alt, 10%),
+		darken($primary-alt, 30%)
+	);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+	background: #385096 !important;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+	background: $accent-blue;
+	box-shadow: none;
+}
+
+.btn-outline-primary {
+	@include button-outline-variant(
+		$primary-alt,
+		#222222,
+		lighten($primary-alt, 5%),
+		$primary-alt
+	);
+}
+
+//Site color theme
+$tca-colors: (
+	"primary-tca": $primary,
+	"primary-alt": $primary-alt,
+	"secondary-tca": $secondary,
+	"tertiary-tca": $tertiary,
+	"accent-tca": $accent,
+	"accent-blue-tca": $accent-blue,
+	"white-tca": $white-tca,
+	"tan-tca": $tan-tca,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $tca-colors);
+
+// Finalize import
+@import "../../node_modules/bootstrap/scss/bootstrap";
