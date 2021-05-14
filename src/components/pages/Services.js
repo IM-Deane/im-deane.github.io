@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
+import FeaturedProjects from "../FeaturedProjects";
 
 function Services() {
 	// Update page title
@@ -14,7 +15,7 @@ function Services() {
 			<article className="container-fluid">
 				<header className="row m-4 py-5 text-lg-center">
 					<h2 className="h1 pb-3 lh-base text-primary-alt text-center">
-						Construction Consultants
+						{"Construction Consultants "}
 						<span className="text-muted fw-bold">&</span>
 						<br />
 						General Contracting
@@ -404,14 +405,16 @@ function Services() {
 			>
 				<header className="d-flex flex-column align-items-center pb-4">
 					<h4 className="h2 text-primary-alt text-uppercase bw-bold">
-						Recent Projects
+						Project Spotlight
 					</h4>
 					<hr style={{ border: "5px solid rgb(15, 15, 156)", width: "10%" }} />
 				</header>
 				<section
 					id="serviceProjects"
 					className="row row-cols-md-2 row-cols-lg-4"
-				></section>
+				>
+					<FeaturedProjects />
+				</section>
 			</article>
 		</main>
 	);

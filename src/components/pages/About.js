@@ -10,22 +10,18 @@ function About() {
 			<header className="row site-banner pt-5 mx-0">
 				<h1 className="display-6 fw-bold p-4">ABOUT</h1>
 			</header>
-
-			<div
-				id="accordion"
-				className="row sections p-4 mt-5 justify-content-center"
-			>
+			<div id="accordion" class="row sections p-4 mt-5 justify-content-center">
 				{/* <!-- Accordian wrapper --> */}
 				<div
-					className="col accordion accordion-flush container-fluid"
+					class="col accordion accordion-flush container-fluid"
 					id="accordionExample"
 				>
 					{/* <!-- HISTORY SECTION --> */}
-					<div className="accordion-item">
-						<header className="accordion-header">
+					<div class="accordion-item">
+						<header class="accordion-header">
 							<h2 id="headingOne">
 								<button
-									className="accordion-button btn-primary-tca text-white"
+									class="accordion-button btn-primary-tca text-white"
 									type="button"
 									data-bs-toggle="collapse"
 									data-bs-target="#collapse-history"
@@ -38,29 +34,29 @@ function About() {
 						</header>
 						<div
 							id="collapse-history"
-							className="accordion-collapse collapse show"
+							class="accordion-collapse collapse show"
 							aria-labelledby="headingOne"
 							data-bs-parent="#accordionExample"
 						>
-							<div className="accordion-body">
-								<section className="fs-5 lh-base">
-									<p className="text-body px-3">
+							<div class="accordion-body">
+								<section class="fs-5 lh-base">
+									<p class="text-body px-3">
 										TCA Developments began in 1990 as a consultant business and
 										in 1999 ventured into commercial construction as a
-										<strong className="fw-bold text-primary-alt">
+										<strong class="fw-bold text-primary-alt">
 											{" General Contractor"}
 										</strong>
 										.
 									</p>
 
-									<p className="text-body mb-4 px-3">
+									<p class="text-body mb-4 px-3">
 										Our vision was to develop strong bonds with local management
 										companies by providing affordable renovation services. This
 										relationship-based business model is still an integral
 										aspect of our success.
 									</p>
 
-									<p className="text-body mb-4 px-3">
+									<p class="text-body mb-4 px-3">
 										TCA Developments initially handled projects from minor
 										renovations to the $100,000.00 range. Since that humble
 										beginning, our business has evolved into a significant
@@ -68,20 +64,20 @@ function About() {
 										industry.
 									</p>
 
-									<p className="text-body mb-4 px-3">
+									<p class="text-body mb-4 px-3">
 										Since our inception, we have chosen to pride ourselves on
-										<strong className="fw-bold text-primary-alt">
+										<strong class="fw-bold text-primary-alt">
 											{" Quality "}
 										</strong>
 										and
-										<strong className="fw-bold text-primary-alt">
+										<strong class="fw-bold text-primary-alt">
 											{" Attention to Detail "}
 										</strong>
 										while exceeding customer expectations. Essentially, TCA
 										Developments is the
 										<em>{" Right Course to Great Developments"}</em>.
 									</p>
-									<p className="text-body px-3">
+									<p class="text-body px-3">
 										We sincerely welcome and appreciate your interest in TCA
 										Developments.
 									</p>
@@ -89,44 +85,102 @@ function About() {
 							</div>
 						</div>
 					</div>
-					<section className="row my-3 ps-2">
-						<header className="row">
-							<h2 className="h3 text-primary-alt">
-								Member Spotlight:
-								<span className="fw-bold ms-2">Rahim</span>
+					{/* TEAM SECTION  */}
+					<div class="accordion-item">
+						<header
+							class="accordion-header w-100 bg-primary-tca"
+							id="headingThree"
+						>
+							<h2>
+								<button
+									class="
+											accordion-button
+											collapsed
+											btn-primary-tca
+											text-white
+										"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapse-team"
+									aria-expanded="false"
+									aria-controls="collapse-team"
+								>
+									MEET OUR TEAM
+								</button>
 							</h2>
 						</header>
-						<p className="text-body mt-2 fs-5 lh-base">
-							One of our most recent projects was working with Goodwill on their
-							new St. Albert location. During this project, we provided a unique
-							opportunity for a<em>{" Career Connections "}</em>
-							participant named Rahim.
-						</p>
-						<p className="text-body mt-2 fs-5 lh-base">
-							While working closely with our staff at the Goodwill site, Rahim
-							learned about various construction services such as electrical,
-							painting, machines. This experience provided him with valuable
-							insight into our industry. We hope to see Rahim in the future and
-							wish him well no matter where his career takes him.
-						</p>
-						<p className="text-body mt-2 fs-5">
-							Please take a moment to watch the below video of his experience
-							working with TCA Developments. A special thank you to Goodwill for
-							this opportunity.
-						</p>
-					</section>
-					<section className="row p-2">
-						<iframe
-							className=""
-							width="560"
-							height="400"
-							src="https://www.youtube.com/embed/2I-RMpMod0U"
-							title="Rahim TCA member spotlight"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						></iframe>
-					</section>
+						<div
+							id="collapse-team"
+							class="accordion-collapse collapse show"
+							aria-labelledby="headingThree"
+							data-bs-parent="#accordionExample"
+						>
+							<div class="accordion-body">
+								<section class="row my-3 ps-2">
+									<h2 class="h3 text-primary-alt mt-2">Team TCA</h2>
+									<p class="text-body mt-2 fs-5 lh-base">
+										At TCA Developments, we believe that every project we take
+										on deserves exceptional care. That is why we strive only to
+										hire employees who share our values.
+									</p>
+									<p class="text-body mt-0 fs-5 lh-base">
+										Our team members are thoughtful, driven, and hard-working
+										professionals who enjoy what they do. It is easy to
+										guarantee our work when they treat every project with
+										outstanding focus and consideration.
+									</p>
+									<p class="text-body mt-1 fs-5 lh-base">
+										If you have any questions or would like more information,
+										feel free to reach out to us at{" "}
+										<a href="mailto:info@tcadeveopments.com">
+											info@tcadeveopments.com
+										</a>{" "}
+										or <a href="tel:(825)401-2404">(825) 401-2404</a>.
+									</p>
+								</section>
+								<section class="row my-3 ps-2">
+									<header class="row">
+										<h2 class="h3 text-primary-alt">
+											Member Spotlight:
+											<span class="fw-bold ms-2">Rahim</span>
+										</h2>
+									</header>
+									<p class="text-body mt-2 fs-5 lh-base">
+										One of our most recent projects was working with Goodwill on
+										their new St. Albert location. During this project, we
+										provided a unique opportunity for a
+										<em>{" Career Connections "}</em>
+										participant named Rahim.
+									</p>
+									<p class="text-body mt-2 fs-5 lh-base">
+										While working closely with our staff at the Goodwill site,
+										Rahim learned about various construction services such as
+										electrical, painting, machines. This experience provided him
+										with valuable insight into our industry. We hope to see
+										Rahim in the future and wish him well no matter where his
+										career takes him.
+									</p>
+									<p class="text-body mt-2 fs-5">
+										Please take a moment to watch the below video of his
+										experience working with TCA Developments. A special thank
+										you to Goodwill for this opportunity.
+									</p>
+								</section>
+								<section class="row p-2">
+									<iframe
+										class=""
+										width="560"
+										height="400"
+										src="https://www.youtube.com/embed/2I-RMpMod0U"
+										title="Rahim TCA member spotlight"
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen
+									></iframe>
+								</section>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			{/* <!-- FAQ SECTION --> */}
@@ -151,14 +205,14 @@ function About() {
 										</p>
 										<div className="row text-center pb-3">
 											<div className="col">
-												<a
-													role="button"
-													href="./projects.html"
+												<HashLink
+													smooth
+													to="/projects#top"
 													className="btn btn-primary btn-sm text-uppercase"
 												>
 													View our work
 													<i className="fa fa-chevron-right ms-2"></i>
-												</a>
+												</HashLink>
 											</div>
 										</div>
 									</details>
@@ -175,14 +229,14 @@ function About() {
 										</p>
 										<div className="row text-center pb-3">
 											<div className="col">
-												<a
-													role="button"
-													href="./contact.html#contact-form"
+												<HashLink
+													smooth
+													to="/contact#contact-form"
 													className="btn btn-primary btn-sm text-uppercase"
 												>
 													Let's Chat{" "}
 													<i className="fa fa-chevron-right ms-2"></i>
-												</a>
+												</HashLink>
 											</div>
 										</div>
 									</details>
@@ -203,14 +257,14 @@ function About() {
 										</p>
 										<div className="row text-center">
 											<div className="col">
-												<a
-													role="button"
-													href="./services.html"
+												<HashLink
+													smooth
+													to="/services#top"
 													className="btn btn-primary btn-sm text-uppercase"
 												>
 													Learn More{" "}
 													<i className="fa fa-chevron-right ms-2"></i>
-												</a>
+												</HashLink>
 											</div>
 										</div>
 									</details>
@@ -229,14 +283,14 @@ function About() {
 										</p>
 										<div className="row text-center">
 											<div className="col">
-												<a
-													role="button"
-													href="./services.html"
+												<HashLink
+													smooth
+													to="/services#top"
 													className="btn btn-primary btn-sm text-uppercase"
 												>
 													Learn More{" "}
 													<i className="fa fa-chevron-right ms-2"></i>
-												</a>
+												</HashLink>
 											</div>
 										</div>
 									</details>
@@ -256,14 +310,14 @@ function About() {
 										</p>
 										<div className="row text-center">
 											<div className="col">
-												<a
-													role="button"
-													href="./services.html"
+												<HashLink
+													smooth
+													to="/services#top"
 													className="btn btn-primary btn-sm text-uppercase"
 												>
 													Learn More{" "}
 													<i className="fa fa-chevron-right ms-2"></i>
-												</a>
+												</HashLink>
 											</div>
 										</div>
 									</details>
@@ -290,7 +344,7 @@ function About() {
 				<div className="col pb-4">
 					<HashLink
 						smooth
-						to="/contact#contactForm"
+						to="/contact#top"
 						className="btn btn-outline-primary text-uppercase"
 					>
 						Request free estimate <i className="fa fa-chevron-right ms-2"></i>

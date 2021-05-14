@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import data from "../ProjectData";
+import RelevantProjects from "../RelevantProjects";
+import bootstrap from "bootstrap/dist/js/bootstrap";
 
 function Project() {
 	const [project, setProject] = useState("Default Project");
+	const [images, setImages] = useState([]);
 	const { id } = useParams();
 
 	//  Convert category id's to names
@@ -30,26 +33,32 @@ function Project() {
 		const newProject = data.find((project) => project.id === parseInt(id));
 		document.title = `${newProject.name} - TCA Developments`;
 
-		console.log(newProject.images);
-
 		setProject(newProject);
+		setImages([...newProject.images]);
+
+		// Activate carousel
+		// const myCarousel = document.querySelector("#projectCarousel");
+		// const carousel = new bootstrap.Carousel(myCarousel, {
+		// 	interval: 6000,
+		// 	wrap: true,
+		// });
 	}, []);
 
 	return (
 		<main className="container-fluid px-0">
 			<header className="row site-banner pt-5 px-0 mx-0">
-				<h1 className="display-6 pt-4 text-center project-name">
+				<h1 className="display-6 pt-4 text-center project-name text-uppercase fw-bold">
 					{project.name}
 				</h1>
 				<nav className="w-75" aria-label="breadcrumb">
 					<ol className="breadcrumb justify-content-end">
 						<li className="breadcrumb-item">
-							<a className="link-accent-tca" href="./index.html">
+							<Link className="link-accent-tca" to="/">
 								Home
-							</a>
+							</Link>
 						</li>
 						<li className="breadcrumb-item">
-							<Link className="link-accent-tca" to="/">
+							<Link className="link-accent-tca" to="/projects">
 								Projects
 							</Link>
 						</li>
@@ -65,39 +74,33 @@ function Project() {
 			<section className="container project-body">
 				<div className="row my-5 pt-4">
 					<div className="col-auto col-sm">
-						{console.log(project.images)}
 						<div
-							id="carouselExampleControls"
+							id="projectCarousel"
 							className="carousel carousel-dark slide"
 							data-bs-ride="carousel"
 						>
-							<div className="carousel-inner">
-								<div className="carousel-item project-image active">
-									<img
-										src={project.images}
-										className="d-block w-100"
-										alt="..."
-									/>
-								</div>
-								<div className="carousel-item">
-									<img
-										src={project.images}
-										className="d-block w-100"
-										alt="..."
-									/>
-								</div>
-								<div className="carousel-item">
-									<img
-										src={project.images}
-										className="d-block w-100"
-										alt="..."
-									/>
-								</div>
+							<div id="carouselInner" className="carousel-inner">
+								{images.map((img) => (
+									<>
+										<div
+											key={project.id}
+											className={`carousel-item project-image border-0 ${
+												images.indexOf(img) === 0 && "active"
+											}`}
+										>
+											<img
+												src={img}
+												className="d-block w-100 img-fluid"
+												alt={project.description}
+											/>
+										</div>
+									</>
+								))}
 							</div>
 							<button
 								className="carousel-control-prev"
 								type="button"
-								data-bs-target="#carouselExampleControls"
+								data-bs-target="#projectCarousel"
 								data-bs-slide="prev"
 							>
 								<span
@@ -109,7 +112,7 @@ function Project() {
 							<button
 								className="carousel-control-next"
 								type="button"
-								data-bs-target="#carouselExampleControls"
+								data-bs-target="#projectCarousel"
 								data-bs-slide="next"
 							>
 								<span
@@ -182,7 +185,7 @@ function Project() {
 									</span>
 									<span className="mx-1 text-dark fw-bolder">Value:</span>
 									<span id="project-cost" className="ps-2">
-										Stipulated in contract
+										{project.contract}
 									</span>
 								</div>
 							</li>
@@ -210,74 +213,40 @@ function Project() {
 						</ul>
 					</aside>
 				</div>
-				<section className="row pb-5">
+				{/* Section hidden until they have more write-ups */}
+				{/* <section className="row pb-5">
 					<div className="col">
-						<h2 className="display-6 project-name">{project.name}</h2>
-						<p id="project-description" className="text-body pt-1">
+						<h2 className="display-6 project-name text-uppercase">
+							{project.name}
+						</h2>
+						
+						 <p id="project-description" className="text-body pt-1">
 							{project.description}
-						</p>
+						</p> 
 					</div>
-				</section>
+				</section> */}
 			</section>
 			{/* <!-- Related Projects --> */}
 			<div className="container-fluid px-0">
 				<article className="row g-1 justify-content-center align-items-center text-center p-5 bg-light">
-					<h4 className="h3 py-4 text-dark text-uppercase">Related Projects</h4>
-					<div className="col-sm">
-						<div className="project">
-							<img
-								src="../src/imgs/projects/ex-lobby.jpg"
-								className="img-fluid project-img"
-								alt="Project one"
-							/>
-							<div className="project-inner">
-								<a href="./project-page.html" className="project-link">
-									{project.name}
-								</a>
-							</div>
-						</div>
-					</div>
-					<div className="col-sm">
-						<div className="project">
-							<img
-								src="../src/imgs/projects/ex-office-int.jpg"
-								className="img-fluid project-img"
-								alt="Project two"
-							/>
-							<div className="project-inner">
-								<a href="./project-page.html" className="project-link">
-									{project.name}
-								</a>
-							</div>
-						</div>
-					</div>
-					<div className="col-sm">
-						<div className="project">
-							<img
-								src="../src/imgs/projects/ex-office-int2.jpg"
-								className="img-fluid project-img"
-								alt="Project three"
-							/>
-							<div className="project-inner">
-								<a href="./project-page.html" className="project-link">
-									{project.name}
-								</a>
-							</div>
-						</div>
-					</div>
-					<div className="col-sm">
-						<div className="project">
-							<img
-								src="../src/imgs/projects/ex-renno.jpg"
-								className="img-fluid project-img"
-								alt="Project four"
-							/>
-							<div className="project-inner">
-								<a href="./project-page.html" className="project-link">
-									{project.name}
-								</a>
-							</div>
-						</div>
+					<header className="d-flex flex-column align-items-center pb-4">
+						<h4 className="h2 text-primary-alt text-uppercase bw-bold">
+							Related Projects
+						</h4>
+						<hr
+							style={{ border: "5px solid rgb(15, 15, 156)", width: "10%" }}
+						/>
+					</header>
+					<div
+						className="
+										row row-cols-md-2 row-cols-lg-4
+										justify-content-center
+										text-center
+										g-2
+										align-items-center
+									"
+					>
+						<RelevantProjects key={project.id} project={project} />
 					</div>
 				</article>
 			</div>

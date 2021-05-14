@@ -1,10 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const Categories = ({ categories, filterProjects }) => {
-	// State
-	const [isActive, setIsActive] = useState(false);
-
 	//  Convert category id's to names
 	const categoryNames = (category) => {
 		let name = null;
@@ -13,10 +10,10 @@ const Categories = ({ categories, filterProjects }) => {
 				name = "Interior";
 				break;
 			case 1:
-				name = "Exterior";
+				name = "Misc";
 				break;
 			case 2:
-				name = "Misc";
+				name = "Exterior";
 				break;
 			default:
 				name = "All";
@@ -24,37 +21,34 @@ const Categories = ({ categories, filterProjects }) => {
 		return name;
 	};
 
+	// On initial render set, first radio to "checked"
+	useEffect(() => {
+		document.getElementById("btnradio0").setAttribute("checked", true);
+	}, []);
+
 	return (
 		<div
-			className="btn-group btn-group-sm my-3"
+			className="btn-group btn-group flex-wrap"
 			role="group"
 			aria-label="Basic radio toggle button group"
 		>
 			{categories.map((category, index) => (
 				<>
-					{/* <input
+					<input
 						type="radio"
-						class="btn-check"
-						name="categories"
-						autocomplete="off"
-						value={categoryNames(category)}
-						onChange={() => filterProjects(category)}
-						checked={categoryNames(category) === "All" && true}
+						key={index}
+						className="btn-check"
+						name="btnradio"
+						id={`btnradio${index}`}
+						autoComplete="off"
+						onClick={() => filterProjects(category)}
 					/>
 					<label
-						class="btn btn-outline-primary"
-						for={`btn-${categoryNames(category)}`}
+						className="btn btn-outline-primary text-uppercase"
+						htmlFor={`btnradio${index}`}
 					>
 						{categoryNames(category)}
-					</label> */}
-					<button
-						type="button"
-						key={index}
-						className="btn btn-outline-primary mx-2 p-2"
-						onClick={() => filterProjects(category)}
-					>
-						{categoryNames(category)}
-					</button>
+					</label>
 				</>
 			))}
 		</div>

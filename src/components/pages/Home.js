@@ -1,13 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import bootstrap from "bootstrap/dist/js/bootstrap";
 
-import mapleLeaf from "../../imgs/maple-leaf.png";
+import FeaturedProjects from "../FeaturedProjects";
 
 function Home() {
 	// Update page title
 	useEffect(() => {
 		document.title =
 			"TCA Developments - Construction Consultant & General Contractor";
+		//  Restart the carousel when page reloads
+		const myCarousel = document.querySelector("#myCarousel");
+		const carousel = new bootstrap.Carousel(myCarousel, {
+			interval: 6000,
+			wrap: true,
+		});
 	}, []);
 	return (
 		<main className="container-fluid px-0 m-0">
@@ -42,13 +50,13 @@ function Home() {
 												The Right Course to Great Developments
 											</p>
 											<p>
-												<a
+												<HashLink
+													smooth
+													to="/contact#contactForm"
 													className="hero-btn btn-primary fs-6 mt-3"
-													href="./contact.html#contact-form"
 												>
 													Free estimate
-													<i className="fa fa-chevron-right ms-2"></i>
-												</a>
+												</HashLink>
 											</p>
 										</div>
 									</div>
@@ -72,12 +80,12 @@ function Home() {
 											</strong>
 											are suitable for properties of every scope
 										</p>
-										<a
-											className="hero-btn btn-primary fs-6"
-											href="./services.html"
+										<Link
+											className="hero-btn btn-primary fs-6 mt-3"
+											to="/services"
 										>
 											Learn more <i className="fa fa-chevron-right ms-2"></i>
-										</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -97,13 +105,12 @@ function Home() {
 											<strong className="fw-bold">{" decades "}</strong>
 											of experience in the commercial development industry
 										</p>
-										<a
-											className="hero-btn btn-primary fs-6"
-											href="./projects.html"
+										<Link
+											className="hero-btn btn-primary fs-6 mt-3"
+											to="/projects"
 										>
-											Browse gallery{" "}
-											<i className="fa fa-chevron-right ms-2"></i>
-										</a>
+											Learn more <i className="fa fa-chevron-right ms-2"></i>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -297,7 +304,7 @@ function Home() {
 											backgroundSize: "cover",
 										}}
 									>
-										<a href="./services.html">
+										<HashLink to="/services#top">
 											<div
 												className="
 														card-text-box
@@ -313,7 +320,7 @@ function Home() {
 													General Contracting
 												</h3>
 											</div>
-										</a>
+										</HashLink>
 									</div>
 								</div>
 								<div className="col-sm mt-2">
@@ -333,7 +340,7 @@ function Home() {
 											backgroundSize: "cover",
 										}}
 									>
-										<a href="./services.html#officeSection">
+										<HashLink to="/services#officeSection">
 											<div
 												className="
 														d-flex
@@ -347,7 +354,7 @@ function Home() {
 													Office Renovations
 												</h3>
 											</div>
-										</a>
+										</HashLink>
 									</div>
 								</div>
 								{/* <!-- Electrical --> */}
@@ -367,7 +374,7 @@ function Home() {
 											backgroundSize: "contain",
 										}}
 									>
-										<a href="./services.html#electricalSection">
+										<HashLink to="/services#electricalSection">
 											<div
 												className="
 														d-flex
@@ -381,7 +388,7 @@ function Home() {
 													Electrical Services
 												</h3>
 											</div>
-										</a>
+										</HashLink>
 									</div>
 								</div>
 								{/* <!-- Mechanical --> */}
@@ -402,7 +409,7 @@ function Home() {
 											backgroundSize: "cover",
 										}}
 									>
-										<a href="./services.html#hvacSection">
+										<HashLink to="/services#hvacSection">
 											<div
 												className="
 														d-flex
@@ -416,7 +423,7 @@ function Home() {
 													Mechanical & Plumbing
 												</h3>
 											</div>
-										</a>
+										</HashLink>
 									</div>
 								</div>
 								{/* <!-- Concrete --> */}
@@ -437,7 +444,7 @@ function Home() {
 											backgroundSize: "cover",
 										}}
 									>
-										<a href="./services.html#concreteSection">
+										<HashLink to="/services#concreteSection">
 											<div
 												className="
 														d-flex
@@ -451,7 +458,7 @@ function Home() {
 													Concrete Services
 												</h3>
 											</div>
-										</a>
+										</HashLink>
 									</div>
 								</div>
 								<div className="col-auto w-100 mt-2">
@@ -470,7 +477,7 @@ function Home() {
 											backgroundSize: "cover",
 										}}
 									>
-										<a href="./services.html#customSection">
+										<HashLink to="/services#customSection">
 											<div
 												className="
 														d-flex
@@ -484,7 +491,7 @@ function Home() {
 													Customized Solutions
 												</h3>
 											</div>
-										</a>
+										</HashLink>
 									</div>
 								</div>
 							</div>
@@ -492,13 +499,13 @@ function Home() {
 					</div>
 					<div className="row pt-2">
 						<div className="col justify-content-center text-center">
-							<a
+							<HashLink
 								className="btn btn-primary text-white mt-3 text-uppercase"
-								href="./services.html"
+								to="/services#top"
 								role="button"
 							>
 								View our services <i className="fa fa-chevron-right ms-2"></i>
-							</a>
+							</HashLink>
 						</div>
 					</div>
 				</section>
@@ -541,16 +548,18 @@ function Home() {
 										align-items-center
 									"
 								id="featuredProjects"
-							></div>
+							>
+								<FeaturedProjects />
+							</div>
 							<div className="row pt-4">
 								<div className="col justify-content-center text-center">
-									<a
+									<HashLink
 										className="btn btn-primary mt-3 text-uppercase"
-										href="./projects.html"
+										to="/projects#top"
 										role="button"
 									>
 										Browse gallery <i className="fa fa-chevron-right ms-2"></i>
-									</a>
+									</HashLink>
 								</div>
 							</div>
 						</div>
@@ -741,7 +750,7 @@ function Home() {
 											className="form-control"
 											id="inputEmail"
 											name="_replyto"
-											placeholder="youremail@host.com  (required)"
+											placeholder="johnDoe@example.com (required)"
 											required
 										/>
 									</div>

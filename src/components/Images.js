@@ -16,11 +16,11 @@ function parseObject(object) {
 }
 
 // Find main thumbnail
-const findThumbnail = (string) => {
-    const reg
+// const findThumbnail = (string) => {
+//     const reg
 
-    return string === "main.jpg";
-}
+//     return string === "main.jpg";
+// }
 
 // Save images into variables
 const images = importAll(

@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-import { Link } from "react-router-dom";
-
 import Categories from "./Categories";
 import ProjectData from "./ProjectData";
 import Project from "./Project";
@@ -13,6 +10,7 @@ import Project from "./Project";
  *
  */
 
+// Create an array of unique category names
 const allProjects = [
 	"all",
 	...new Set(ProjectData.map((project) => project.category)),
@@ -34,28 +32,26 @@ const Gallery = () => {
 	};
 
 	// Get featured projects
-	const getFeatured = () => {
-		const featuredProjects = ProjectData.filter(
-			(proj) => proj.isFeatured === true
-		);
-		setFeatured(featuredProjects);
-	};
+	// const getFeatured = () => {
+	// 	const featuredProjects = ProjectData.filter(
+	// 		(proj) => proj.isFeatured === true
+	// 	);
+	// 	setFeatured(featuredProjects);
+	// };
 
 	return (
-		<div className="row justify-content-center">
-			{projects.map((project) => (
-				<Project project={project} />
-				// <section key={id} className="project pb-3">
-				// 	<header style={{ width: "400px" }}>
-				// 		<img class="img-fluid" src={images[0]} alt={description} />
-				// 		<div className="text-center">
-				// 			<h4>
-				// 				<Link to={`/projects/${id}`}>{name}</Link>
-				// 			</h4>
-				// 		</div>
-				// 	</header>
-				// </section>
-			))}
+		<div className="row justify-content-center mx-0 mt-5 px-md-5 w-100">
+			<section className="row justify-content-center pb-4">
+				<div className="col col-sm text-center">
+					<Categories filterProjects={filterProjects} categories={categories} />
+				</div>
+			</section>
+
+			<div className="row row-cols-sm-1 row-cols-md-2 row-cols-xl-3 pt-3">
+				{projects.map((project) => (
+					<Project key={project.id} project={project} />
+				))}
+			</div>
 		</div>
 	);
 };

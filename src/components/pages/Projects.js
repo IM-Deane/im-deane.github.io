@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 // Project Gallery
 import Gallery from "../Gallery";
@@ -27,82 +27,11 @@ function Projects() {
 				<div className="row justify-content-center mx-0 mt-5 px-md-5">
 					<article className="col-9 col-sm">
 						<section id="project-container" className="px-0 mx-0 w-100">
-							<section className="row justify-content-center">
-								<div className="col pb-4 text-center" id="gallery-controls">
-									<div
-										className="btn-group btn-group-sm"
-										role="group"
-										aria-label="Basic radio toggle button group"
-									>
-										<input
-											type="radio"
-											className="btn-check"
-											name="btnradio"
-											id="btn-all"
-											autocomplete="off"
-											checked
-										/>
-										<label className="btn btn-outline-primary" for="btn-all">
-											SHOW ALL
-										</label>
-										<input
-											type="radio"
-											className="btn-check"
-											name="btnradio"
-											id="btn-int"
-											autocomplete="off"
-										/>
-										<label className="btn btn-outline-primary" for="btn-int">
-											INTERIOR
-										</label>
-										<input
-											type="radio"
-											className="btn-check"
-											name="btnradio"
-											id="btn-ext"
-											autocomplete="off"
-										/>
-										<label className="btn btn-outline-primary" for="btn-ext">
-											EXTERIOR
-										</label>
-										<input
-											type="radio"
-											className="btn-check"
-											name="btnradio"
-											id="btn-misc"
-											autocomplete="off"
-										/>
-										<label className="btn btn-outline-primary" for="btn-misc">
-											MISC
-										</label>
-									</div>
-								</div>
-							</section>
 							<section
 								id="projectGallery"
 								className="row row-cols-sm-1 row-cols-lg-2 pt-3"
 							>
 								<Gallery />
-								{/* <article className="col col-sm">
-										<div className="project-card border-1 border-primary-alt mb-3">
-											<a className="project-links" href="./project-page.html">
-												<img
-													src="../src/imgs/projects/skyview/skyview-main.jpg"
-													className="card-img-top"
-													alt="Project"
-												/>
-												<div className="project-body">
-													<h2 className="project-title h4">
-														Skyview Dental Clinic
-													</h2>
-													<h3 className="project-text pt-3 fs-5">
-														View Project
-														<i className="fa fa-chevron-right ps-1"></i>
-													</h3>
-												</div>
-											</a>
-										</div>
-									</article> */}
 							</section>
 						</section>
 					</article>
