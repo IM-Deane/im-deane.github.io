@@ -14,19 +14,19 @@ const ProjectData = [
 		category: 0,
 		isFeatured: true,
 	},
-	{
-		id: 1,
-		name: "Xtreme",
-		consultant: "Bentall Green Oak",
-		date: "May 21, 2020",
-		location: "1005 Eby Road, Edmonton, AB T6X 2N9, Canada",
-		description: "Xtreme project.",
-		images: [...Images.xtreme.images],
-		thumbnail: "",
-		contract: "Stipulated Price",
-		category: 0,
-		isFeatured: false,
-	},
+	// {
+	// 	id: 1,
+	// 	name: "Xtreme",
+	// 	consultant: "Bentall Green Oak",
+	// 	date: "May 21, 2020",
+	// 	location: "1005 Eby Road, Edmonton, AB T6X 2N9, Canada",
+	// 	description: "Xtreme project.",
+	// 	images: [...Images.xtreme.images],
+	// 	thumbnail: "",
+	// 	contract: "Stipulated Price",
+	// 	category: 0,
+	// 	isFeatured: false,
+	// },
 	{
 		id: 2,
 		name: "Structube",
@@ -51,7 +51,7 @@ const ProjectData = [
 		thumbnail: "",
 		contract: "Stipulated Price",
 		category: 0,
-		isFeatured: false,
+		isFeatured: true,
 	},
 	{
 		id: 4,
@@ -122,55 +122,55 @@ const ProjectData = [
 		category: 0,
 		isFeatured: false,
 	},
-	// Ramps Services
-	{
-		id: 9,
-		name: "Ramp Services",
-		description:
-			"TCA Developments can erect ramps of various types and sizes. Please contact us for an estimate.",
-		images: [...Images.exterior.images],
-		thumbnail: "",
-		category: 2,
-		isFeatured: true,
-	},
-	// Commercial Doors
-	{
-		id: 10,
-		name: "Commercial Door Services",
-		description:
-			"TCA Developments can install commercial doors of various types and sizes. Please contact us for an estimate.",
-		images: [
-			"../src/imgs/projects/exterior/commercial-doors/commercial-door.jpg",
-		],
-		thumbnail: "",
-		category: 2,
-		isFeatured: false,
-	},
-	// Masonry Services
-	{
-		id: 11,
-		name: "Masonry Services",
-		description:
-			"TCA Developments can perform a variety of masonry services. Please contact us for an estimate.",
-		images: [
-			"../src/imgs/projects/exterior/masonry/masonry-main.jpg",
-			"../src/imgs/projects/exterior/masonry/masonry-anytime-fitness.jpg",
-		],
-		thumbnail: "",
-		category: 1,
-		isFeatured: false,
-	},
-	// Window Services
-	{
-		id: 12,
-		name: "Window Services",
-		description:
-			"TCA Developments can install windows for properties of all types. Please contact us for an estimate.",
-		images: ["../src/imgs/projects/exterior/windows/windows-main.jpg"],
-		thumbnail: "",
-		category: 1,
-		isFeatured: false,
-	},
+	// // Ramps Services
+	// {
+	// 	id: 9,
+	// 	name: "Ramp Services",
+	// 	description:
+	// 		"TCA Developments can erect ramps of various types and sizes. Please contact us for an estimate.",
+	// 	images: [...Images.exterior.images],
+	// 	thumbnail: "",
+	// 	category: 2,
+	// 	isFeatured: true,
+	// },
+	// // Commercial Doors
+	// {
+	// 	id: 10,
+	// 	name: "Commercial Door Services",
+	// 	description:
+	// 		"TCA Developments can install commercial doors of various types and sizes. Please contact us for an estimate.",
+	// 	images: [
+	// 		"../src/imgs/projects/exterior/commercial-doors/commercial-door.jpg",
+	// 	],
+	// 	thumbnail: "",
+	// 	category: 2,
+	// 	isFeatured: false,
+	// },
+	// // Masonry Services
+	// {
+	// 	id: 11,
+	// 	name: "Masonry Services",
+	// 	description:
+	// 		"TCA Developments can perform a variety of masonry services. Please contact us for an estimate.",
+	// 	images: [
+	// 		"../src/imgs/projects/exterior/masonry/masonry-main.jpg",
+	// 		"../src/imgs/projects/exterior/masonry/masonry-anytime-fitness.jpg",
+	// 	],
+	// 	thumbnail: "",
+	// 	category: 1,
+	// 	isFeatured: false,
+	// },
+	// // Window Services
+	// {
+	// 	id: 12,
+	// 	name: "Window Services",
+	// 	description:
+	// 		"TCA Developments can install windows for properties of all types. Please contact us for an estimate.",
+	// 	images: ["../src/imgs/projects/exterior/windows/windows-main.jpg"],
+	// 	thumbnail: "",
+	// 	category: 1,
+	// 	isFeatured: false,
+	// },
 ];
 
 export default ProjectData;

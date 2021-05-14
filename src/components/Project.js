@@ -10,10 +10,11 @@ function Project({ project }) {
 		<article key={id} className="col col-sm">
 			<div className="project-card border-1 border-primary-alt mb-3">
 				<HashLink className="project-links" to={`/projects/${id}#top`}>
-					<div className="w-100">
+					<div className="w-100" style={{ objectFit: "contain" }}>
 						<img
 							src={thumbnail !== "" ? thumbnail : images[0]}
 							className="img-fluid"
+							style={{ maxWidth: "100%", height: "auto" }}
 							alt={description}
 						/>
 					</div>

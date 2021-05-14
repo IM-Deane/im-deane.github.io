@@ -46,11 +46,11 @@ function Project() {
 				</h1>
 				<nav className="w-75" aria-label="breadcrumb">
 					<ol className="breadcrumb justify-content-end">
-						<li className="breadcrumb-item">
+						{/* <li className="breadcrumb-item">
 							<Link className="link-accent-tca" to="/">
 								Home
 							</Link>
-						</li>
+						</li> */}
 						<li className="breadcrumb-item">
 							<Link className="link-accent-tca" to="/projects">
 								Projects

@@ -9,7 +9,7 @@ function RelevantProjects({ project }) {
 
 	const getRelevantProjects = () => {
 		const relevantProjects = ProjectData.filter(
-			(proj) => proj.category === project.category
+			(proj) => proj.id !== project.id && proj.category === project.category
 		);
 
 		// TRY FILTERING OUT ELEMENTS THAT ARE NOT THE FIRST FOUR (BY INDEX)
