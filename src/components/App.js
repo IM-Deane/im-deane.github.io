@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import {
 	BrowserRouter as Router,
@@ -18,6 +18,8 @@ import Projects from "./pages/Projects";
 import Error from "./pages/Error";
 
 function App() {
+	const [isCollapsed, setIsCollapsed] = useState(true);
+
 	return (
 		<div className="wrapper w-100">
 			<Router>
@@ -73,16 +75,19 @@ function App() {
 							<button
 								className="navbar-toggler"
 								type="button"
-								data-bs-toggle="collapse"
+								// data-bs-toggle="collapse"
 								data-bs-target="#navbarCollapse"
 								aria-controls="navbarCollapse"
-								aria-expanded="false"
+								aria-expanded={isCollapsed ? false : true}
 								aria-label="Toggle navigation"
+								onClick={() => setIsCollapsed(!isCollapsed)}
 							>
 								<span className="navbar-toggler-icon"></span>
 							</button>
 							<div
-								className="collapse navbar-collapse justify-content-lg-end"
+								className={`${
+									isCollapsed ? "collapse" : ""
+								} navbar-collapse justify-content-lg-end`}
 								id="navbarCollapse"
 							>
 								<div className="navbar-nav mr-auto mb-2 mb-lg-0 pb-2 align-items-baseline">
