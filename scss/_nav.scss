@@ -1,0 +1,41 @@
+@import "./variables";
+
+// .btn-outline-light #quote-btn:hover {
+// 	background-color: map-get($theme-colors, "accent-tca");
+// }
+
+.active,
+.nav-link:hover {
+	border-bottom: 3px solid map-get($theme-colors, "primary-tca");
+	outline: none;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.active:hover,
+.active:focus {
+	border-color: map-get($theme-colors, "primary-tca");
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+// TCA logo
+.logo {
+	width: 120px;
+}
+
+// Media Queries
+
+/* Reset nav styling on mobile/small screens */
+@media only screen and (max-width: 775px) {
+	.active {
+		border-bottom: initial;
+	}
+	.logo {
+		width: 90px;
+	}
+	/* Adjust banner font size for spacing */
+	.banner {
+		font-size: 80%;
+	}
+}
