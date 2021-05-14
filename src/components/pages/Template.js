@@ -79,13 +79,17 @@ function Project() {
 									<>
 										<div
 											key={project.id}
-											className={`carousel-item project-image border-0  ${
+											style={{ objectFit: "contain" }}
+											className={`carousel-item w-100 project-image border-0  ${
 												images.indexOf(img) === 0 && "active"
 											}`}
 										>
 											<img
 												src={img}
-												className="img-fluid"
+												style={{
+													width: "650px",
+													height: "433px",
+												}}
 												alt={project.description}
 											/>
 										</div>
