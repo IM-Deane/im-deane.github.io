@@ -1,6 +1,12 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import {
+	BrowserRouter as Router,
+	Link,
+	NavLink,
+	Route,
+	Switch,
+} from "react-router-dom";
 
 // Pages
 import Home from "./pages/Home";
@@ -25,7 +31,7 @@ function App() {
 								Celebrating 30 years of Canadian business!{" "}
 								<img
 									id="leaf"
-									src="./assets/maple-leaf.png"
+									src="/assets/maple-leaf.png"
 									alt="Canadian maple leaf"
 								/>
 							</span>
@@ -59,7 +65,7 @@ function App() {
 						<div className="container-fluid container-lg justify-content-lg-center">
 							<Link className="navbar-brand" to="/">
 								<img
-									src="./assets/tca-logo.png"
+									src="/assets/tca-logo.png"
 									className="img-fluid logo"
 									alt="TCA Developments company logo"
 								/>
@@ -79,22 +85,43 @@ function App() {
 								className="collapse navbar-collapse justify-content-lg-end"
 								id="navbarCollapse"
 							>
-								<div className="navbar-nav mr-auto mb-2 mb-lg-0 align-items-baseline">
-									<Link className="nav-link text-uppercase" to="/">
+								<div className="navbar-nav mr-auto mb-2 mb-lg-0 pb-2 align-items-baseline">
+									<NavLink
+										className="nav-link text-uppercase"
+										activeClassName="active"
+										exact
+										to="/"
+									>
 										Home
-									</Link>
-									<Link className="nav-link text-uppercase" to="/about">
+									</NavLink>
+									<NavLink
+										className="nav-link text-uppercase"
+										activeClassName="active"
+										to="/about"
+									>
 										About us
-									</Link>
-									<Link className="nav-link text-uppercase" to="/projects">
+									</NavLink>
+									<NavLink
+										className="nav-link text-uppercase"
+										activeClassName="active"
+										to="/projects"
+									>
 										Projects
-									</Link>
-									<Link className="nav-link text-uppercase" to="/services">
+									</NavLink>
+									<NavLink
+										className="nav-link text-uppercase"
+										activeClassName="active"
+										to="/services"
+									>
 										Services
-									</Link>
-									<Link className="nav-link text-uppercase" to="/contact">
+									</NavLink>
+									<NavLink
+										className="nav-link text-uppercase"
+										activeClassName="active"
+										to="/contact"
+									>
 										Contact Us
-									</Link>
+									</NavLink>
 									<span className="ms-3 d-none d-lg-inline-block">
 										<HashLink
 											smooth

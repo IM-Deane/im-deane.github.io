@@ -8,6 +8,7 @@ import bootstrap from "bootstrap/dist/js/bootstrap";
 function Project() {
 	const [project, setProject] = useState("Default Project");
 	const [images, setImages] = useState([]);
+
 	const { id } = useParams();
 
 	//  Convert category id's to names
@@ -35,13 +36,6 @@ function Project() {
 
 		setProject(newProject);
 		setImages([...newProject.images]);
-
-		// Activate carousel
-		// const myCarousel = document.querySelector("#projectCarousel");
-		// const carousel = new bootstrap.Carousel(myCarousel, {
-		// 	interval: 6000,
-		// 	wrap: true,
-		// });
 	}, []);
 
 	return (
@@ -78,19 +72,20 @@ function Project() {
 							id="projectCarousel"
 							className="carousel carousel-dark slide"
 							data-bs-ride="carousel"
+							data-bs-interval={6000}
 						>
 							<div id="carouselInner" className="carousel-inner">
 								{images.map((img) => (
 									<>
 										<div
 											key={project.id}
-											className={`carousel-item project-image border-0 ${
+											className={`carousel-item project-image border-0  ${
 												images.indexOf(img) === 0 && "active"
 											}`}
 										>
 											<img
 												src={img}
-												className="d-block w-100 img-fluid"
+												className="img-fluid"
 												alt={project.description}
 											/>
 										</div>
@@ -165,7 +160,11 @@ function Project() {
 										</svg>
 									</span>
 									<span className="mx-1 text-dark fw-bolder">Client:</span>
-									<span className="ps-2 project-name">{project.name}</span>
+									<span className="ps-2 project-name">
+										{project.consultant != null
+											? project.consultant
+											: project.name}
+									</span>
 								</div>
 							</li>
 							<li className="list-group-item flex-fill">

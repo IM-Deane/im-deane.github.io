@@ -139,14 +139,14 @@ function Services() {
 										</ul>
 										<div className="row text-center">
 											<div className="col mt-5 py-3">
-												<a
-													role="button"
-													href="./contact.html#contact-form"
+												<HashLink
+													smooth
+													to="/contact#contactForm"
 													className="btn btn-primary text-uppercase"
 												>
 													Get started today
 													<i className="fa fa-chevron-right ms-2"></i>
-												</a>
+												</HashLink>
 											</div>
 										</div>
 									</div>
@@ -161,7 +161,7 @@ function Services() {
 											"
 									>
 										<img
-											src={`../src/imgs/projects/skyview/skyview-lobby.jpg`}
+											src={`./assets/services/skyview-lobby.jpg`}
 											className="img-fluid"
 											alt="Skyview lobby"
 										/>
@@ -217,20 +217,20 @@ function Services() {
 								</ul>
 								<div className="row text-center py-3 my-4">
 									<div className="col">
-										<a
-											role="button"
-											href="./contact.html#contact-form"
+										<HashLink
+											smooth
+											to="/contact#contactForm"
 											className="btn btn-primary text-uppercase"
 										>
 											Get started today
 											<i className="fa fa-chevron-right ms-2"></i>
-										</a>
+										</HashLink>
 									</div>
 								</div>
 							</div>
 							<div className="col-md-5 order-md-1">
 								<img
-									src={`../src/imgs/projects/structube/structube-electrical.jpg`}
+									src={`./assets/services/structube-electrical.jpg`}
 									className="img-fluid"
 									alt="Electrical box in Structube warehouse"
 								/>
@@ -271,20 +271,19 @@ function Services() {
 								</ul>
 								<div className="row text-center py-3 my-4">
 									<div className="col">
-										<a
-											role="button"
-											href="./contact.html#contact-form"
+										<HashLink
+											to="/contact#contactForm"
 											className="btn btn-primary text-uppercase"
 										>
 											Get started today
 											<i className="fa fa-chevron-right ms-2"></i>
-										</a>
+										</HashLink>
 									</div>
 								</div>
 							</div>
 							<div className="col-md-5">
 								<img
-									src={`../src/imgs/projects/finning/finning-hvac2.jpg`}
+									src={`./assets/services/finning-hvac2.jpg`}
 									className="img-fluid"
 									alt="Finning Cat hvac system"
 								/>
@@ -296,7 +295,7 @@ function Services() {
 						<div className="row featurette my-5 px-5">
 							<div className="col-md-5 pb-3">
 								<img
-									src={`../src/imgs/projects/scotia-place/scotia-place-concrete.jpg`}
+									src={`./assets/concrete-main.jpg`}
 									className="img-fluid"
 									alt="Concrete being set."
 								/>
@@ -344,14 +343,14 @@ function Services() {
 								</ul>
 								<div className="row text-center py-3 my-4">
 									<div className="col">
-										<a
-											role="button"
-											href="./contact.html#contact-form"
+										<HashLink
+											smooth
+											to="/contact#contactForm"
 											className="btn btn-primary text-uppercase"
 										>
 											Get started today
 											<i className="fa fa-chevron-right ms-2"></i>
-										</a>
+										</HashLink>
 									</div>
 								</div>
 							</div>
