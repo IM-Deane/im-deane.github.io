@@ -69,7 +69,6 @@ export const xtreme = parseObject(
 );
 
 console.log(skyview);
-console.log(findThumbnail(skyview));
 
 // const strings = images.map((obj) => obj.default.toString());
 
