@@ -67,10 +67,10 @@ function Project() {
 			</header>
 			<section className="container project-body">
 				<div className="row my-5 pt-4">
-					<div className="col-auto col-sm">
+					<div className="col-sm p-4">
 						<div
 							id="projectCarousel"
-							className="carousel carousel-dark slide"
+							className="carousel carousel-dark slide "
 							data-bs-ride="carousel"
 							data-bs-interval={6000}
 						>
@@ -79,16 +79,15 @@ function Project() {
 									<>
 										<div
 											key={project.id}
-											style={{ objectFit: "contain" }}
-											className={`carousel-item w-100 project-image border-0  ${
+											className={`carousel-item w-100 border-0  ${
 												images.indexOf(img) === 0 && "active"
 											}`}
 										>
 											<img
 												src={img}
+												className="img-fluid"
 												style={{
-													width: "650px",
-													height: "433px",
+													maxHeight: "433px",
 												}}
 												alt={project.description}
 											/>

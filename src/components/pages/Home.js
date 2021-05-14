@@ -542,7 +542,7 @@ function Home() {
 							</div>
 							<div
 								className="
-										row row-cols-md-2 row-cols-lg-4
+										row row-cols-sm row-cols-md-2 row-cols-lg-4
 										justify-content-center
 										text-center
 										g-2
