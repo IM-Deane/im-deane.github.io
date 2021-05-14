@@ -13,7 +13,7 @@ function Project({ project }) {
 					<div className="w-100" style={{ objectFit: "contain" }}>
 						<img
 							src={thumbnail !== "" ? thumbnail : images[0]}
-							className="img-fluid"
+							className=""
 							style={{ maxWidth: "100%", height: "auto" }}
 							alt={description}
 						/>
