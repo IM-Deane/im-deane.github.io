@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams, useRouteMatch } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import Images from "./Images";
 
 // Create a project component
 function Project({ project }) {
 	const { id, name, images, description, thumbnail } = project;
+
 	return (
 		<article key={id} className="col-sm">
 			<div className="project-card border-1 border-primary-alt mb-3">

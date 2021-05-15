@@ -92,6 +92,7 @@ function App() {
 							>
 								<div className="navbar-nav mr-auto mb-2 mb-lg-0 pb-2 align-items-baseline">
 									<NavLink
+										onClick={() => setIsCollapsed(!isCollapsed)}
 										className="nav-link text-uppercase"
 										activeClassName="active"
 										exact
@@ -100,6 +101,7 @@ function App() {
 										Home
 									</NavLink>
 									<NavLink
+										onClick={() => setIsCollapsed(!isCollapsed)}
 										className="nav-link text-uppercase"
 										activeClassName="active"
 										to="/about"
@@ -107,6 +109,7 @@ function App() {
 										About us
 									</NavLink>
 									<NavLink
+										onClick={() => setIsCollapsed(!isCollapsed)}
 										className="nav-link text-uppercase"
 										activeClassName="active"
 										to="/projects"
@@ -114,6 +117,7 @@ function App() {
 										Projects
 									</NavLink>
 									<NavLink
+										onClick={() => setIsCollapsed(!isCollapsed)}
 										className="nav-link text-uppercase"
 										activeClassName="active"
 										to="/services"
@@ -121,6 +125,7 @@ function App() {
 										Services
 									</NavLink>
 									<NavLink
+										onClick={() => setIsCollapsed(!isCollapsed)}
 										className="nav-link text-uppercase"
 										activeClassName="active"
 										to="/contact"
@@ -129,6 +134,7 @@ function App() {
 									</NavLink>
 									<span className="ms-3 d-none d-lg-inline-block">
 										<HashLink
+											onClick={() => setIsCollapsed(!isCollapsed)}
 											smooth
 											to="/contact#contactForm"
 											className="btn btn-danger btn-sm text-uppercase"
@@ -142,39 +148,30 @@ function App() {
 					</nav>
 				</header>
 				<Switch>
-					<Route exact path="/">
-						<Home />
-					</Route>
-					<Route path="/about">
-						<About />
-					</Route>
-					<Route path="/services">
-						<Services />
-					</Route>
-					{/* <Route path="/gallery">
-						<Gallery />
-					</Route> */}
-					<Route exact path="/projects">
-						<Projects />
-					</Route>
-					<Route path="project">
-						<Template />
-					</Route>
-					<Route path="/contact#contactForm">
-						<Contact />
-					</Route>
-					<Route exact path="/contact">
-						<Contact />
-					</Route>
+					<Route path="/about" component={About} />
+					<Route path="/services" component={Services} />
+					<Route exact path="/projects" component={Projects} />
+					<Route path="project" component={Template} />
+					<Route path="/contact#contactForm" component={Contact} />
+					<Route exact path="/contact" component={Contact} />
 					{/* Handle Individual project paths */}
-					<Route exact path="/projects/:id" childern={<Template />}>
-						<Template />
-					</Route>
+					<Route
+						exact
+						path="/:id"
+						component={Template}
+						childern={<Template />}
+					/>
+
 					<Route eaxct path="/home/:id" childern={<Template />}>
 						<Template />
 					</Route>
 					<Route exact path="/services/:id" childern={<Template />}>
 						<Template />
+					</Route>
+					{/* Handle relevant projects paths */}
+					<Route exact path={"/:id"} children={Template} />
+					<Route exact path="/">
+						<Home />
 					</Route>
 					<Route path="*">
 						<Error />
