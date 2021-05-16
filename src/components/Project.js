@@ -7,6 +7,8 @@ import Images from "./Images";
 function Project({ project }) {
 	const { id, name, images, description, thumbnail } = project;
 
+	// const { path, url } = useRouteMatch();
+
 	return (
 		<article key={id} className="col-sm">
 			<div className="project-card border-1 border-primary-alt mb-3">

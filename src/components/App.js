@@ -148,28 +148,42 @@ function App() {
 					</nav>
 				</header>
 				<Switch>
-					<Route path="/about" component={About} />
-					<Route path="/services" component={Services} />
-					<Route exact path="/projects" component={Projects} />
-					<Route path="project" component={Template} />
-					<Route path="/contact#contactForm" component={Contact} />
-					<Route exact path="/contact" component={Contact} />
+					<Route path="/about">
+						<About />
+					</Route>
+					<Route exact path="/projects">
+						<Projects />
+					</Route>
+					<Route path="/services">
+						<Services />
+					</Route>
+					<Route path="/Template">
+						<Template />
+					</Route>
+					<Route path="/contact#contactForm">
+						<Contact />
+					</Route>
+					<Route exact path="/contact">
+						<Contact />
+					</Route>
 					{/* Handle Individual project paths */}
-					<Route
+					{/* <Route
 						exact
 						path="/:id"
 						component={Template}
 						childern={<Template />}
-					/>
+					/> */}
 
-					<Route eaxct path="/home/:id" childern={<Template />}>
+					<Route exact path="/home/:id" childern={<Template />}>
 						<Template />
 					</Route>
 					<Route exact path="/services/:id" childern={<Template />}>
 						<Template />
 					</Route>
 					{/* Handle relevant projects paths */}
-					<Route exact path={"/:id"} children={Template} />
+					<Route exact path={"/projects/:id"} children={<Template />}>
+						<Template />
+					</Route>
 					<Route exact path="/">
 						<Home />
 					</Route>

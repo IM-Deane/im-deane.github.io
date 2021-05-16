@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import data from "../ProjectData";
 import RelevantProjects from "../RelevantProjects";
-import bootstrap from "bootstrap/dist/js/bootstrap";
 
 function Project() {
 	const [project, setProject] = useState("Default Project");
@@ -36,7 +35,7 @@ function Project() {
 
 		setProject(newProject);
 		setImages([...newProject.images]);
-	}, []);
+	}, [id]);
 
 	return (
 		<main className="container-fluid px-0">
@@ -52,6 +51,7 @@ function Project() {
 							</Link>
 						</li> */}
 						<li className="breadcrumb-item">
+							{/* Make bread crumb dynamic */}
 							<Link className="link-accent-tca" to="/projects">
 								Projects
 							</Link>
@@ -70,7 +70,7 @@ function Project() {
 					<div className="col-sm p-4">
 						<div
 							id="projectCarousel"
-							className="carousel slide "
+							className="carousel slide"
 							data-bs-ride="carousel"
 							data-bs-interval={6000}
 						>
