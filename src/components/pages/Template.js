@@ -214,11 +214,11 @@ function Project() {
 				<section className="row pb-5">
 					<div className="col">
 						<h2 className="display-6 project-name text-uppercase">
-							{project.name}
+							{project.category === 1 ? project.name : ""}
 						</h2>
 
 						<p id="project-description" className="text-body pt-1">
-							{project.description}
+							{project.category === 1 ? project.description : ""}
 						</p>
 					</div>
 				</section>

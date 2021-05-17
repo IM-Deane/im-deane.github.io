@@ -30,7 +30,7 @@ const ProjectData = [
 		location: "1005 Eby Road, Edmonton, AB T6X 2N9, Canada",
 		description: "Structube project.",
 		images: [...Images.structube.images],
-		thumbnail: "",
+		thumbnail: Images.findThumbnail(Images.structube.images[1]),
 		contract: "Stipulated Price",
 		category: 0,
 		isFeatured: true,
@@ -132,7 +132,7 @@ const ProjectData = [
 		description:
 			"TCA Developments can perform a variety of masonry services. Please contact us for an estimate.",
 		images: [...Images.masonry.images],
-		thumbnail: "",
+		thumbnail: Images.findThumbnail(Images.bonaventure.images[1]),
 		category: 1,
 		isFeatured: false,
 	},
