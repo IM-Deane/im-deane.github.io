@@ -43,15 +43,10 @@ function Project() {
 				<h1 className="display-6 pt-4 text-center project-name text-uppercase fw-bold">
 					{project.name}
 				</h1>
+				{/* BREADCRUMBS */}
 				<nav className="w-75" aria-label="breadcrumb">
 					<ol className="breadcrumb justify-content-end">
-						{/* <li className="breadcrumb-item">
-							<Link className="link-accent-tca" to="/">
-								Home
-							</Link>
-						</li> */}
 						<li className="breadcrumb-item">
-							{/* Make bread crumb dynamic */}
 							<Link className="link-accent-tca" to="/projects">
 								Projects
 							</Link>
@@ -70,7 +65,7 @@ function Project() {
 					<div className="col-sm p-4">
 						<div
 							id="projectCarousel"
-							className="carousel slide"
+							className="carousel carousel-dark slide"
 							data-bs-ride="carousel"
 							data-bs-interval={6000}
 						>
@@ -216,17 +211,17 @@ function Project() {
 					</aside>
 				</div>
 				{/* Section hidden until they have more write-ups */}
-				{/* <section className="row pb-5">
+				<section className="row pb-5">
 					<div className="col">
 						<h2 className="display-6 project-name text-uppercase">
 							{project.name}
 						</h2>
-						
-						 <p id="project-description" className="text-body pt-1">
+
+						<p id="project-description" className="text-body pt-1">
 							{project.description}
-						</p> 
+						</p>
 					</div>
-				</section> */}
+				</section>
 			</section>
 			{/* <!-- Related Projects --> */}
 			<div className="container-fluid px-0">

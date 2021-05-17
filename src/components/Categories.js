@@ -10,7 +10,7 @@ const Categories = ({ categories, filterProjects }) => {
 				name = "Interior";
 				break;
 			case 1:
-				name = "Misc";
+				name = "Services";
 				break;
 			case 2:
 				name = "Exterior";

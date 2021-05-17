@@ -17,7 +17,6 @@ function parseObject(object) {
 // Find main thumbnail
 export const findThumbnail = (string) => {
 	// "/static/media/main.0c9ef875.jpg";
-	console.log(string);
 
 	if (string.search("/main.")) {
 		return string;
@@ -38,13 +37,13 @@ export const bonaventure = {
 	),
 	thumbnail: null,
 };
-export const exterior = {
-	images: parseObject(
-		importAll(
-			require.context("./projects/exterior", true, /\.(png|jpe?g|svg)$/)
-		)
-	),
-};
+// export const exterior = {
+// 	images: parseObject(
+// 		importAll(
+// 			require.context("./projects/exterior", true, /\.(png|jpe?g|svg)$/)
+// 		)
+// 	),
+// };
 export const finning = {
 	images: parseObject(
 		importAll(
@@ -69,7 +68,18 @@ export const huntswood = {
 export const scotiaPlace = {
 	images: parseObject(
 		importAll(
-			require.context("./projects/scotia-place", true, /\.(png|jpe?g|svg)$/)
+			require.context("./projects/scotia-place", false, /\.(png|jpe?g|svg)$/)
+		)
+	),
+};
+export const SPBikeroom = {
+	images: parseObject(
+		importAll(
+			require.context(
+				"./projects/scotia-place/scotia-place-bikeroom",
+				false,
+				/\.(png|jpe?g|svg)$/
+			)
 		)
 	),
 };
@@ -104,6 +114,48 @@ export const traneSupply = {
 export const xtreme = {
 	images: parseObject(
 		importAll(require.context("./projects/xtreme", false, /\.(png|jpe?g|svg)$/))
+	),
+};
+
+// SERVICES images
+export const commercialDoors = {
+	images: parseObject(
+		importAll(
+			require.context(
+				"./projects/exterior/commercial-doors",
+				false,
+				/\.(png|jpe?g|svg)$/
+			)
+		)
+	),
+};
+export const masonry = {
+	images: parseObject(
+		importAll(
+			require.context(
+				"./projects/exterior/masonry",
+				false,
+				/\.(png|jpe?g|svg)$/
+			)
+		)
+	),
+};
+export const ramps = {
+	images: parseObject(
+		importAll(
+			require.context("./projects/exterior/ramps", false, /\.(png|jpe?g|svg)$/)
+		)
+	),
+};
+export const windows = {
+	images: parseObject(
+		importAll(
+			require.context(
+				"./projects/exterior/windows",
+				false,
+				/\.(png|jpe?g|svg)$/
+			)
+		)
 	),
 };
 
