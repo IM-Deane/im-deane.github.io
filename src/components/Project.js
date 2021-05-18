@@ -1,13 +1,9 @@
 import React from "react";
-import { Link, useParams, useRouteMatch } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import Images from "./Images";
 
 // Create a project component
 function Project({ project }) {
 	const { id, name, images, description, thumbnail } = project;
-
-	const match = useRouteMatch();
 
 	return (
 		<article key={id} className="col-sm">

@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import bootstrap from "bootstrap/dist/js/bootstrap";
 
 import FeaturedProjects from "../FeaturedProjects";
 import ContactForm from "../ContactForm";
-import Contact from "./Contact";
 
 function Home() {
 	// Update page title
@@ -14,11 +12,11 @@ function Home() {
 			"TCA Developments - Construction Consultant & General Contractor";
 
 		//  Restart the carousel when page reloads
-		const myCarousel = document.querySelector("#myCarousel");
-		const carousel = new bootstrap.Carousel(myCarousel, {
-			interval: 6000,
-			wrap: true,
-		});
+		// const myCarousel = document.querySelector("#myCarousel");
+		// const carousel = new bootstrap.Carousel(myCarousel, {
+		// 	interval: 6000,
+		// 	wrap: true,
+		// });
 	}, []);
 	return (
 		<main className="container-fluid px-0 m-0">

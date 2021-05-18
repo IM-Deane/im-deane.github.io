@@ -158,18 +158,3 @@ export const windows = {
 		)
 	),
 };
-
-// console.log(findThumbnail(skyview.images[0]));
-
-// console.log(bonaventure.thumbnail);
-
-// const strings = images.map((obj) => obj.default.toString());
-
-// console.log(strings);
-
-// const fin = strings.filter((string) => {
-//     const pattern = new RegExp("/")
-// })
-
-// console.log(skyview.findIndex(()));
-// export  images;

@@ -1,8 +1,8 @@
 {
 	"homepage": "https://im-deane.github.io",
 	"name": "website",
-	"version": "0.1.0",
-	"private": true,
+	"version": "1.0.0",
+	"private": false,
 	"dependencies": {
 		"@formspree/react": "^2.2.3",
 		"@testing-library/jest-dom": "^5.12.0",

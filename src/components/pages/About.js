@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 
 function About() {
-	const [isCollapsed, setIsCollapsed] = useState(true);
 	useEffect(() => {
 		document.title = "About Us - TCA Developments";
 	}, []);

@@ -204,10 +204,10 @@ function Services() {
 													<div className="container-fluid">
 														<div
 															id="officeIndicators"
-															class="carousel slide"
+															className="carousel slide"
 															data-bs-ride="carousel"
 														>
-															<div class="carousel-indicators">
+															<div className="carousel-indicators">
 																<button
 																	type="button"
 																	data-bs-target="#officeIndicators"
@@ -235,29 +235,29 @@ function Services() {
 																	aria-label="Slide 4"
 																></button>
 															</div>
-															<div class="carousel-inner">
-																<div class="carousel-item active border-0">
+															<div className="carousel-inner">
+																<div className="carousel-item active border-0">
 																	<img
 																		src={`./assets/services/offices/structube-bathroom.jpg`}
 																		className="img-fluid"
 																		alt="Structube bathroom."
 																	/>
 																</div>
-																<div class="carousel-item border-0">
+																<div className="carousel-item border-0">
 																	<img
 																		src={`./assets/services/offices/structube-kitchen.jpg`}
 																		className="img-fluid"
 																		alt="Structube Kitchen"
 																	/>
 																</div>
-																<div class="carousel-item border-0">
+																<div className="carousel-item border-0">
 																	<img
 																		src={`./assets/services/offices/office-interior.jpg`}
 																		className="img-fluid"
 																		alt="Structube shipping office"
 																	/>
 																</div>
-																<div class="carousel-item border-0">
+																<div className="carousel-item border-0">
 																	<img
 																		src={`./assets/services/offices/bonaventure-lobby.jpg`}
 																		className="img-fluid"
@@ -266,28 +266,30 @@ function Services() {
 																</div>
 															</div>
 															<button
-																class="carousel-control-prev"
+																className="carousel-control-prev"
 																type="button"
 																data-bs-target="#officeIndicators"
 																data-bs-slide="prev"
 															>
 																<span
-																	class="carousel-control-prev-icon"
+																	className="carousel-control-prev-icon"
 																	aria-hidden="true"
 																></span>
-																<span class="visually-hidden">Previous</span>
+																<span className="visually-hidden">
+																	Previous
+																</span>
 															</button>
 															<button
-																class="carousel-control-next"
+																className="carousel-control-next"
 																type="button"
 																data-bs-target="#officeIndicators"
 																data-bs-slide="next"
 															>
 																<span
-																	class="carousel-control-next-icon"
+																	className="carousel-control-next-icon"
 																	aria-hidden="true"
 																></span>
-																<span class="visually-hidden">Next</span>
+																<span className="visually-hidden">Next</span>
 															</button>
 														</div>
 													</div>
@@ -409,15 +411,15 @@ function Services() {
 											<div className="container-fluid">
 												<div
 													id="electricalIndicators"
-													class="carousel slide"
+													className="carousel slide"
 													data-bs-ride="carousel"
 												>
-													<div class="carousel-indicators">
+													<div className="carousel-indicators">
 														<button
 															type="button"
 															data-bs-target="#electricalIndicators"
 															data-bs-slide-to="0"
-															class="active"
+															className="active"
 															aria-current="true"
 															aria-label="Slide 1"
 														></button>
@@ -446,36 +448,36 @@ function Services() {
 															aria-label="Slide 5"
 														></button>
 													</div>
-													<div class="carousel-inner">
-														<div class="carousel-item active border-0">
+													<div className="carousel-inner">
+														<div className="carousel-item active border-0">
 															<img
 																src={`./assets/services/electrical/electrical-box.jpg`}
 																className="img-fluid"
 																alt="Electrical box."
 															/>
 														</div>
-														<div class="carousel-item border-0">
+														<div className="carousel-item border-0">
 															<img
 																src={`./assets/services/electrical/electrical-box2.jpg`}
 																className="img-fluid"
 																alt="Electrical box"
 															/>
 														</div>
-														<div class="carousel-item border-0">
+														<div className="carousel-item border-0">
 															<img
 																src={`./assets/services/electrical/electrical-box-3.jpg`}
 																className="img-fluid"
 																alt="Electrical box"
 															/>
 														</div>
-														<div class="carousel-item border-0">
+														<div className="carousel-item border-0">
 															<img
 																src={`./assets/services/electrical/electrical-tall.jpg`}
 																className="img-fluid"
 																alt="Electrical box"
 															/>
 														</div>
-														<div class="carousel-item border-0">
+														<div className="carousel-item border-0">
 															<img
 																src={`./assets/services/electrical/fire-detection.jpg`}
 																className="img-fluid"
@@ -484,28 +486,28 @@ function Services() {
 														</div>
 													</div>
 													<button
-														class="carousel-control-prev"
+														className="carousel-control-prev"
 														type="button"
 														data-bs-target="#electricalIndicators"
 														data-bs-slide="prev"
 													>
 														<span
-															class="carousel-control-prev-icon"
+															className="carousel-control-prev-icon"
 															aria-hidden="true"
 														></span>
-														<span class="visually-hidden">Previous</span>
+														<span className="visually-hidden">Previous</span>
 													</button>
 													<button
-														class="carousel-control-next"
+														className="carousel-control-next"
 														type="button"
 														data-bs-target="#electricalIndicators"
 														data-bs-slide="next"
 													>
 														<span
-															class="carousel-control-next-icon"
+															className="carousel-control-next-icon"
 															aria-hidden="true"
 														></span>
-														<span class="visually-hidden">Next</span>
+														<span className="visually-hidden">Next</span>
 													</button>
 												</div>
 											</div>
@@ -532,7 +534,7 @@ function Services() {
 									id="hvacSection"
 									className="featurette-heading text-primary-alt"
 								>
-									HVAC Services
+									Mechanical <span className="text-muted">&</span> HVAC Services
 									<i className="fas fa-snowflake text-primary ms-2"></i>
 								</h2>
 								<p className="lead lh-base pt-4">
@@ -612,15 +614,15 @@ function Services() {
 										<div className="container-fluid">
 											<div
 												id="mechanicalIndicators"
-												class="carousel slide"
+												className="carousel slide"
 												data-bs-ride="carousel"
 											>
-												<div class="carousel-indicators">
+												<div className="carousel-indicators">
 													<button
 														type="button"
 														data-bs-target="#mechanicalIndicators"
 														data-bs-slide-to="0"
-														class="active"
+														className="active"
 														aria-current="true"
 														aria-label="Slide 1"
 													></button>
@@ -649,36 +651,36 @@ function Services() {
 														aria-label="Slide 5"
 													></button>
 												</div>
-												<div class="carousel-inner">
-													<div class="carousel-item active border-0">
+												<div className="carousel-inner">
+													<div className="carousel-item active border-0">
 														<img
 															src={`./assets/services/mech-hvac/finning-controls.jpg`}
 															className="img-fluid"
 															alt="Finning control interface."
 														/>
 													</div>
-													<div class="carousel-item border-0">
+													<div className="carousel-item border-0">
 														<img
 															src={`./assets/services/mech-hvac/finning-scc2.jpg`}
 															className="img-fluid"
 															alt="Finning self contained controls."
 														/>
 													</div>
-													<div class="carousel-item border-0">
+													<div className="carousel-item border-0">
 														<img
 															src={`./assets/services/mech-hvac/structube-hvac.jpg`}
 															className="img-fluid"
 															alt="Structube shipping office"
 														/>
 													</div>
-													<div class="carousel-item border-0">
+													<div className="carousel-item border-0">
 														<img
 															src={`./assets/services/mech-hvac/trane-hvac.jpg`}
 															className="img-fluid"
 															alt="Trane interior HVAC system."
 														/>
 													</div>
-													<div class="carousel-item border-0">
+													<div className="carousel-item border-0">
 														<img
 															src={`./assets/services/mech-hvac/trane-interior.jpg`}
 															className="img-fluid"
@@ -687,28 +689,28 @@ function Services() {
 													</div>
 												</div>
 												<button
-													class="carousel-control-prev"
+													className="carousel-control-prev"
 													type="button"
 													data-bs-target="#mechanicalIndicators"
 													data-bs-slide="prev"
 												>
 													<span
-														class="carousel-control-prev-icon"
+														className="carousel-control-prev-icon"
 														aria-hidden="true"
 													></span>
-													<span class="visually-hidden">Previous</span>
+													<span className="visually-hidden">Previous</span>
 												</button>
 												<button
-													class="carousel-control-next"
+													className="carousel-control-next"
 													type="button"
 													data-bs-target="#mechanicalIndicators"
 													data-bs-slide="next"
 												>
 													<span
-														class="carousel-control-next-icon"
+														className="carousel-control-next-icon"
 														aria-hidden="true"
 													></span>
-													<span class="visually-hidden">Next</span>
+													<span className="visually-hidden">Next</span>
 												</button>
 											</div>
 										</div>
@@ -827,15 +829,15 @@ function Services() {
 										<div className="container-fluid">
 											<div
 												id="concreteIndicators"
-												class="carousel slide"
+												className="carousel slide"
 												data-bs-ride="carousel"
 											>
-												<div class="carousel-indicators">
+												<div className="carousel-indicators">
 													<button
 														type="button"
 														data-bs-target="#concreteIndicators"
 														data-bs-slide-to="0"
-														class="active"
+														className="active"
 														aria-current="true"
 														aria-label="Slide 1"
 													></button>
@@ -852,22 +854,22 @@ function Services() {
 														aria-label="Slide 3"
 													></button>
 												</div>
-												<div class="carousel-inner">
-													<div class="carousel-item active border-0">
+												<div className="carousel-inner">
+													<div className="carousel-item active border-0">
 														<img
 															src={`./assets/services/concrete/concrete-slabs.jpg`}
 															className="img-fluid"
 															alt="Large concrete slabs"
 														/>
 													</div>
-													<div class="carousel-item border-0">
+													<div className="carousel-item border-0">
 														<img
 															src={`./assets/services/concrete/concrete-slabs2.jpg`}
 															className="img-fluid"
 															alt="Small concrete slabs"
 														/>
 													</div>
-													<div class="carousel-item border-0">
+													<div className="carousel-item border-0">
 														<img
 															src={`./assets/services/concrete/concrete-wall.jpg`}
 															className="img-fluid"
@@ -876,28 +878,28 @@ function Services() {
 													</div>
 												</div>
 												<button
-													class="carousel-control-prev"
+													className="carousel-control-prev"
 													type="button"
 													data-bs-target="#concreteIndicators"
 													data-bs-slide="prev"
 												>
 													<span
-														class="carousel-control-prev-icon"
+														className="carousel-control-prev-icon"
 														aria-hidden="true"
 													></span>
-													<span class="visually-hidden">Previous</span>
+													<span className="visually-hidden">Previous</span>
 												</button>
 												<button
-													class="carousel-control-next"
+													className="carousel-control-next"
 													type="button"
 													data-bs-target="#concreteIndicators"
 													data-bs-slide="next"
 												>
 													<span
-														class="carousel-control-next-icon"
+														className="carousel-control-next-icon"
 														aria-hidden="true"
 													></span>
-													<span class="visually-hidden">Next</span>
+													<span className="visually-hidden">Next</span>
 												</button>
 											</div>
 										</div>

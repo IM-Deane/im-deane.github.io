@@ -7,9 +7,9 @@ company that specializes in commerical construction and rennovation.
 
 **Author:** Tristan Deane <email>contact.alchemizedsoftware.com</email>
 
-URL: https://im-deane.github.io/dist/index.html
+URL: https://im-deane.github.io/
 
-Current Version: **0.18**
+Current Version: **1.0**
 
 ## II. Analysis & Design
 
@@ -40,6 +40,8 @@ to access the site's content.
 A site footer with copyright and social media links should be added.
 
 2. Content
+
+The entire websites content needs to be overhauled.
 
 I. **Home:** Bland and should be completely overhauled.
 
@@ -103,6 +105,19 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.0:
+
+This version features the official launch of the TCA site. I have successfully
+recreated the site in react and everything is in working order.
+
+The next step will be to deploy the site to the clients domain and run some
+tests to ensure it is working correctly (I'm worried about the page refresh
+error but that may just need a simple redirect).
+
+Minor:
+
+- Cleaned up numerous warnings from the website components.
 
 ## Version 0.18:
 

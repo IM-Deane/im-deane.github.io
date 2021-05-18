@@ -1,14 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Categories from "./Categories";
 import ProjectData from "./ProjectData";
 import Project from "./Project";
-
-/*
- * 1. Get project data from its component and store in an array
- * 2.
- *
- *
- */
 
 // Create an array of unique category names
 const allProjects = [
@@ -18,8 +11,7 @@ const allProjects = [
 
 const Gallery = () => {
 	const [projects, setProjects] = useState(ProjectData);
-	const [featured, setFeatured] = useState([]);
-	const [categories, setCategory] = useState(allProjects);
+	const [categories] = useState(allProjects);
 
 	// By category
 	const filterProjects = (project) => {
@@ -30,14 +22,6 @@ const Gallery = () => {
 		const newProjects = ProjectData.filter((proj) => proj.category === project);
 		setProjects(newProjects);
 	};
-
-	// Get featured projects
-	// const getFeatured = () => {
-	// 	const featuredProjects = ProjectData.filter(
-	// 		(proj) => proj.isFeatured === true
-	// 	);
-	// 	setFeatured(featuredProjects);
-	// };
 
 	return (
 		<div className="row justify-content-center mx-0 mt-5 px-md-5 w-100">
