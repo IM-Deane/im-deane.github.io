@@ -20,11 +20,11 @@ function Projects() {
 						for safety and precision, we are committed to producing quality
 						facilities that are on time and under budget.
 					</p>
-					<p className="lead">
+					<p className="lead mt-3">
 						Click on any project below to learn more about its details.
 					</p>
 				</section>
-				<div className="row justify-content-center mx-0 mt-5 px-md-5">
+				<div className="row justify-content-center mx-0 mt-2 px-md-5">
 					<article className="col-9 col-sm">
 						<section id="project-container" className="px-0 mx-0 w-100">
 							<section

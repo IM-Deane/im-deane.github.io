@@ -344,7 +344,7 @@ function App() {
 							<div className="container pt-2">
 								<hr className="text-white" />
 								<p className="text-accent-tca py-3">
-									&copy; 2021 TCA Developments Ltd |
+									&copy; 2021 TCA Developments & Consultants Ltd |
 									<a
 										className="alchemized text-white ms-1"
 										href="http://alchemizedsoftware.com/"

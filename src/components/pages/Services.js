@@ -534,7 +534,7 @@ function Services() {
 									id="hvacSection"
 									className="featurette-heading text-primary-alt"
 								>
-									Mechanical <span className="text-muted">&</span> HVAC Services
+									Mechanical Services
 									<i className="fas fa-snowflake text-primary ms-2"></i>
 								</h2>
 								<p className="lead lh-base pt-4">
@@ -601,7 +601,7 @@ function Services() {
 								<div className="modal-content">
 									<div className="modal-header">
 										<h5 className="modal-title" id="hvacModalLabel">
-											Mechanical & HVAC Gallery
+											Mechanical Gallery
 										</h5>
 										<button
 											type="button"

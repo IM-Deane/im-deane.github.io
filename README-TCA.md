@@ -7,9 +7,9 @@ company that specializes in commerical construction and rennovation.
 
 **Author:** Tristan Deane <email>contact.alchemizedsoftware.com</email>
 
-URL: https://im-deane.github.io/
+URL: https://www.tcadevelopments.com/
 
-Current Version: **1.0**
+Current Version: **1.0.1**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,14 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.1:
+
+Removed the project gallery controls per the client's request. As the site only
+has 10 projects, we have deactivated the controls for now. Once we've added 20+
+projects we will activate them.
+
+Updated the site home page to reflect the newly secured site.
 
 ## Version 1.0.0:
 

@@ -59,7 +59,7 @@ const ProjectData = [
 		images: [...Images.finning.images],
 		thumbnail: "",
 		contract: "Stipulated Price",
-		category: 2,
+		category: 0,
 		isFeatured: false,
 	},
 	{

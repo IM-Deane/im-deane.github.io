@@ -25,11 +25,12 @@ const Gallery = () => {
 
 	return (
 		<div className="row justify-content-center mx-0 mt-5 px-md-5 w-100">
-			<section className="row justify-content-center pb-4">
+			{/* Hid the filter controls until we have more projects */}
+			{/* <section className="row justify-content-center pb-4">
 				<div className="col col-sm text-center">
 					<Categories filterProjects={filterProjects} categories={categories} />
 				</div>
-			</section>
+			</section> */}
 
 			<div className="row row-cols-sm-1 row-cols-md-2 row-cols-xl-3 pt-3">
 				{projects.map((project) => (
