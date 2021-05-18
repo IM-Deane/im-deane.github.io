@@ -191,7 +191,7 @@ function Services() {
 											<div className="modal-content">
 												<div className="modal-header">
 													<h5 className="modal-title" id="officeModalLabel">
-														Office Services Gallery
+														Office Gallery
 													</h5>
 													<button
 														type="button"
@@ -396,7 +396,7 @@ function Services() {
 									<div className="modal-content">
 										<div className="modal-header">
 											<h5 className="modal-title" id="electricalModalLabel">
-												Electrical Services Gallery
+												Electrical Gallery
 											</h5>
 											<button
 												type="button"
@@ -599,7 +599,7 @@ function Services() {
 								<div className="modal-content">
 									<div className="modal-header">
 										<h5 className="modal-title" id="hvacModalLabel">
-											Mechanical & HVAC Services Gallery
+											Mechanical & HVAC Gallery
 										</h5>
 										<button
 											type="button"
@@ -814,7 +814,7 @@ function Services() {
 								<div className="modal-content">
 									<div className="modal-header">
 										<h5 className="modal-title" id="concreteModalLabel">
-											Concrete Services Gallery
+											Concrete Gallery
 										</h5>
 										<button
 											type="button"
