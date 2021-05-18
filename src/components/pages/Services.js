@@ -12,6 +12,7 @@ function Services() {
 			<header className="row site-banner pt-5 mx-0">
 				<h1 className="display-6 fw-bold p-4">OUR SERVICES</h1>
 			</header>
+
 			<article className="container-fluid">
 				<header className="row m-4 py-5 text-lg-center">
 					<h2 className="h1 pb-3 lh-base text-primary-alt text-center">
@@ -151,20 +152,157 @@ function Services() {
 										</div>
 									</div>
 
-									<div
+									<figure
 										className="
 												img-container
 												col-md-4
 												px-0
 												d-flex
+												flex-column
 												justify-content-center
 											"
 									>
 										<img
-											src={`./assets/services/skyview-lobby.jpg`}
+											src={`./assets/services/offices/skyview-lobby.jpg`}
 											className="img-fluid"
 											alt="Skyview lobby"
 										/>
+										<figcaption className="text-center mt-2">
+											<button
+												type="button"
+												className="btn btn-outline-primary"
+												data-bs-toggle="modal"
+												data-bs-target="#officeModal"
+												data-bs-whatever="@mdo"
+											>
+												View more of our work
+											</button>
+										</figcaption>
+									</figure>
+									{/* MODAL SECTION */}
+									<div
+										className="modal fade"
+										id="officeModal"
+										tabIndex="-1"
+										aria-labelledby="officeModalLabel"
+										aria-hidden="true"
+									>
+										<div className="modal-dialog">
+											<div className="modal-content">
+												<div className="modal-header">
+													<h5 className="modal-title" id="officeModalLabel">
+														Office Services Gallery
+													</h5>
+													<button
+														type="button"
+														className="btn-close"
+														data-bs-dismiss="modal"
+														aria-label="Close"
+													></button>
+												</div>
+												<div className="modal-body">
+													<div className="container-fluid">
+														<div
+															id="officeIndicators"
+															class="carousel slide"
+															data-bs-ride="carousel"
+														>
+															<div class="carousel-indicators">
+																<button
+																	type="button"
+																	data-bs-target="#officeIndicators"
+																	data-bs-slide-to="0"
+																	className="active"
+																	aria-current="true"
+																	aria-label="Slide 1"
+																></button>
+																<button
+																	type="button"
+																	data-bs-target="#officeIndicators"
+																	data-bs-slide-to="1"
+																	aria-label="Slide 2"
+																></button>
+																<button
+																	type="button"
+																	data-bs-target="#officeIndicators"
+																	data-bs-slide-to="2"
+																	aria-label="Slide 3"
+																></button>
+																<button
+																	type="button"
+																	data-bs-target="#officeIndicators"
+																	data-bs-slide-to="3"
+																	aria-label="Slide 4"
+																></button>
+															</div>
+															<div class="carousel-inner">
+																<div class="carousel-item active border-0">
+																	<img
+																		src={`./assets/services/offices/structube-bathroom.jpg`}
+																		className="img-fluid"
+																		alt="Structube bathroom."
+																	/>
+																</div>
+																<div class="carousel-item border-0">
+																	<img
+																		src={`./assets/services/offices/structube-kitchen.jpg`}
+																		className="img-fluid"
+																		alt="Structube Kitchen"
+																	/>
+																</div>
+																<div class="carousel-item border-0">
+																	<img
+																		src={`./assets/services/offices/office-interior.jpg`}
+																		className="img-fluid"
+																		alt="Structube shipping office"
+																	/>
+																</div>
+																<div class="carousel-item border-0">
+																	<img
+																		src={`./assets/services/offices/bonaventure-lobby.jpg`}
+																		className="img-fluid"
+																		alt="Structube shipping office"
+																	/>
+																</div>
+															</div>
+															<button
+																class="carousel-control-prev"
+																type="button"
+																data-bs-target="#officeIndicators"
+																data-bs-slide="prev"
+															>
+																<span
+																	class="carousel-control-prev-icon"
+																	aria-hidden="true"
+																></span>
+																<span class="visually-hidden">Previous</span>
+															</button>
+															<button
+																class="carousel-control-next"
+																type="button"
+																data-bs-target="#officeIndicators"
+																data-bs-slide="next"
+															>
+																<span
+																	class="carousel-control-next-icon"
+																	aria-hidden="true"
+																></span>
+																<span class="visually-hidden">Next</span>
+															</button>
+														</div>
+													</div>
+												</div>
+												<div className="modal-footer">
+													<button
+														type="button"
+														className="btn btn-danger"
+														data-bs-dismiss="modal"
+													>
+														Close
+													</button>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -228,12 +366,161 @@ function Services() {
 									</div>
 								</div>
 							</div>
-							<div className="col-md-5 order-md-1">
+							<figure className="col-md-5 order-md-1">
 								<img
 									src={`./assets/services/structube-electrical.jpg`}
 									className="img-fluid"
 									alt="Electrical box in Structube warehouse"
 								/>
+								<figcaption className="text-center mt-2">
+									<button
+										type="button"
+										className="btn btn-outline-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#electricalModal"
+										data-bs-whatever="@mdo"
+									>
+										View more of our work
+									</button>
+								</figcaption>
+							</figure>
+							{/* MODAL SECTION */}
+							<div
+								className="modal fade"
+								id="electricalModal"
+								tabIndex="-1"
+								aria-labelledby="electricalModalLabel"
+								aria-hidden="true"
+							>
+								<div className="modal-dialog">
+									<div className="modal-content">
+										<div className="modal-header">
+											<h5 className="modal-title" id="electricalModalLabel">
+												Electrical Services Gallery
+											</h5>
+											<button
+												type="button"
+												className="btn-close"
+												data-bs-dismiss="modal"
+												aria-label="Close"
+											></button>
+										</div>
+										<div className="modal-body">
+											<div className="container-fluid">
+												<div
+													id="electricalIndicators"
+													class="carousel slide"
+													data-bs-ride="carousel"
+												>
+													<div class="carousel-indicators">
+														<button
+															type="button"
+															data-bs-target="#electricalIndicators"
+															data-bs-slide-to="0"
+															class="active"
+															aria-current="true"
+															aria-label="Slide 1"
+														></button>
+														<button
+															type="button"
+															data-bs-target="#electricalIndicators"
+															data-bs-slide-to="1"
+															aria-label="Slide 2"
+														></button>
+														<button
+															type="button"
+															data-bs-target="#electricalIndicators"
+															data-bs-slide-to="2"
+															aria-label="Slide 3"
+														></button>
+														<button
+															type="button"
+															data-bs-target="#electricalIndicators"
+															data-bs-slide-to="3"
+															aria-label="Slide 4"
+														></button>
+														<button
+															type="button"
+															data-bs-target="#electricalIndicators"
+															data-bs-slide-to="4"
+															aria-label="Slide 5"
+														></button>
+													</div>
+													<div class="carousel-inner">
+														<div class="carousel-item active border-0">
+															<img
+																src={`./assets/services/electrical/electrical-box.jpg`}
+																className="img-fluid"
+																alt="Electrical box."
+															/>
+														</div>
+														<div class="carousel-item border-0">
+															<img
+																src={`./assets/services/electrical/electrical-box2.jpg`}
+																className="img-fluid"
+																alt="Electrical box"
+															/>
+														</div>
+														<div class="carousel-item border-0">
+															<img
+																src={`./assets/services/electrical/electrical-box-3.jpg`}
+																className="img-fluid"
+																alt="Electrical box"
+															/>
+														</div>
+														<div class="carousel-item border-0">
+															<img
+																src={`./assets/services/electrical/electrical-tall.jpg`}
+																className="img-fluid"
+																alt="Electrical box"
+															/>
+														</div>
+														<div class="carousel-item border-0">
+															<img
+																src={`./assets/services/electrical/fire-detection.jpg`}
+																className="img-fluid"
+																alt="Fire detection system"
+															/>
+														</div>
+													</div>
+													<button
+														class="carousel-control-prev"
+														type="button"
+														data-bs-target="#electricalIndicators"
+														data-bs-slide="prev"
+													>
+														<span
+															class="carousel-control-prev-icon"
+															aria-hidden="true"
+														></span>
+														<span class="visually-hidden">Previous</span>
+													</button>
+													<button
+														class="carousel-control-next"
+														type="button"
+														data-bs-target="#electricalIndicators"
+														data-bs-slide="next"
+													>
+														<span
+															class="carousel-control-next-icon"
+															aria-hidden="true"
+														></span>
+														<span class="visually-hidden">Next</span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div className="modal-footer">
+											<button
+												type="button"
+												className="btn btn-danger"
+												data-bs-dismiss="modal"
+											>
+												Close
+											</button>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</section>
@@ -281,25 +568,185 @@ function Services() {
 									</div>
 								</div>
 							</div>
-							<div className="col-md-5">
+							<figure className="col-md-5">
 								<img
 									src={`./assets/services/finning-hvac2.jpg`}
 									className="img-fluid"
 									alt="Finning Cat hvac system"
 								/>
+								<figcaption className="text-center mt-2">
+									<button
+										type="button"
+										className="btn btn-outline-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#hvacModal"
+										data-bs-whatever="@mdo"
+									>
+										View more of our work
+									</button>
+								</figcaption>
+							</figure>
+						</div>
+						{/* MODAL SECTION */}
+						<div
+							className="modal fade"
+							id="hvacModal"
+							tabIndex="-1"
+							aria-labelledby="hvacModalLabel"
+							aria-hidden="true"
+						>
+							<div className="modal-dialog">
+								<div className="modal-content">
+									<div className="modal-header">
+										<h5 className="modal-title" id="hvacModalLabel">
+											Mechanical & HVAC Services Gallery
+										</h5>
+										<button
+											type="button"
+											className="btn-close"
+											data-bs-dismiss="modal"
+											aria-label="Close"
+										></button>
+									</div>
+									<div className="modal-body">
+										<div className="container-fluid">
+											<div
+												id="mechanicalIndicators"
+												class="carousel slide"
+												data-bs-ride="carousel"
+											>
+												<div class="carousel-indicators">
+													<button
+														type="button"
+														data-bs-target="#mechanicalIndicators"
+														data-bs-slide-to="0"
+														class="active"
+														aria-current="true"
+														aria-label="Slide 1"
+													></button>
+													<button
+														type="button"
+														data-bs-target="#mechanicalIndicators"
+														data-bs-slide-to="1"
+														aria-label="Slide 2"
+													></button>
+													<button
+														type="button"
+														data-bs-target="#mechanicalIndicators"
+														data-bs-slide-to="2"
+														aria-label="Slide 3"
+													></button>
+													<button
+														type="button"
+														data-bs-target="#mechanicalIndicators"
+														data-bs-slide-to="3"
+														aria-label="Slide 4"
+													></button>
+													<button
+														type="button"
+														data-bs-target="#mechanicalIndicators"
+														data-bs-slide-to="4"
+														aria-label="Slide 5"
+													></button>
+												</div>
+												<div class="carousel-inner">
+													<div class="carousel-item active border-0">
+														<img
+															src={`./assets/services/mech-hvac/finning-controls.jpg`}
+															className="img-fluid"
+															alt="Finning control interface."
+														/>
+													</div>
+													<div class="carousel-item border-0">
+														<img
+															src={`./assets/services/mech-hvac/finning-scc2.jpg`}
+															className="img-fluid"
+															alt="Finning self contained controls."
+														/>
+													</div>
+													<div class="carousel-item border-0">
+														<img
+															src={`./assets/services/mech-hvac/structube-hvac.jpg`}
+															className="img-fluid"
+															alt="Structube shipping office"
+														/>
+													</div>
+													<div class="carousel-item border-0">
+														<img
+															src={`./assets/services/mech-hvac/trane-hvac.jpg`}
+															className="img-fluid"
+															alt="Trane interior HVAC system."
+														/>
+													</div>
+													<div class="carousel-item border-0">
+														<img
+															src={`./assets/services/mech-hvac/trane-interior.jpg`}
+															className="img-fluid"
+															alt="Trane interior HVAC system."
+														/>
+													</div>
+												</div>
+												<button
+													class="carousel-control-prev"
+													type="button"
+													data-bs-target="#mechanicalIndicators"
+													data-bs-slide="prev"
+												>
+													<span
+														class="carousel-control-prev-icon"
+														aria-hidden="true"
+													></span>
+													<span class="visually-hidden">Previous</span>
+												</button>
+												<button
+													class="carousel-control-next"
+													type="button"
+													data-bs-target="#mechanicalIndicators"
+													data-bs-slide="next"
+												>
+													<span
+														class="carousel-control-next-icon"
+														aria-hidden="true"
+													></span>
+													<span class="visually-hidden">Next</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div className="modal-footer">
+										<button
+											type="button"
+											className="btn btn-danger"
+											data-bs-dismiss="modal"
+										>
+											Close
+										</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</section>
 					<section className="sections mx-0">
 						<hr className="featurette-divider mx-5" />
 						<div className="row featurette my-5 px-5">
-							<div className="col-md-5 pb-3">
+							<figure className="col-md-5 pb-3">
 								<img
 									src={`./assets/concrete-main.jpg`}
 									className="img-fluid"
 									alt="Concrete being set."
 								/>
-							</div>
+								<figcaption className="text-center mt-2">
+									<button
+										type="button"
+										className="btn btn-outline-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#concreteModal"
+										data-bs-whatever="@mdo"
+									>
+										View more of our work
+									</button>
+								</figcaption>
+							</figure>
 							<div className="col-md-7">
 								<h2
 									id="concreteSection"
@@ -351,6 +798,118 @@ function Services() {
 											Get started today
 											<i className="fa fa-chevron-right ms-2"></i>
 										</HashLink>
+									</div>
+								</div>
+							</div>
+						</div>
+						{/* MODAL SECTION */}
+						<div
+							className="modal fade"
+							id="concreteModal"
+							tabIndex="-1"
+							aria-labelledby="concreteModalLabel"
+							aria-hidden="true"
+						>
+							<div className="modal-dialog">
+								<div className="modal-content">
+									<div className="modal-header">
+										<h5 className="modal-title" id="concreteModalLabel">
+											Concrete Services Gallery
+										</h5>
+										<button
+											type="button"
+											className="btn-close"
+											data-bs-dismiss="modal"
+											aria-label="Close"
+										></button>
+									</div>
+									<div className="modal-body">
+										<div className="container-fluid">
+											<div
+												id="concreteIndicators"
+												class="carousel slide"
+												data-bs-ride="carousel"
+											>
+												<div class="carousel-indicators">
+													<button
+														type="button"
+														data-bs-target="#concreteIndicators"
+														data-bs-slide-to="0"
+														class="active"
+														aria-current="true"
+														aria-label="Slide 1"
+													></button>
+													<button
+														type="button"
+														data-bs-target="#concreteIndicators"
+														data-bs-slide-to="1"
+														aria-label="Slide 2"
+													></button>
+													<button
+														type="button"
+														data-bs-target="#concreteIndicators"
+														data-bs-slide-to="2"
+														aria-label="Slide 3"
+													></button>
+												</div>
+												<div class="carousel-inner">
+													<div class="carousel-item active border-0">
+														<img
+															src={`./assets/services/concrete/concrete-slabs.jpg`}
+															className="img-fluid"
+															alt="Large concrete slabs"
+														/>
+													</div>
+													<div class="carousel-item border-0">
+														<img
+															src={`./assets/services/concrete/concrete-slabs2.jpg`}
+															className="img-fluid"
+															alt="Small concrete slabs"
+														/>
+													</div>
+													<div class="carousel-item border-0">
+														<img
+															src={`./assets/services/concrete/concrete-wall.jpg`}
+															className="img-fluid"
+															alt="Concrete wall"
+														/>
+													</div>
+												</div>
+												<button
+													class="carousel-control-prev"
+													type="button"
+													data-bs-target="#concreteIndicators"
+													data-bs-slide="prev"
+												>
+													<span
+														class="carousel-control-prev-icon"
+														aria-hidden="true"
+													></span>
+													<span class="visually-hidden">Previous</span>
+												</button>
+												<button
+													class="carousel-control-next"
+													type="button"
+													data-bs-target="#concreteIndicators"
+													data-bs-slide="next"
+												>
+													<span
+														class="carousel-control-next-icon"
+														aria-hidden="true"
+													></span>
+													<span class="visually-hidden">Next</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div className="modal-footer">
+										<button
+											type="button"
+											className="btn btn-danger"
+											data-bs-dismiss="modal"
+										>
+											Close
+										</button>
 									</div>
 								</div>
 							</div>
