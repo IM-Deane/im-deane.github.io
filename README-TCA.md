@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 URL: https://www.tcadevelopments.com/
 
-Current Version: **1.0.3**
+Current Version: **1.0.4**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,16 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.4:
+
+Refactored the project cards to address the alignment issues.
+
+I converted the project images from <img> tags to background images contained
+within a div. This seems to have fixed the alignment issues that have plagued
+these cards.
+
+In a future update I may refactor the template page carousel as well.
 
 ## Version 1.0.3:
 

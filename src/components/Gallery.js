@@ -32,7 +32,7 @@ const Gallery = () => {
 				</div>
 			</section> */}
 
-			<div className="row row-cols-sm-1 row-cols-md-2 row-cols-xl-3 pt-3">
+			<div className="row row-cols-md-2 row-cols-xl-3 pt-3 gy-2 gx-3">
 				{projects.map((project) => (
 					<Project key={project.id} project={project} />
 				))}

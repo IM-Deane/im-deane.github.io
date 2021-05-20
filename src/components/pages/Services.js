@@ -963,7 +963,6 @@ function Services() {
 			<article
 				className="
 						row
-						g-1
 						justify-content-center
 						align-items-center
 						text-center
@@ -979,7 +978,7 @@ function Services() {
 				</header>
 				<section
 					id="serviceProjects"
-					className="row row-cols-md-2 row-cols-lg-4"
+					className="row row-cols-md-2 row-cols-lg-4 g-2"
 				>
 					<FeaturedProjects />
 				</section>

@@ -16,10 +16,12 @@
 		text-align: justify;
 	}
 
-	img {
-		object-fit: contain;
+	.project-image {
 		min-width: 100%;
-		height: auto;
+		height: 200px;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
 	.project-title,
@@ -45,5 +47,3 @@
 		background-color: $primary;
 	}
 }
-
-// Project Carousel

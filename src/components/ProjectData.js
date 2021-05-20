@@ -132,7 +132,7 @@ const ProjectData = [
 		description:
 			"TCA Developments can perform a variety of masonry services. Please contact us for an estimate.",
 		images: [...Images.masonry.images],
-		thumbnail: Images.findThumbnail(Images.bonaventure.images[1]),
+		thumbnail: Images.findThumbnail(Images.masonry.images[1]),
 		category: 1,
 		isFeatured: false,
 	},

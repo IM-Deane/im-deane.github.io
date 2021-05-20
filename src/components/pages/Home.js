@@ -552,11 +552,12 @@ function Home() {
 							</div>
 							<div
 								className="
-										row row-cols-sm row-cols-md-2 row-cols-lg-4
+										row row-cols-md-2 row-cols-lg-4
 										justify-content-center
+										justify-content-lg-start
 										text-center
-										g-2
 										align-items-center
+										g-2
 									"
 								id="featuredProjects"
 							>
