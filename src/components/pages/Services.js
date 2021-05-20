@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
+import { FaChevronRight } from "react-icons/fa";
 import FeaturedProjects from "../FeaturedProjects";
 
 function Services() {
@@ -145,8 +146,10 @@ function Services() {
 													to="/contact#contactForm"
 													className="btn btn-primary text-uppercase"
 												>
-													Get started today
-													<i className="fa fa-chevron-right ms-2"></i>
+													<span className="d-flex align-items-center">
+														Get started today{" "}
+														<FaChevronRight className="ms-2" />
+													</span>
 												</HashLink>
 											</div>
 										</div>
@@ -362,8 +365,9 @@ function Services() {
 											to="/contact#contactForm"
 											className="btn btn-primary text-uppercase"
 										>
-											Get started today
-											<i className="fa fa-chevron-right ms-2"></i>
+											<span className="d-flex align-items-center">
+												Get started today <FaChevronRight className="ms-2" />
+											</span>
 										</HashLink>
 									</div>
 								</div>
@@ -564,8 +568,9 @@ function Services() {
 											to="/contact#contactForm"
 											className="btn btn-primary text-uppercase"
 										>
-											Get started today
-											<i className="fa fa-chevron-right ms-2"></i>
+											<span className="d-flex align-items-center">
+												Get started today <FaChevronRight className="ms-2" />
+											</span>
 										</HashLink>
 									</div>
 								</div>
@@ -797,8 +802,9 @@ function Services() {
 											to="/contact#contactForm"
 											className="btn btn-primary text-uppercase"
 										>
-											Get started today
-											<i className="fa fa-chevron-right ms-2"></i>
+											<span className="d-flex align-items-center">
+												Get started today <FaChevronRight className="ms-2" />
+											</span>
 										</HashLink>
 									</div>
 								</div>
@@ -942,7 +948,9 @@ function Services() {
 											to="/contact#contactForm"
 											className="btn btn-primary text-uppercase"
 										>
-											Let's Chat <i className="fa fa-chevron-right ms-2"></i>
+											<span className="d-flex align-items-center">
+												Let's Chat <FaChevronRight className="ms-2" />
+											</span>
 										</HashLink>
 									</div>
 								</div>

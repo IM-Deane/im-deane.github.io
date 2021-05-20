@@ -7,12 +7,13 @@ function Project({ project }) {
 	const { id, name, images, description, thumbnail } = project;
 
 	return (
-		<article key={id} className="col-sm">
+		<article key={id} className="col-sm col-sm-12 col-md-6">
 			<div className="project-card border-1 border-primary-alt mb-3">
 				<HashLink className="project-links" to={`/projects/${id}#top`}>
 					<img
 						src={thumbnail !== "" ? thumbnail : images[0]}
 						className="img-fluid"
+						style={{ width: "630px" }}
 						alt={description}
 					/>
 					<div className="project-body">
