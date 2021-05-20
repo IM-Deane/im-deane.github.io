@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 URL: https://www.tcadevelopments.com/
 
-Current Version: **1.0.2**
+Current Version: **1.0.3**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,13 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.3:
+
+Refactored the navbar, footer, and mobile navbar into separate components.
+
+This new layout has made the App.js file much easier to navigate and also makes
+the application compliant with the general styling of React apps.
 
 ## Version 1.0.2:
 
