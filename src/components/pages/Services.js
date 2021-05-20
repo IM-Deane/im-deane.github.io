@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
+
+import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronRight, FaTools, FaBolt, FaSnowflake } from "react-icons/fa";
+import { GiConcreteBag } from "react-icons/gi";
 import FeaturedProjects from "../FeaturedProjects";
 
 function Services() {
@@ -56,7 +59,7 @@ function Services() {
 							free-standing building, TCA is the general contractor for you.
 						</p>
 						<p className="lead lh-base fs-5 pt-4">
-							Please <a href="./contact.html">contact us</a> if you have any
+							Please <Link to="./contact.html">contact us</Link> if you have any
 							questions or potential projects in mind.
 						</p>
 						<p className="lead fs-5">
@@ -101,11 +104,11 @@ function Services() {
 								</p>
 								<div className="row mx-0">
 									<div className="col-lg-8 col-sm py-3 bg-white">
-										<h3 className="h3 mb-5 text-center">
-											<span className="me-1">
-												<i className="fas fa-tools text-primary"></i>
+										<h3 className="h3 mb-5 d-flex justify-content-center">
+											<span className="d-flex align-items-center">
+												<FaTools className="text-primary me-2" />
+												Our Specialties
 											</span>
-											Our Specialties
 										</h3>
 										<ul className="row row-cols-md-2 list-group-flush fw-bold ps-0">
 											<li className="list-group-item col-sm">Carpentry</li>
@@ -319,13 +322,12 @@ function Services() {
 							<div className="col-md-7 order-md-2 text-center">
 								<h2
 									id="electricalSection"
-									className="featurette-heading text-primary-alt"
+									className="featurette-heading text-primary-alt d-flex justify-content-center"
 								>
-									Electrical Services
-									<i
-										className="fa fa-bolt text-primary ms-3"
-										aria-hidden="true"
-									></i>
+									<span className="d-flex align-items-center">
+										Electrical Services
+										<FaBolt className="text-primary ms-3" />
+									</span>
 								</h2>
 								<p className="lead lh-base pt-4">
 									We believe that exceptional work is a result of focusing on
@@ -536,10 +538,12 @@ function Services() {
 							<div className="col-md-7">
 								<h2
 									id="hvacSection"
-									className="featurette-heading text-primary-alt"
+									className="featurette-heading text-primary-alt d-flex align-items-center"
 								>
-									Mechanical Services
-									<i className="fas fa-snowflake text-primary ms-2"></i>
+									<span>
+										Mechanical Services{" "}
+										<FaSnowflake className="ms-2 text-primary mb-md-2" />
+									</span>
 								</h2>
 								<p className="lead lh-base pt-4">
 									TCA Developments is committed to preserving your investment.
@@ -757,12 +761,14 @@ function Services() {
 							<div className="col-md-7">
 								<h2
 									id="concreteSection"
-									className="featurette-heading text-primary-alt"
+									className="featurette-heading text-primary-alt d-flex justify-content-center align-items-center"
 								>
-									Concrete Services
-									<i className="fas fa-road text-primary ms-3"></i>
+									<span>
+										Concrete Services{" "}
+										<GiConcreteBag className="text-primary ms-3" />
+									</span>
 								</h2>
-								<p className="lead lh-base pt-4">
+								<p className="lead lh-base pt-4 ps-lg-5">
 									Over the past 30 years, we have dedicated ourselves to
 									providing
 									<strong className="fw-bold text-primary-alt">
