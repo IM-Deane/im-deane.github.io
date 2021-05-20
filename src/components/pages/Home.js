@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
+import { FaChevronRight } from "react-icons/fa";
 import FeaturedProjects from "../FeaturedProjects";
 import ContactForm from "../ContactForm";
 
@@ -33,7 +34,10 @@ function Home() {
 							<div className="carousel-item active border-0">
 								<img
 									className="img-fluid"
-									src="../assets/hero-city-development.jpg"
+									srcSet="../assets/hero-city/hero-city-1920w.jpg 1920w,
+									../assets/hero-city/hero-city-630w.jpg 630w,
+									../assets/hero-city/hero-city-320w.jpg 320w"
+									src="../assets/hero-city/hero-city-fallback.jpg"
 									alt="Background of Skyview dental clinic exterior"
 								/>
 								<div className="container mx-0 px-0 w-100">
@@ -85,7 +89,9 @@ function Home() {
 											className="hero-btn btn-primary fs-6 mt-3"
 											to="/services"
 										>
-											Learn more <i className="fa fa-chevron-right ms-2"></i>
+											<span className="d-flex align-items-center">
+												Learn more <FaChevronRight className="ms-2" />
+											</span>
 										</Link>
 									</div>
 								</div>
@@ -110,7 +116,9 @@ function Home() {
 											className="hero-btn btn-primary fs-6 mt-3"
 											to="/projects"
 										>
-											Learn more <i className="fa fa-chevron-right ms-2"></i>
+											<span className="d-flex align-items-center">
+												Learn more <FaChevronRight className="ms-2" />
+											</span>
 										</Link>
 									</div>
 								</div>
@@ -505,7 +513,9 @@ function Home() {
 								to="/services#top"
 								role="button"
 							>
-								View our services <i className="fa fa-chevron-right ms-2"></i>
+								<span className="d-flex align-items-center">
+									View our services <FaChevronRight className="ms-2" />
+								</span>
 							</HashLink>
 						</div>
 					</div>
@@ -559,7 +569,9 @@ function Home() {
 										to="/projects#top"
 										role="button"
 									>
-										Browse gallery <i className="fa fa-chevron-right ms-2"></i>
+										<span className="d-flex align-items-center">
+											Browse gallery <FaChevronRight className="ms-2" />
+										</span>
 									</HashLink>
 								</div>
 							</div>
@@ -568,6 +580,7 @@ function Home() {
 				</article>
 			</section>
 			{/* <!-- Testimonials --> */}
+			{/* Remember to import FONT AWESOME STAR ICON WHEN IMPLEMENTING THIS SECTION */}
 			{/* <!-- <section className="row">
 					<section className="container py-5 text-center bg-light">
 						<div className="sections">

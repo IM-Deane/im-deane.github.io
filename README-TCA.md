@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 URL: https://www.tcadevelopments.com/
 
-Current Version: **1.0.1**
+Current Version: **1.0.2**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,31 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.2:
+
+This update is concerned with optimizing the site. After performing a Google
+page insight test, I found that the images were drastically effecting the page
+load speed on mobile devices.
+
+To address this issue, I will be implementing responsive images for the hero
+carousel as well as any other large static images on the site.
+
+Major:
+
+- Modified the site's scss and css by moving the styling folders to the src
+  directory. It turns out I didn't import the scss file and so the site was
+  running off of an old css stylesheet! Ooops :(
+  - Adding to the above, I have stopped using the live sass compiler as React
+    allows you to import the .scss file as a module. Success!
+
+Minor:
+
+- Fixed a bug where the form message input was not clearing after submission.
+- Added dimensions to the maple leaf icon
+- Updated the Font awesome icons to rely on an npm package. This will remove the
+  need to call a CDN.
+- Adjusted styling of various site content
 
 ## Version 1.0.1:
 

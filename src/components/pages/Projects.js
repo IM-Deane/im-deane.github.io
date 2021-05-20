@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
+import { FaChevronRight } from "react-icons/fa";
 // Project Gallery
 import Gallery from "../Gallery";
 
@@ -107,7 +108,9 @@ function Projects() {
 						to="/contact#contactForm"
 						className="btn btn-outline-primary text-uppercase"
 					>
-						Request free estimate <i className="fa fa-chevron-right ms-2"></i>
+						<span className="d-flex align-items-center">
+							Request free estimate <FaChevronRight className="ms-2" />
+						</span>
 					</HashLink>
 				</div>
 			</article>

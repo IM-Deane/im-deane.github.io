@@ -1,5 +1,6 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
+import { FaChevronRight } from "react-icons/fa";
 
 // Create a project component
 function Project({ project }) {
@@ -17,8 +18,9 @@ function Project({ project }) {
 					<div className="project-body">
 						<h2 className="project-title h4">{name}</h2>
 						<h3 className="project-text pt-3 fs-5">
-							View Project
-							<i className="fa fa-chevron-right ps-1"></i>
+							<span className="d-flex align-items-center">
+								View Project <FaChevronRight className="ps-2" />
+							</span>
 						</h3>
 					</div>
 				</HashLink>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaChevronRight } from "react-icons/fa";
 import { useForm } from "@formspree/react";
 
 function ContactForm() {
@@ -6,7 +7,7 @@ function ContactForm() {
 	const [email, setEmail] = useState("");
 	const [phone, setPhone] = useState("");
 	const [subject, setSubject] = useState("");
-	const [inputMessage, setInputMessage] = useState("");
+	const [message, setMessage] = useState("");
 
 	const [state, handleSubmit] = useForm("xzbydlkw");
 
@@ -36,7 +37,7 @@ function ContactForm() {
 		setEmail("");
 		setPhone("");
 		setSubject("");
-		setInputMessage("");
+		setMessage("");
 	};
 
 	return (
@@ -185,13 +186,13 @@ function ContactForm() {
 						<div className="col">
 							<textarea
 								className="form-control form-control-lg"
-								id="inputMessage"
-								name="inputMessage"
+								id="message"
+								name="message"
 								placeholder="Your message"
 								maxLength="500"
 								required
-								value={inputMessage}
-								onChange={(e) => setInputMessage(e.target.value)}
+								value={message}
+								onChange={(e) => setMessage(e.target.value)}
 							></textarea>
 						</div>
 					</div>
@@ -204,7 +205,9 @@ function ContactForm() {
 							disabled={state.submitting}
 							// onClick={handleSubmit}
 						>
-							Send <i className="fa fa-chevron-right"></i>
+							<span className="d-flex align-items-center">
+								Send <FaChevronRight className="ms-1" />
+							</span>
 						</button>
 					</div>
 				</fieldset>

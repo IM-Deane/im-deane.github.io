@@ -8,6 +8,8 @@ import {
 	Switch,
 } from "react-router-dom";
 
+import "../scss/app.scss";
+
 // Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -148,6 +150,9 @@ function App() {
 					</nav>
 				</header>
 				<Switch>
+					<Route exact path="/">
+						<Home />
+					</Route>
 					<Route path="/about">
 						<About />
 					</Route>
@@ -166,14 +171,6 @@ function App() {
 					<Route exact path="/contact">
 						<Contact />
 					</Route>
-					{/* Handle Individual project paths */}
-					{/* <Route
-						exact
-						path="/:id"
-						component={Template}
-						childern={<Template />}
-					/> */}
-
 					<Route exact path="/home/:id" childern={<Template />}>
 						<Template />
 					</Route>
@@ -184,9 +181,7 @@ function App() {
 					<Route exact path={"/projects/:id"} children={<Template />}>
 						<Template />
 					</Route>
-					<Route exact path="/">
-						<Home />
-					</Route>
+
 					<Route path="*">
 						<Error />
 					</Route>
