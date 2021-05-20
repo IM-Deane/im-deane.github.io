@@ -1,8 +1,11 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
-
-// Import font awesome fire icon for alchemized software
-// Import instagram, facebook, and twitter social icons
+import {
+	FaFire,
+	FaFacebookSquare,
+	FaInstagramSquare,
+	FaTwitterSquare,
+} from "react-icons/fa";
 
 function Footer() {
 	return (
@@ -43,27 +46,29 @@ function Footer() {
 					<div className="col">
 						<h5 className="text-white-tca pb-2">CONNECT WITH US</h5>
 						<a href="#instagram">
-							<i className="fab fa-instagram-square social"></i>
+							<FaInstagramSquare className="social" />
 						</a>
 						<a href="#facebook">
-							<i className="fab fa-facebook-square social mx-2"></i>
+							<FaFacebookSquare className="social mx-2" />
 						</a>
 						<a href="#twitter">
-							<i className="fab fa-twitter-square social"></i>
+							<FaTwitterSquare className="social" />
 						</a>
 					</div>
 				</section>
 				<section className="justify-content-center pb-3 w-100">
 					<div className="container pt-2">
 						<hr className="text-white" />
-						<p className="text-accent-tca py-3">
+						<p className="text-accent-tca py-3 d-flex justify-content-center align-items-center">
 							&copy; 2021 TCA Developments & Consultants Ltd |
 							<a
 								className="alchemized text-white ms-1"
 								href="http://alchemizedsoftware.com/"
 							>
-								Crafted by Alchemized Software
-								<i className="fa fa-fire text-accent-blue-tca ms-1"></i>
+								<span className="d-flex align-items-center">
+									Crafted by Alchemized Software
+									<FaFire className="text-accent-blue-tca ms-1" />
+								</span>
 							</a>
 						</p>
 					</div>
