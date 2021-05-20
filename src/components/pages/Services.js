@@ -104,7 +104,7 @@ function Services() {
 								</p>
 								<div className="row mx-0">
 									<div className="col-lg-8 col-sm py-3 bg-white">
-										<h3 className="h3 mb-5 d-flex justify-content-center">
+										<h3 className="h3 mb-5 d-flex justify-content-center text-secondary">
 											<span className="d-flex align-items-center">
 												<FaTools className="text-primary me-2" />
 												Our Specialties
@@ -196,7 +196,10 @@ function Services() {
 										<div className="modal-dialog">
 											<div className="modal-content">
 												<div className="modal-header">
-													<h5 className="modal-title" id="officeModalLabel">
+													<h5
+														className="modal-title text-primary-alt"
+														id="officeModalLabel"
+													>
 														Office Gallery
 													</h5>
 													<button
@@ -403,7 +406,10 @@ function Services() {
 								<div className="modal-dialog">
 									<div className="modal-content">
 										<div className="modal-header">
-											<h5 className="modal-title" id="electricalModalLabel">
+											<h5
+												className="modal-title text-primary-alt"
+												id="electricalModalLabel"
+											>
 												Electrical Gallery
 											</h5>
 											<button
@@ -609,7 +615,10 @@ function Services() {
 							<div className="modal-dialog">
 								<div className="modal-content">
 									<div className="modal-header">
-										<h5 className="modal-title" id="hvacModalLabel">
+										<h5
+											className="modal-title text-primary-alt"
+											id="hvacModalLabel"
+										>
 											Mechanical Gallery
 										</h5>
 										<button
@@ -827,7 +836,10 @@ function Services() {
 							<div className="modal-dialog">
 								<div className="modal-content">
 									<div className="modal-header">
-										<h5 className="modal-title" id="concreteModalLabel">
+										<h5
+											className="modal-title text-primary-alt"
+											id="concreteModalLabel"
+										>
 											Concrete Gallery
 										</h5>
 										<button
