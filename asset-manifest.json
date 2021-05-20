@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.5e19a6d5.chunk.js",
-    "main.js.map": "/static/js/main.5e19a6d5.chunk.js.map",
+    "main.css": "/static/css/main.7c074fa0.chunk.css",
+    "main.js": "/static/js/main.33d7ce30.chunk.js",
+    "main.js.map": "/static/js/main.33d7ce30.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.56a8dca1.js",
     "runtime-main.js.map": "/static/js/runtime-main.56a8dca1.js.map",
-    "static/js/2.b634cae1.chunk.js": "/static/js/2.b634cae1.chunk.js",
-    "static/js/2.b634cae1.chunk.js.map": "/static/js/2.b634cae1.chunk.js.map",
+    "static/js/2.218a6991.chunk.js": "/static/js/2.218a6991.chunk.js",
+    "static/js/2.218a6991.chunk.js.map": "/static/js/2.218a6991.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.b634cae1.chunk.js.LICENSE.txt": "/static/js/2.b634cae1.chunk.js.LICENSE.txt",
+    "static/css/main.7c074fa0.chunk.css.map": "/static/css/main.7c074fa0.chunk.css.map",
+    "static/js/2.218a6991.chunk.js.LICENSE.txt": "/static/js/2.218a6991.chunk.js.LICENSE.txt",
     "static/media/anytime-fitness.jpg": "/static/media/anytime-fitness.5db36bd3.jpg",
     "static/media/bike-room-interior.jpg": "/static/media/bike-room-interior.39ac62d8.jpg",
     "static/media/concrete-main.jpg": "/static/media/concrete-main.4464dc2d.jpg",
@@ -64,7 +66,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.56a8dca1.js",
-    "static/js/2.b634cae1.chunk.js",
-    "static/js/main.5e19a6d5.chunk.js"
+    "static/js/2.218a6991.chunk.js",
+    "static/css/main.7c074fa0.chunk.css",
+    "static/js/main.33d7ce30.chunk.js"
   ]
 }
