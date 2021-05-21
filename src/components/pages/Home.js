@@ -3,8 +3,27 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 import { FaChevronRight } from "react-icons/fa";
+import ServiceCards from "../ServiceCards";
 import FeaturedProjects from "../FeaturedProjects";
 import ContactForm from "../ContactForm";
+import { importAll, parseObject } from "../Images";
+
+const heroImgs = {
+	nextGen: parseObject(
+		importAll(
+			require.context("../../imgs/heroes/nextgen", false, /\.(webp|jxr|jpx)$/)
+		)
+	),
+	legacy: [
+		parseObject(
+			importAll(
+				require.context("../../imgs/heroes/legacy", false, /\.(png|jpe?g|svg)$/)
+			)
+		),
+	],
+};
+
+console.log(heroImgs.nextGen);
 
 function Home() {
 	// Update page title
@@ -32,14 +51,18 @@ function Home() {
 					<div className="carousel-inner">
 						<div className="hero-container">
 							<div className="carousel-item active border-0">
-								<img
-									className="img-fluid"
-									srcSet="../assets/hero-city/hero-city-1920w.jpg 1920w,
-									../assets/hero-city/hero-city-630w.jpg 630w,
-									../assets/hero-city/hero-city-320w.jpg 320w"
-									src="../assets/hero-city/hero-city-fallback.jpg"
-									alt="Background of Skyview dental clinic exterior"
-								/>
+								<picture>
+									<source
+										className="img-fluid"
+										srcSet={`${heroImgs.nextGen[0]}`}
+										type="image/webp"
+									/>
+									<img
+										className="img-fluid"
+										src={`${heroImgs.legacy[0]}`}
+										alt="A city under development."
+									/>
+								</picture>
 								<div className="container mx-0 px-0 w-100">
 									<div className="carousel-caption text-start">
 										<h1 className="display-6 fw-bold text-uppercase w-100">
@@ -68,11 +91,18 @@ function Home() {
 								</div>
 							</div>
 							<div className="carousel-item border-0">
-								<img
-									className="img-fluid"
-									src="./assets/hero-kitchen.jpg"
-									alt="Background of Skyview lobby"
-								/>
+								<picture>
+									<source
+										className="img-fluid"
+										srcSet={`${heroImgs.nextGen[1]}`}
+										type="image/webp"
+									/>
+									<img
+										className="img-fluid"
+										src={`${heroImgs.legacy[1]}`}
+										alt="Structube kitchen created by TCA Developments."
+									/>
+								</picture>
 								<div className="container mx-0 px-0 w-100">
 									<div className="carousel-caption">
 										<h1 className="display-6 fw-bold text-uppercase">
@@ -97,11 +127,18 @@ function Home() {
 								</div>
 							</div>
 							<div className="carousel-item border-0">
-								<img
-									className="img-fluid"
-									src="./assets/hero-worker.jpg"
-									alt="Background of a masonry wall that was built by TCA Developments."
-								/>
+								<picture>
+									<source
+										className="img-fluid"
+										srcSet={`${heroImgs.nextGen[2]}`}
+										type="image/webp"
+									/>
+									<img
+										className="img-fluid"
+										src={`${heroImgs.legacy[2]}`}
+										alt="Background of a masonry wall that was built by TCA Developments."
+									/>
+								</picture>
 								<div className="container mx-0 px-0 w-100">
 									<div className="carousel-caption text-end">
 										<h1 className="display-6 fw-bold text-uppercase">
@@ -294,217 +331,7 @@ function Home() {
 								button to view all of our solutions.
 							</p>
 						</div>
-						<div className="row mx-0" id="custom-cards">
-							<div className="row align-items-stretch mx-auto py-5">
-								{/* <!-- General Contractor --> */}
-								<div className="col-sm mt-2 pe-md-0">
-									<div
-										className="
-												card card-cover
-												image-container
-												h-100
-												bg-dark
-												rounded-5
-												shadow-lg
-											"
-										style={{
-											background:
-												"url('./assets/hero-construction.jpg') center",
-											backgroundSize: "cover",
-										}}
-									>
-										<HashLink to="/services#top">
-											<div
-												className="
-														card-text-box
-														d-flex
-														flex-column
-														text-center
-														h-100
-														pb-3
-														text-white text-shadow-1
-													"
-											>
-												<h3 className="pt-5 mt-5 mb-4 lh-1 fw-bold">
-													General Contracting
-												</h3>
-											</div>
-										</HashLink>
-									</div>
-								</div>
-								<div className="col-sm mt-2">
-									<div
-										className="
-												card card-cover
-												image-container
-												h-100
-												text-white
-												bg-dark
-												rounded-5
-												shadow-lg
-											"
-										style={{
-											background:
-												"url('./assets/hero-office.jpg') center no-repeat",
-											backgroundSize: "cover",
-										}}
-									>
-										<HashLink to="/services#officeSection">
-											<div
-												className="
-														d-flex
-														flex-column
-														h-100
-														pb-3
-														text-center text-white text-shadow-1
-													"
-											>
-												<h3 className="pt-5 mt-5 mb-4 lh-1 fw-bold">
-													Office Renovations
-												</h3>
-											</div>
-										</HashLink>
-									</div>
-								</div>
-								{/* <!-- Electrical --> */}
-								<div className="col-sm mt-2 ps-md-0">
-									<div
-										className="
-												card card-cover
-												image-container
-												h-100
-												text-white
-												bg-dark
-												rounded-5
-												shadow-lg
-											"
-										style={{
-											background: "url('./assets/electrical-main.jpg') center",
-											backgroundSize: "contain",
-										}}
-									>
-										<HashLink to="/services#electricalSection">
-											<div
-												className="
-														d-flex
-														flex-column
-														h-100
-														pb-3
-														text-white text-center text-shadow-1
-													"
-											>
-												<h3 className="pt-5 mt-5 mb-4 lh-1 fw-bold">
-													Electrical Services
-												</h3>
-											</div>
-										</HashLink>
-									</div>
-								</div>
-								{/* <!-- Mechanical --> */}
-								<div className="col-sm mt-2 ps-md-0">
-									<div
-										className="
-												card card-cover
-												image-container
-												h-100
-												text-white
-												bg-dark
-												rounded-5
-												shadow-lg
-											"
-										style={{
-											background:
-												"url('./assets/mechanical-main.jpg') no-repeat left",
-											backgroundSize: "cover",
-										}}
-									>
-										<HashLink to="/services#hvacSection">
-											<div
-												className="
-														d-flex
-														flex-column
-														h-100
-														pb-3
-														text-white text-center text-shadow-1
-													"
-											>
-												<h3 className="pt-5 mt-5 mb-4 lh-1 fw-bold">
-													Mechanical & Plumbing
-												</h3>
-											</div>
-										</HashLink>
-									</div>
-								</div>
-								{/* <!-- Concrete --> */}
-								<div className="col-sm mt-2 ps-md-0">
-									<div
-										className="
-												card card-cover
-												image-container
-												h-100
-												text-white
-												bg-dark
-												rounded-5
-												shadow-lg
-											"
-										style={{
-											background:
-												"url('./assets/concrete-main.jpg') center no-repeat",
-											backgroundSize: "cover",
-										}}
-									>
-										<HashLink to="/services#concreteSection">
-											<div
-												className="
-														d-flex
-														flex-column
-														h-100
-														pb-3
-														text-white text-center text-shadow-1
-													"
-											>
-												<h3 className="pt-5 mt-5 mb-4 lh-1 fw-bold">
-													Concrete Services
-												</h3>
-											</div>
-										</HashLink>
-									</div>
-								</div>
-								<div className="col-auto w-100 mt-2">
-									<div
-										className="
-												card card-cover
-												image-container
-												text-white
-												bg-dark
-												rounded-5
-												shadow-lg
-											"
-										style={{
-											background:
-												"url('./assets/hero-tools.jpg') no-repeat center",
-											backgroundSize: "cover",
-										}}
-									>
-										<HashLink to="/services#customSection">
-											<div
-												className="
-														d-flex
-														flex-column
-														h-100
-														pb-3
-														text-white text-center text-shadow-1
-													"
-											>
-												<h3 className="pt-5 mt-5 mb-4 lh-1 fw-bold">
-													Customized Solutions
-												</h3>
-											</div>
-										</HashLink>
-									</div>
-								</div>
-							</div>
-						</div>
+						<ServiceCards />
 					</div>
 					<div className="row pt-2">
 						<div className="col justify-content-center text-center">

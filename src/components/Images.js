@@ -6,11 +6,11 @@
  */
 
 // Import all images from specified diretory
-function importAll(r) {
+export function importAll(r) {
 	return r.keys().map(r);
 }
 
-function parseObject(object) {
+export function parseObject(object) {
 	return object.map((obj) => obj.default.toString());
 }
 

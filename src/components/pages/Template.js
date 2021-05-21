@@ -66,7 +66,7 @@ function Project() {
 					<div className="col-sm p-4">
 						<div
 							id="projectCarousel"
-							className="carousel carousel-dark slide"
+							className="carousel slide"
 							data-bs-ride="carousel"
 							data-bs-interval={6000}
 						>

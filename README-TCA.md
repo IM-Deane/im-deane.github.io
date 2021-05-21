@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 URL: https://www.tcadevelopments.com/
 
-Current Version: **1.0.4**
+Current Version: **1.0.5**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,20 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.5:
+
+This update is focused on optimizing the website.
+
+Major:
+
+- Installed the React-Player package that enables the use of lazy loading a
+  video player. This has drastically reduced the initial About page load time.
+- Created a component that will try to use nextgen image formats (.webp) as the
+  primary source. If the users browers can't handle this image type then the
+  component will fallback to a legacy format (.jpg).
+- Update the image file structure. There are now folders for legacy and nextgen
+  images
 
 ## Version 1.0.4:
 

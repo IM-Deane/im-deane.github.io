@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import { FaChevronRight } from "react-icons/fa";
+import VideoPlayer from "../ReactPlayer";
 
 function About() {
 	useEffect(() => {
@@ -171,7 +172,8 @@ function About() {
 									</p>
 								</section>
 								<section className="row p-2">
-									<iframe
+									<VideoPlayer />
+									{/* <iframe
 										width="560"
 										height="400"
 										src="https://www.youtube.com/embed/2I-RMpMod0U"
@@ -179,7 +181,7 @@ function About() {
 										frameBorder="0"
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 										allowFullScreen
-									></iframe>
+									></iframe> */}
 								</section>
 							</div>
 						</div>
