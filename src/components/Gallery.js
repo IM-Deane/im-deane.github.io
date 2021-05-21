@@ -3,6 +3,8 @@ import Categories from "./Categories";
 import ProjectData from "./ProjectData";
 import Project from "./Project";
 
+import LazyLoad from "react-lazyload";
+
 // Create an array of unique category names
 const allProjects = [
 	"all",

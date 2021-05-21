@@ -16,7 +16,7 @@ function Footer() {
 						<HashLink
 							smooth
 							to="#top"
-							className="text-accent-blue-tca text-decoration-none text-uppercase"
+							className="text-white text-decoration-none text-uppercase"
 						>
 							Back to the top
 						</HashLink>
@@ -45,13 +45,22 @@ function Footer() {
 					</div>
 					<div className="col">
 						<h5 className="text-white-tca pb-2">CONNECT WITH US</h5>
-						<a href="#instagram">
+						<a
+							href="#instagram"
+							aria-label="The Instagram account for TCA Developments."
+						>
 							<FaInstagramSquare className="social" />
 						</a>
-						<a href="#facebook">
+						<a
+							href="#facebook"
+							aria-label="The Facebook account for TCA Developments."
+						>
 							<FaFacebookSquare className="social mx-2" />
 						</a>
-						<a href="#twitter">
+						<a
+							href="#twitter"
+							aria-label="The Twitter account for TCA Developments."
+						>
 							<FaTwitterSquare className="social" />
 						</a>
 					</div>
@@ -64,6 +73,7 @@ function Footer() {
 							<a
 								className="alchemized text-white ms-1"
 								href="http://alchemizedsoftware.com/"
+								aria-label="Links to the website for Alchemized Software."
 							>
 								<span className="d-flex align-items-center">
 									Crafted by Alchemized Software

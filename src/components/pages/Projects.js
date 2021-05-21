@@ -106,7 +106,7 @@ function Projects() {
 					<HashLink
 						smooth
 						to="/contact#contactForm"
-						className="btn btn-outline-primary text-uppercase"
+						className="btn btn-outline-light text-uppercase"
 					>
 						<span className="d-flex align-items-center">
 							Request free estimate <FaChevronRight className="ms-2" />

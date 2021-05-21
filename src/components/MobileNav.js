@@ -31,8 +31,16 @@ function MobileNav() {
 				>
 					{/* <!-- Phone --> */}
 					<div className="flex-column align-items-center justify-content-center">
-						<button type="button" className="btn d-flex px-0 w-100">
-							<a href="tel:(825) 401-2404" className="flex-fill text-white">
+						<button
+							type="button"
+							className="btn d-flex px-0 w-100"
+							aria-label="Phone Button. Will call the TCA Developments office."
+						>
+							<a
+								href="tel:(825) 401-2404"
+								className="flex-fill text-white"
+								aria-label="Will start a call to the TCA Developments office number."
+							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="20"
@@ -55,10 +63,12 @@ function MobileNav() {
 						<button
 							type="button"
 							className="btn btn-tertiary-tca d-flex px-0 w-100"
+							aria-label="E-mail button. Will open an e-mail and insert the TCA Developments e-mail address."
 						>
 							<a
 								href="mailto:info@tcadevelopments.com?subject=General Inquiry"
 								className="flex-fill text-white"
+								aria-label="Open's a new e-mail that is addressed to TCA Developments."
 							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -79,11 +89,13 @@ function MobileNav() {
 						<button
 							type="button"
 							className="btn btn-tertiary-tca d-flex px-0 w-100"
+							aria-label="Quote button. Will navigate to a contact form."
 						>
 							<HashLink
 								smooth
 								to="/contact#contactForm"
 								className="flex-fill text-white"
+								aria-label="Will navigate to a contact form on the websites contact us page."
 							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"

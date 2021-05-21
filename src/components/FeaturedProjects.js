@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import ProjectData from "./ProjectData";
 import Project from "./Project";
 
-import { lazyload } from "react-lazyload";
-
 function FeaturedProjects() {
 	const [featured, setFeatured] = useState([]);
 
