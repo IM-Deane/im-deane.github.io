@@ -122,7 +122,7 @@ function About() {
 						>
 							<div className="accordion-body">
 								<section className="row my-3 ps-2">
-									<h2 className="h3 text-primary-alt mt-2">Team TCA</h2>
+									<h3 className="text-primary-alt mt-2">Team TCA</h3>
 									<p className="text-body mt-2 fs-5 lh-base">
 										At TCA Developments, we believe that every project we take
 										on deserves exceptional care. That is why we strive only to
@@ -145,10 +145,10 @@ function About() {
 								</section>
 								<section className="row my-3 ps-2">
 									<header className="row">
-										<h2 className="h3 text-primary-alt">
+										<h3 className="text-primary-alt">
 											Member Spotlight:
 											<span className="fw-bold ms-2">Rahim</span>
-										</h2>
+										</h3>
 									</header>
 									<p className="text-body mt-2 fs-5 lh-base">
 										One of our most recent projects was working with Goodwill on
@@ -173,15 +173,6 @@ function About() {
 								</section>
 								<section className="row p-2">
 									<VideoPlayer />
-									{/* <iframe
-										width="560"
-										height="400"
-										src="https://www.youtube.com/embed/2I-RMpMod0U"
-										title="Rahim TCA member spotlight"
-										frameBorder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-										allowFullScreen
-									></iframe> */}
 								</section>
 							</div>
 						</div>
@@ -192,9 +183,9 @@ function About() {
 			<div className="row bg-light">
 				<article className="container">
 					<header className="row m-4 py-5 text-center">
-						<h2 id="FAQ" className="h1 text-primary-alt">
+						<h4 id="FAQ" className="h1 text-primary-alt">
 							Frequently Asked Questions
-						</h2>
+						</h4>
 						<section className="row justify-content-center text-center mx-auto">
 							<div className="row row-cols-1 mt-4 p-4">
 								<div className="col pb-3">
@@ -268,9 +259,11 @@ function About() {
 													smooth
 													to="/services#top"
 													className="btn btn-primary btn-sm text-uppercase"
+													aria-label="Will navigate to the services page of the TCA Developments website."
 												>
 													<span className="d-flex align-items-center">
-														Learn more <FaChevronRight className="ms-2" />
+														Discover more of our services{" "}
+														<FaChevronRight className="ms-2" />
 													</span>
 												</HashLink>
 											</div>
@@ -295,9 +288,11 @@ function About() {
 													smooth
 													to="/services#top"
 													className="btn btn-primary btn-sm text-uppercase"
+													aria-label="Will navigate to the services page of the TCA Developments website."
 												>
 													<span className="d-flex align-items-center">
-														Learn more <FaChevronRight className="ms-2" />
+														Discover more of our services{" "}
+														<FaChevronRight className="ms-2" />
 													</span>
 												</HashLink>
 											</div>
@@ -323,9 +318,11 @@ function About() {
 													smooth
 													to="/services#top"
 													className="btn btn-primary btn-sm text-uppercase"
+													aria-label="Will navigate to the services page of the TCA Developments website."
 												>
 													<span className="d-flex align-items-center">
-														Learn more <FaChevronRight className="ms-2" />
+														Discover more of our services{" "}
+														<FaChevronRight className="ms-2" />
 													</span>
 												</HashLink>
 											</div>
@@ -355,7 +352,7 @@ function About() {
 					<HashLink
 						smooth
 						to="/contact#top"
-						className="btn btn-outline-primary text-uppercase"
+						className="btn btn-outline-light text-uppercase"
 					>
 						<span className="d-flex align-items-center">
 							Request free estimate <FaChevronRight className="ms-2" />
