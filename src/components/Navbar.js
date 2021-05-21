@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Link, NavLink } from "react-router-dom";
 
+import { FaCanadianMapleLeaf } from "react-icons/fa";
+
 function Navbar() {
 	const [isCollapsed, setIsCollapsed] = useState(true);
 
@@ -14,11 +16,7 @@ function Navbar() {
 				<div className="container">
 					<span className="ps-2">
 						Celebrating 30 years of Canadian business!{" "}
-						<img
-							id="leaf"
-							src="/assets/maple-leaf.png"
-							alt="Canadian maple leaf"
-						/>
+						<FaCanadianMapleLeaf style={{ color: "red" }} />
 					</span>
 					<div className="d-none d-md-flex align-items-baseline">
 						<a href="tel:(825) 401-2404" className="btn btn-sm text-white">
@@ -51,7 +49,7 @@ function Navbar() {
 					<Link className="navbar-brand" to="/">
 						<img
 							src="/assets/tca-logo.png"
-							className="img-fluid logo"
+							className="logo"
 							alt="TCA Developments company logo"
 						/>
 					</Link>
