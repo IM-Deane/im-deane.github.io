@@ -5,6 +5,92 @@ import { HashLink } from "react-router-hash-link";
 import { FaChevronRight, FaTools, FaBolt, FaSnowflake } from "react-icons/fa";
 import { GiConcreteBag } from "react-icons/gi";
 import FeaturedProjects from "../FeaturedProjects";
+import LazyLoad from "react-lazyload";
+
+import { importAll, parseObject } from "../Images";
+import ImageWithFallback from "../ImgWithFallback";
+import Carousel from "../Carousel";
+
+const officeImgs = {
+	nextgen: parseObject(
+		importAll(
+			require.context(
+				"../../imgs/service-page/offices/nextgen/",
+				false,
+				/\.(webp|jxr|jpx)$/
+			)
+		)
+	),
+	legacy: parseObject(
+		importAll(
+			require.context(
+				"../../imgs/service-page/offices/legacy/",
+				false,
+				/\.(png|jpe?g|svg)$/
+			)
+		)
+	),
+};
+const electricalImgs = {
+	nextgen: parseObject(
+		importAll(
+			require.context(
+				"../../imgs/service-page/electrical/nextgen/",
+				false,
+				/\.(webp|jxr|jpx)$/
+			)
+		)
+	),
+	legacy: parseObject(
+		importAll(
+			require.context(
+				"../../imgs/service-page/electrical/legacy/",
+				false,
+				/\.(png|jpe?g|svg)$/
+			)
+		)
+	),
+};
+const mechanicalImgs = {
+	nextgen: parseObject(
+		importAll(
+			require.context(
+				"../../imgs/service-page/mechanical/nextgen/",
+				false,
+				/\.(webp|jxr|jpx)$/
+			)
+		)
+	),
+	legacy: parseObject(
+		importAll(
+			require.context(
+				"../../imgs/service-page/mechanical/legacy/",
+				false,
+				/\.(png|jpe?g|svg)$/
+			)
+		)
+	),
+};
+const concreteImgs = {
+	nextgen: parseObject(
+		importAll(
+			require.context(
+				"../../imgs/service-page/concrete/nextgen",
+				false,
+				/\.(webp|jxr|jpx)$/
+			)
+		)
+	),
+	legacy: parseObject(
+		importAll(
+			require.context(
+				"../../imgs/service-page/concrete/legacy",
+				false,
+				/\.(png|jpe?g|svg)$/
+			)
+		)
+	),
+};
 
 function Services() {
 	// Update page title
@@ -168,15 +254,18 @@ function Services() {
 												justify-content-center
 											"
 									>
-										<img
-											src={`./assets/services/offices/skyview-lobby.jpg`}
-											className="img-fluid"
-											alt="Skyview lobby"
-										/>
+										{/* Skyview lobby */}
+										<LazyLoad offset={100} once>
+											<ImageWithFallback
+												src={officeImgs.nextgen[3]}
+												fallback={officeImgs.legacy[3]}
+												alt={"Skyview lobby"}
+											/>
+										</LazyLoad>
 										<figcaption className="text-center mt-2">
 											<button
 												type="button"
-												className="btn btn-outline-primary"
+												className="btn btn-success"
 												data-bs-toggle="modal"
 												data-bs-target="#officeModal"
 												data-bs-whatever="@mdo"
@@ -186,6 +275,7 @@ function Services() {
 										</figcaption>
 									</figure>
 									{/* MODAL SECTION */}
+
 									<div
 										className="modal fade"
 										id="officeModal"
@@ -211,96 +301,21 @@ function Services() {
 												</div>
 												<div className="modal-body">
 													<div className="container-fluid">
-														<div
-															id="officeIndicators"
-															className="carousel slide"
-															data-bs-ride="carousel"
-														>
-															<div className="carousel-indicators">
-																<button
-																	type="button"
-																	data-bs-target="#officeIndicators"
-																	data-bs-slide-to="0"
-																	className="active"
-																	aria-current="true"
-																	aria-label="Slide 1"
-																></button>
-																<button
-																	type="button"
-																	data-bs-target="#officeIndicators"
-																	data-bs-slide-to="1"
-																	aria-label="Slide 2"
-																></button>
-																<button
-																	type="button"
-																	data-bs-target="#officeIndicators"
-																	data-bs-slide-to="2"
-																	aria-label="Slide 3"
-																></button>
-																<button
-																	type="button"
-																	data-bs-target="#officeIndicators"
-																	data-bs-slide-to="3"
-																	aria-label="Slide 4"
-																></button>
-															</div>
-															<div className="carousel-inner">
-																<div className="carousel-item active border-0">
-																	<img
-																		src={`./assets/services/offices/structube-bathroom.jpg`}
-																		className="img-fluid"
-																		alt="Structube bathroom."
-																	/>
-																</div>
-																<div className="carousel-item border-0">
-																	<img
-																		src={`./assets/services/offices/structube-kitchen.jpg`}
-																		className="img-fluid"
-																		alt="Structube Kitchen"
-																	/>
-																</div>
-																<div className="carousel-item border-0">
-																	<img
-																		src={`./assets/services/offices/office-interior.jpg`}
-																		className="img-fluid"
-																		alt="Structube shipping office"
-																	/>
-																</div>
-																<div className="carousel-item border-0">
-																	<img
-																		src={`./assets/services/offices/bonaventure-lobby.jpg`}
-																		className="img-fluid"
-																		alt="Structube shipping office"
-																	/>
-																</div>
-															</div>
-															<button
-																className="carousel-control-prev"
-																type="button"
-																data-bs-target="#officeIndicators"
-																data-bs-slide="prev"
-															>
-																<span
-																	className="carousel-control-prev-icon"
-																	aria-hidden="true"
-																></span>
-																<span className="visually-hidden">
-																	Previous
-																</span>
-															</button>
-															<button
-																className="carousel-control-next"
-																type="button"
-																data-bs-target="#officeIndicators"
-																data-bs-slide="next"
-															>
-																<span
-																	className="carousel-control-next-icon"
-																	aria-hidden="true"
-																></span>
-																<span className="visually-hidden">Next</span>
-															</button>
-														</div>
+														<LazyLoad offset={100} once>
+															<Carousel
+																imgList={officeImgs.nextgen.map(
+																	(img, index) => {
+																		return {
+																			primarySrc: img,
+																			fallbackSrc: officeImgs.legacy[index],
+																			type: "image/webp",
+																			alt: `Office image ${index + 1}`,
+																		};
+																	}
+																)}
+																indicatorId="officeIndicators"
+															/>
+														</LazyLoad>
 													</div>
 												</div>
 												<div className="modal-footer">
@@ -378,15 +393,18 @@ function Services() {
 								</div>
 							</div>
 							<figure className="col-md-5 order-md-1">
-								<img
-									src={`./assets/services/structube-electrical.jpg`}
-									className="img-fluid"
-									alt="Electrical box in Structube warehouse"
-								/>
+								{/* Structube Electrical */}
+								<LazyLoad offset={100} once>
+									<ImageWithFallback
+										src={electricalImgs.nextgen[5]}
+										fallback={electricalImgs.legacy[5]}
+										alt={"Electrical box in Structube warehouse"}
+									/>
+								</LazyLoad>
 								<figcaption className="text-center mt-2">
 									<button
 										type="button"
-										className="btn btn-outline-primary"
+										className="btn btn-success"
 										data-bs-toggle="modal"
 										data-bs-target="#electricalModal"
 										data-bs-whatever="@mdo"
@@ -421,107 +439,21 @@ function Services() {
 										</div>
 										<div className="modal-body">
 											<div className="container-fluid">
-												<div
-													id="electricalIndicators"
-													className="carousel slide"
-													data-bs-ride="carousel"
-												>
-													<div className="carousel-indicators">
-														<button
-															type="button"
-															data-bs-target="#electricalIndicators"
-															data-bs-slide-to="0"
-															className="active"
-															aria-current="true"
-															aria-label="Slide 1"
-														></button>
-														<button
-															type="button"
-															data-bs-target="#electricalIndicators"
-															data-bs-slide-to="1"
-															aria-label="Slide 2"
-														></button>
-														<button
-															type="button"
-															data-bs-target="#electricalIndicators"
-															data-bs-slide-to="2"
-															aria-label="Slide 3"
-														></button>
-														<button
-															type="button"
-															data-bs-target="#electricalIndicators"
-															data-bs-slide-to="3"
-															aria-label="Slide 4"
-														></button>
-														<button
-															type="button"
-															data-bs-target="#electricalIndicators"
-															data-bs-slide-to="4"
-															aria-label="Slide 5"
-														></button>
-													</div>
-													<div className="carousel-inner">
-														<div className="carousel-item active border-0">
-															<img
-																src={`./assets/services/electrical/electrical-box.jpg`}
-																className="img-fluid"
-																alt="Electrical box."
-															/>
-														</div>
-														<div className="carousel-item border-0">
-															<img
-																src={`./assets/services/electrical/electrical-box2.jpg`}
-																className="img-fluid"
-																alt="Electrical box"
-															/>
-														</div>
-														<div className="carousel-item border-0">
-															<img
-																src={`./assets/services/electrical/electrical-box-3.jpg`}
-																className="img-fluid"
-																alt="Electrical box"
-															/>
-														</div>
-														<div className="carousel-item border-0">
-															<img
-																src={`./assets/services/electrical/electrical-tall.jpg`}
-																className="img-fluid"
-																alt="Electrical box"
-															/>
-														</div>
-														<div className="carousel-item border-0">
-															<img
-																src={`./assets/services/electrical/fire-detection.jpg`}
-																className="img-fluid"
-																alt="Fire detection system"
-															/>
-														</div>
-													</div>
-													<button
-														className="carousel-control-prev"
-														type="button"
-														data-bs-target="#electricalIndicators"
-														data-bs-slide="prev"
-													>
-														<span
-															className="carousel-control-prev-icon"
-															aria-hidden="true"
-														></span>
-														<span className="visually-hidden">Previous</span>
-													</button>
-													<button
-														className="carousel-control-next"
-														type="button"
-														data-bs-target="#electricalIndicators"
-														data-bs-slide="next"
-													>
-														<span
-															className="carousel-control-next-icon"
-															aria-hidden="true"
-														></span>
-														<span className="visually-hidden">Next</span>
-													</button>
-												</div>
+												<LazyLoad offset={100} once>
+													<Carousel
+														imgList={electricalImgs.nextgen.map(
+															(img, index) => {
+																return {
+																	primarySrc: img,
+																	fallbackSrc: electricalImgs.legacy[index],
+																	type: "image/webp",
+																	alt: `Electrical image ${index + 1}`,
+																};
+															}
+														)}
+														indicatorId="electricalIndicators"
+													/>
+												</LazyLoad>
 											</div>
 										</div>
 										<div className="modal-footer">
@@ -586,15 +518,18 @@ function Services() {
 								</div>
 							</div>
 							<figure className="col-md-5">
-								<img
-									src={`./assets/services/finning-hvac2.jpg`}
-									className="img-fluid"
-									alt="Finning Cat hvac system"
-								/>
+								{/* Finning Mechanical */}
+								<LazyLoad offset={100} once>
+									<ImageWithFallback
+										src={mechanicalImgs.nextgen[1]}
+										fallback={mechanicalImgs.legacy[1]}
+										alt={"Finning Cat hvac system"}
+									/>
+								</LazyLoad>
 								<figcaption className="text-center mt-2">
 									<button
 										type="button"
-										className="btn btn-outline-primary"
+										className="btn btn-success"
 										data-bs-toggle="modal"
 										data-bs-target="#hvacModal"
 										data-bs-whatever="@mdo"
@@ -630,107 +565,19 @@ function Services() {
 									</div>
 									<div className="modal-body">
 										<div className="container-fluid">
-											<div
-												id="mechanicalIndicators"
-												className="carousel slide"
-												data-bs-ride="carousel"
-											>
-												<div className="carousel-indicators">
-													<button
-														type="button"
-														data-bs-target="#mechanicalIndicators"
-														data-bs-slide-to="0"
-														className="active"
-														aria-current="true"
-														aria-label="Slide 1"
-													></button>
-													<button
-														type="button"
-														data-bs-target="#mechanicalIndicators"
-														data-bs-slide-to="1"
-														aria-label="Slide 2"
-													></button>
-													<button
-														type="button"
-														data-bs-target="#mechanicalIndicators"
-														data-bs-slide-to="2"
-														aria-label="Slide 3"
-													></button>
-													<button
-														type="button"
-														data-bs-target="#mechanicalIndicators"
-														data-bs-slide-to="3"
-														aria-label="Slide 4"
-													></button>
-													<button
-														type="button"
-														data-bs-target="#mechanicalIndicators"
-														data-bs-slide-to="4"
-														aria-label="Slide 5"
-													></button>
-												</div>
-												<div className="carousel-inner">
-													<div className="carousel-item active border-0">
-														<img
-															src={`./assets/services/mech-hvac/finning-controls.jpg`}
-															className="img-fluid"
-															alt="Finning control interface."
-														/>
-													</div>
-													<div className="carousel-item border-0">
-														<img
-															src={`./assets/services/mech-hvac/finning-scc2.jpg`}
-															className="img-fluid"
-															alt="Finning self contained controls."
-														/>
-													</div>
-													<div className="carousel-item border-0">
-														<img
-															src={`./assets/services/mech-hvac/structube-hvac.jpg`}
-															className="img-fluid"
-															alt="Structube shipping office"
-														/>
-													</div>
-													<div className="carousel-item border-0">
-														<img
-															src={`./assets/services/mech-hvac/trane-hvac.jpg`}
-															className="img-fluid"
-															alt="Trane interior HVAC system."
-														/>
-													</div>
-													<div className="carousel-item border-0">
-														<img
-															src={`./assets/services/mech-hvac/trane-interior.jpg`}
-															className="img-fluid"
-															alt="Trane interior HVAC system."
-														/>
-													</div>
-												</div>
-												<button
-													className="carousel-control-prev"
-													type="button"
-													data-bs-target="#mechanicalIndicators"
-													data-bs-slide="prev"
-												>
-													<span
-														className="carousel-control-prev-icon"
-														aria-hidden="true"
-													></span>
-													<span className="visually-hidden">Previous</span>
-												</button>
-												<button
-													className="carousel-control-next"
-													type="button"
-													data-bs-target="#mechanicalIndicators"
-													data-bs-slide="next"
-												>
-													<span
-														className="carousel-control-next-icon"
-														aria-hidden="true"
-													></span>
-													<span className="visually-hidden">Next</span>
-												</button>
-											</div>
+											<LazyLoad offset={100} once>
+												<Carousel
+													imgList={mechanicalImgs.nextgen.map((img, index) => {
+														return {
+															primarySrc: img,
+															fallbackSrc: mechanicalImgs.legacy[index],
+															type: "image/webp",
+															alt: `Mechanical image ${index + 1}`,
+														};
+													})}
+													indicatorId="mechancialIndicators"
+												/>
+											</LazyLoad>
 										</div>
 									</div>
 									<div className="modal-footer">
@@ -750,15 +597,18 @@ function Services() {
 						<hr className="featurette-divider mx-5" />
 						<div className="row featurette my-5 px-5">
 							<figure className="col-md-5 pb-3">
-								<img
-									src={`./assets/concrete-main.jpg`}
-									className="img-fluid"
-									alt="Concrete being set."
-								/>
+								{/* TCA Concrete setting */}
+								<LazyLoad offset={100} once>
+									<ImageWithFallback
+										src={concreteImgs.nextgen[0]}
+										fallback={concreteImgs.legacy[0]}
+										alt={"Concrete being set."}
+									/>
+								</LazyLoad>
 								<figcaption className="text-center mt-2">
 									<button
 										type="button"
-										className="btn btn-outline-primary"
+										className="btn btn-success"
 										data-bs-toggle="modal"
 										data-bs-target="#concreteModal"
 										data-bs-whatever="@mdo"
@@ -851,81 +701,19 @@ function Services() {
 									</div>
 									<div className="modal-body">
 										<div className="container-fluid">
-											<div
-												id="concreteIndicators"
-												className="carousel slide"
-												data-bs-ride="carousel"
-											>
-												<div className="carousel-indicators">
-													<button
-														type="button"
-														data-bs-target="#concreteIndicators"
-														data-bs-slide-to="0"
-														className="active"
-														aria-current="true"
-														aria-label="Slide 1"
-													></button>
-													<button
-														type="button"
-														data-bs-target="#concreteIndicators"
-														data-bs-slide-to="1"
-														aria-label="Slide 2"
-													></button>
-													<button
-														type="button"
-														data-bs-target="#concreteIndicators"
-														data-bs-slide-to="2"
-														aria-label="Slide 3"
-													></button>
-												</div>
-												<div className="carousel-inner">
-													<div className="carousel-item active border-0">
-														<img
-															src={`./assets/services/concrete/concrete-slabs.jpg`}
-															className="img-fluid"
-															alt="Large concrete slabs"
-														/>
-													</div>
-													<div className="carousel-item border-0">
-														<img
-															src={`./assets/services/concrete/concrete-slabs2.jpg`}
-															className="img-fluid"
-															alt="Small concrete slabs"
-														/>
-													</div>
-													<div className="carousel-item border-0">
-														<img
-															src={`./assets/services/concrete/concrete-wall.jpg`}
-															className="img-fluid"
-															alt="Concrete wall"
-														/>
-													</div>
-												</div>
-												<button
-													className="carousel-control-prev"
-													type="button"
-													data-bs-target="#concreteIndicators"
-													data-bs-slide="prev"
-												>
-													<span
-														className="carousel-control-prev-icon"
-														aria-hidden="true"
-													></span>
-													<span className="visually-hidden">Previous</span>
-												</button>
-												<button
-													className="carousel-control-next"
-													type="button"
-													data-bs-target="#concreteIndicators"
-													data-bs-slide="next"
-												>
-													<span
-														className="carousel-control-next-icon"
-														aria-hidden="true"
-													></span>
-													<span className="visually-hidden">Next</span>
-												</button>
-											</div>
+											<LazyLoad offset={100} once>
+												<Carousel
+													imgList={concreteImgs.nextgen.map((img, index) => {
+														return {
+															primarySrc: img,
+															fallbackSrc: concreteImgs.legacy[index],
+															type: "image/webp",
+															alt: `Concrete image ${index + 1}`,
+														};
+													})}
+													indicatorId="concreteIndicators"
+												/>
+											</LazyLoad>
 										</div>
 									</div>
 									<div className="modal-footer">

@@ -16,17 +16,11 @@ const heroImgs = {
 			require.context("../../imgs/heroes/nextgen/", false, /\.(webp|jxr|jpx)$/)
 		)
 	),
-	legacy: [
-		parseObject(
-			importAll(
-				require.context(
-					"../../imgs/heroes/legacy/",
-					false,
-					/\.(png|jpe?g|svg)$/
-				)
-			)
-		),
-	],
+	legacy: parseObject(
+		importAll(
+			require.context("../../imgs/heroes/legacy/", false, /\.(png|jpe?g|svg)$/)
+		)
+	),
 };
 
 function Home() {

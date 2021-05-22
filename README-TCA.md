@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 URL: https://www.tcadevelopments.com/
 
-Current Version: **1.0.5**
+Current Version: **1.0.6**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,20 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.6:
+
+Optimized the Services page.
+
+Major:
+
+- Refactored the modal carousels into a resuable component.
+- Converted all images to nextgen format and refactored their containers into a
+  resuable component
+
+Minor:
+
+- Update the styling of the "view more" buttons to reduce the contrast ratio.
 
 ## Version 1.0.5:
 

@@ -1,29 +1,28 @@
 import React, { useState } from "react";
-import Categories from "./Categories";
+// import Categories from "./Categories";
 import ProjectData from "./ProjectData";
 import Project from "./Project";
 
-import LazyLoad from "react-lazyload";
-
 // Create an array of unique category names
-const allProjects = [
-	"all",
-	...new Set(ProjectData.map((project) => project.category)),
-];
+// const allProjects = [
+// 	"all",
+// 	...new Set(ProjectData.map((project) => project.category)),
+// ];
 
 const Gallery = () => {
-	const [projects, setProjects] = useState(ProjectData);
-	const [categories] = useState(allProjects);
+	// Create "setProjects" once filer is restored
+	const [projects] = useState(ProjectData);
+	// const [categories] = useState(allProjects);
 
 	// By category
-	const filterProjects = (project) => {
-		if (project === "all") {
-			setProjects(ProjectData);
-			return;
-		}
-		const newProjects = ProjectData.filter((proj) => proj.category === project);
-		setProjects(newProjects);
-	};
+	// const filterProjects = (project) => {
+	// 	if (project === "all") {
+	// 		setProjects(ProjectData);
+	// 		return;
+	// 	}
+	// 	const newProjects = ProjectData.filter((proj) => proj.category === project);
+	// 	setProjects(newProjects);
+	// };
 
 	return (
 		<div className="row justify-content-center mx-0 mt-5 px-md-5 w-100">
