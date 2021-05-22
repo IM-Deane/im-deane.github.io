@@ -8,35 +8,31 @@ import FeaturedProjects from "../FeaturedProjects";
 import ContactForm from "../ContactForm";
 import { importAll, parseObject } from "../Images";
 
+import ImageWithFallback from "../ImgWithFallback";
+
 const heroImgs = {
 	nextGen: parseObject(
 		importAll(
-			require.context("../../imgs/heroes/nextgen", false, /\.(webp|jxr|jpx)$/)
+			require.context("../../imgs/heroes/nextgen/", false, /\.(webp|jxr|jpx)$/)
 		)
 	),
 	legacy: [
 		parseObject(
 			importAll(
-				require.context("../../imgs/heroes/legacy", false, /\.(png|jpe?g|svg)$/)
+				require.context(
+					"../../imgs/heroes/legacy/",
+					false,
+					/\.(png|jpe?g|svg)$/
+				)
 			)
 		),
 	],
 };
 
-console.log(heroImgs.nextGen);
-
 function Home() {
-	// Update page title
 	useEffect(() => {
 		document.title =
 			"TCA Developments - Construction Consultant & General Contractor";
-
-		//  Restart the carousel when page reloads
-		// const myCarousel = document.querySelector("#myCarousel");
-		// const carousel = new bootstrap.Carousel(myCarousel, {
-		// 	interval: 6000,
-		// 	wrap: true,
-		// });
 	}, []);
 	return (
 		<main className="container-fluid px-0 m-0">
@@ -51,19 +47,13 @@ function Home() {
 					<div className="carousel-inner">
 						<div className="hero-container">
 							<div className="carousel-item active border-0">
-								<picture>
-									<source
-										className="img-fluid"
-										srcSet={`${heroImgs.nextGen[0]}`}
+								<div className="hero-inner mx-0 px-0 w-100">
+									<ImageWithFallback
+										src={heroImgs.nextGen[0]}
+										fallback={heroImgs.legacy[0]}
 										type="image/webp"
+										alt={"A city under development."}
 									/>
-									<img
-										className="img-fluid"
-										src={`${heroImgs.legacy[0]}`}
-										alt="A city under development."
-									/>
-								</picture>
-								<div className="container mx-0 px-0 w-100">
 									<div className="carousel-caption text-start">
 										<h1 className="display-6 fw-bold text-uppercase w-100">
 											TCA DEVELOPMENTS
@@ -91,19 +81,12 @@ function Home() {
 								</div>
 							</div>
 							<div className="carousel-item border-0">
-								<picture>
-									<source
-										className="img-fluid"
-										srcSet={`${heroImgs.nextGen[1]}`}
-										type="image/webp"
+								<div className="hero-inner mx-0 px-0 w-100">
+									<ImageWithFallback
+										src={heroImgs.nextGen[1]}
+										fallback={heroImgs.legacy[1]}
+										alt={"Structube kitchen created by TCA Developments."}
 									/>
-									<img
-										className="img-fluid"
-										src={`${heroImgs.legacy[1]}`}
-										alt="Structube kitchen created by TCA Developments."
-									/>
-								</picture>
-								<div className="container mx-0 px-0 w-100">
 									<div className="carousel-caption">
 										<h1 className="display-6 fw-bold text-uppercase">
 											General Contracting
@@ -120,26 +103,21 @@ function Home() {
 											to="/services"
 										>
 											<span className="d-flex align-items-center">
-												Learn more <FaChevronRight className="ms-2" />
+												View our Services <FaChevronRight className="ms-2" />
 											</span>
 										</Link>
 									</div>
 								</div>
 							</div>
 							<div className="carousel-item border-0">
-								<picture>
-									<source
-										className="img-fluid"
-										srcSet={`${heroImgs.nextGen[2]}`}
-										type="image/webp"
+								<div className="hero-inner mx-0 px-0 w-100">
+									<ImageWithFallback
+										src={heroImgs.nextGen[2]}
+										fallback={heroImgs.legacy[2]}
+										alt={
+											"Background of a masonry wall that was built by TCA Developments."
+										}
 									/>
-									<img
-										className="img-fluid"
-										src={`${heroImgs.legacy[2]}`}
-										alt="Background of a masonry wall that was built by TCA Developments."
-									/>
-								</picture>
-								<div className="container mx-0 px-0 w-100">
 									<div className="carousel-caption text-end">
 										<h1 className="display-6 fw-bold text-uppercase">
 											See our Work
@@ -154,7 +132,7 @@ function Home() {
 											to="/projects"
 										>
 											<span className="d-flex align-items-center">
-												Learn more <FaChevronRight className="ms-2" />
+												Browse Gallery <FaChevronRight className="ms-2" />
 											</span>
 										</Link>
 									</div>
@@ -174,8 +152,10 @@ function Home() {
 								<h2 className="display-5 fw-bold text-primary-alt">
 									TCA Developments
 								</h2>
-								<small className="text-uppercase text-tan-tca fw-bold">
-									General Construction & commercial renovations
+								<small className="text-uppercase text-dark fw-bold">
+									General Construction{" "}
+									<span className="text-primary-alt">& </span>commercial
+									renovations
 								</small>
 							</div>
 						</header>
@@ -305,7 +285,7 @@ function Home() {
 								"
 						>
 							<div className="ms-4 text-center text-md-left">
-								<small className="text-uppercase text-muted fw-bold">
+								<small className="text-uppercase text-dark fw-bold">
 									What we do best
 								</small>
 								<h2 className="display-5 fw-bold text-primary-alt">
@@ -362,7 +342,7 @@ function Home() {
 									"
 							>
 								<div className="text-center text-md-left ms-4">
-									<small className="text-uppercase text-tan-tca fw-bold">
+									<small className="text-uppercase text-dark fw-bold">
 										Our latest work
 									</small>
 									<h2 className="display-5 fw-bold text-primary-alt">
@@ -526,7 +506,7 @@ function Home() {
 						"
 				>
 					<header>
-						<h5 className="h3 text-light">Choose the right course</h5>
+						<h4 className="h3 text-light">Choose the right course</h4>
 						<p className="text-white fst-italic">We answer within 24 hours</p>
 					</header>
 					<ContactForm />

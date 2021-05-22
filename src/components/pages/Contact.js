@@ -176,7 +176,7 @@ function Contact() {
 								title={`Google Maps API`}
 								style={{ border: "0" }}
 								src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAYBtxVWVGtUF3eBnx_qiNXizLh5ETvw_o&q=16065+132+Ave+NW,Edmonton,Alberta&zoom=12"
-								allowfullscreen
+								allowFullScreen
 							></iframe>
 						</aside>
 					</aside>

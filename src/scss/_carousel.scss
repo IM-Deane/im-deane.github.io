@@ -24,7 +24,7 @@
 	.hero-container {
 		// Card link container
 
-		.container::after {
+		.hero-inner::before {
 			content: "";
 			position: absolute;
 			width: 100%;
@@ -37,7 +37,7 @@
 			z-index: 1;
 		}
 
-		.container > * {
+		.hero-inner > * {
 			z-index: 1000;
 		}
 

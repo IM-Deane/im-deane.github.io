@@ -9,8 +9,8 @@ const ImgWithFallback = ({
 }) => {
 	return (
 		<picture>
-			<source srcSet={src} type={type} />
-			<img src={fallback} {...delegated} />
+			<source className="img-fluid" srcSet={src} type={type} />
+			<img className="img-fluid" src={fallback} {...delegated} />
 		</picture>
 	);
 };
