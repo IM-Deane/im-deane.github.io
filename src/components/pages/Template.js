@@ -12,23 +12,23 @@ function Project() {
 	const { id } = useParams();
 
 	//  Convert category id's to names
-	const categoryNames = (category) => {
-		let name = null;
-		switch (category) {
-			case 0:
-				name = "Interior";
-				break;
-			case 1:
-				name = "Exterior";
-				break;
-			case 2:
-				name = "Misc";
-				break;
-			default:
-				name = "All";
-		}
-		return name;
-	};
+	// const categoryNames = (category) => {
+	// 	let name = null;
+	// 	switch (category) {
+	// 		case 0:
+	// 			name = "Interior";
+	// 			break;
+	// 		case 1:
+	// 			name = "Exterior";
+	// 			break;
+	// 		case 2:
+	// 			name = "Misc";
+	// 			break;
+	// 		default:
+	// 			name = "All";
+	// 	}
+	// 	return name;
+	// };
 
 	useEffect(() => {
 		const newProject = data.find((project) => project.id === parseInt(id));
