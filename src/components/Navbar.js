@@ -48,7 +48,7 @@ function Navbar() {
 				<div className="container-fluid container-lg justify-content-lg-center">
 					<Link className="navbar-brand" to="/">
 						<img
-							src="/assets/tca-logo.png"
+							src="/tca-logo.png"
 							className="logo"
 							alt="TCA Developments company logo"
 						/>
