@@ -26,9 +26,9 @@ export const findThumbnail = (string) => {
 };
 
 // Save images into variables
-const images = importAll(
-	require.context("./projects", true, /\.(png|jpe?g|svg)$/)
-);
+// const images = importAll(
+// 	require.context("./projects", true, /\.(png|jpe?g|svg)$/)
+// );
 export const bonaventure = {
 	images: parseObject(
 		importAll(

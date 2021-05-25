@@ -10,6 +10,8 @@ import { importAll, parseObject } from "../Images";
 
 import ImageWithFallback from "../ImgWithFallback";
 
+import "bootstrap/js/dist/carousel";
+
 const heroImgs = {
 	nextGen: parseObject(
 		importAll(

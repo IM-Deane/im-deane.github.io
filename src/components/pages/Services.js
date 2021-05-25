@@ -11,6 +11,9 @@ import { importAll, parseObject } from "../Images";
 import ImageWithFallback from "../ImgWithFallback";
 import Carousel from "../Carousel";
 
+import "bootstrap/js/dist/carousel";
+import "bootstrap/js/dist/modal";
+
 const officeImgs = {
 	nextgen: parseObject(
 		importAll(
@@ -297,25 +300,21 @@ function Services() {
 														className="btn-close"
 														data-bs-dismiss="modal"
 														aria-label="Close"
-													></button>
+													/>
 												</div>
 												<div className="modal-body">
 													<div className="container-fluid">
-														<LazyLoad offset={100} once>
-															<Carousel
-																imgList={officeImgs.nextgen.map(
-																	(img, index) => {
-																		return {
-																			primarySrc: img,
-																			fallbackSrc: officeImgs.legacy[index],
-																			type: "image/webp",
-																			alt: `Office image ${index + 1}`,
-																		};
-																	}
-																)}
-																indicatorId="officeIndicators"
-															/>
-														</LazyLoad>
+														<Carousel
+															imgList={officeImgs.nextgen.map((img, index) => {
+																return {
+																	primarySrc: img,
+																	fallbackSrc: officeImgs.legacy[index],
+																	type: "image/webp",
+																	alt: `Office image ${index + 1}`,
+																};
+															})}
+															indicatorId="officeIndicators"
+														/>
 													</div>
 												</div>
 												<div className="modal-footer">
@@ -435,25 +434,21 @@ function Services() {
 												className="btn-close"
 												data-bs-dismiss="modal"
 												aria-label="Close"
-											></button>
+											/>
 										</div>
 										<div className="modal-body">
 											<div className="container-fluid">
-												<LazyLoad offset={100} once>
-													<Carousel
-														imgList={electricalImgs.nextgen.map(
-															(img, index) => {
-																return {
-																	primarySrc: img,
-																	fallbackSrc: electricalImgs.legacy[index],
-																	type: "image/webp",
-																	alt: `Electrical image ${index + 1}`,
-																};
-															}
-														)}
-														indicatorId="electricalIndicators"
-													/>
-												</LazyLoad>
+												<Carousel
+													imgList={electricalImgs.nextgen.map((img, index) => {
+														return {
+															primarySrc: img,
+															fallbackSrc: electricalImgs.legacy[index],
+															type: "image/webp",
+															alt: `Electrical image ${index + 1}`,
+														};
+													})}
+													indicatorId="electricalIndicators"
+												/>
 											</div>
 										</div>
 										<div className="modal-footer">
@@ -561,23 +556,21 @@ function Services() {
 											className="btn-close"
 											data-bs-dismiss="modal"
 											aria-label="Close"
-										></button>
+										/>
 									</div>
 									<div className="modal-body">
 										<div className="container-fluid">
-											<LazyLoad offset={100} once>
-												<Carousel
-													imgList={mechanicalImgs.nextgen.map((img, index) => {
-														return {
-															primarySrc: img,
-															fallbackSrc: mechanicalImgs.legacy[index],
-															type: "image/webp",
-															alt: `Mechanical image ${index + 1}`,
-														};
-													})}
-													indicatorId="mechancialIndicators"
-												/>
-											</LazyLoad>
+											<Carousel
+												imgList={mechanicalImgs.nextgen.map((img, index) => {
+													return {
+														primarySrc: img,
+														fallbackSrc: mechanicalImgs.legacy[index],
+														type: "image/webp",
+														alt: `Mechanical image ${index + 1}`,
+													};
+												})}
+												indicatorId="mechancialIndicators"
+											/>
 										</div>
 									</div>
 									<div className="modal-footer">
@@ -697,23 +690,21 @@ function Services() {
 											className="btn-close"
 											data-bs-dismiss="modal"
 											aria-label="Close"
-										></button>
+										/>
 									</div>
 									<div className="modal-body">
 										<div className="container-fluid">
-											<LazyLoad offset={100} once>
-												<Carousel
-													imgList={concreteImgs.nextgen.map((img, index) => {
-														return {
-															primarySrc: img,
-															fallbackSrc: concreteImgs.legacy[index],
-															type: "image/webp",
-															alt: `Concrete image ${index + 1}`,
-														};
-													})}
-													indicatorId="concreteIndicators"
-												/>
-											</LazyLoad>
+											<Carousel
+												imgList={concreteImgs.nextgen.map((img, index) => {
+													return {
+														primarySrc: img,
+														fallbackSrc: concreteImgs.legacy[index],
+														type: "image/webp",
+														alt: `Concrete image ${index + 1}`,
+													};
+												})}
+												indicatorId="concreteIndicators"
+											/>
 										</div>
 									</div>
 									<div className="modal-footer">

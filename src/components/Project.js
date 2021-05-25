@@ -8,7 +8,7 @@ function Project({ project }) {
 	const { id, name, images, thumbnail } = project;
 
 	return (
-		<article key={id} className="col-sm col-md-6 ">
+		<article className="col-sm col-md-6 ">
 			<div className="project-card border-1 border-primary-alt mb-3">
 				<HashLink className="project-links" to={`/projects/${id}#top`}>
 					<LazyLoad height={200} offset={100} once>

@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 URL: https://www.tcadevelopments.com/
 
-Current Version: **1.0.6**
+Current Version: **1.0.7**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,26 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.7:
+
+Optimized the site content
+
+Major:
+
+- Added custom carousel controls to the template page and service page
+  carousels. These new buttons are more visible than the previous controls.
+- Updated the dimensions of the template page carousel images. They now properly
+  fit the carousel slide.
+
+Minor:
+
+- Updated the nav header padding
+
+Bugs:
+
+- Fixed a positioning issue with the home page carousel on mobile. The image
+  overlay was not properly adjusting to the smaller screen.
 
 ## Version 1.0.6:
 

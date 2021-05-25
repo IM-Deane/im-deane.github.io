@@ -63,10 +63,9 @@ button {
 }
 
 // NAVIGATION
-
 .nav-banner {
 	color: $white-tca;
-	padding: 0 8px;
+	padding: 8px;
 	background-color: $primary-alt;
 }
 
@@ -217,7 +216,7 @@ button {
 	// Shrink font on smaller screen
 	.nav-banner {
 		font-size: 11px;
-		padding: 0;
+		padding: 8px 0;
 	}
 
 	// Hero Section

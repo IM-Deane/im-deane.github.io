@@ -45,7 +45,7 @@ function Project() {
 					{project.name}
 				</h1>
 				{/* BREADCRUMBS */}
-				<nav className="w-75" aria-label="breadcrumb">
+				{/* <nav className="col-6 mx-auto" aria-label="breadcrumb">
 					<ol className="breadcrumb justify-content-end">
 						<li className="breadcrumb-item">
 							<Link className="link-accent-tca" to="/projects">
@@ -59,38 +59,50 @@ function Project() {
 							{project.name}
 						</li>
 					</ol>
-				</nav>
+				</nav> */}
 			</header>
 			<section className="container project-body">
-				<div className="row my-5 pt-4">
-					<div className="col-sm p-4">
+				<div className="row my-5 mx-0  pt-4">
+					<div className="col-sm">
 						<div
 							id="projectCarousel"
 							className="carousel slide"
 							data-bs-ride="carousel"
-							data-bs-interval={6000}
+							data-bs-interval="6000"
 						>
-							<div id="carouselInner" className="carousel-inner">
-								{images.map((img) => (
+							<div className="carousel-inner">
+								{images.map((img, index) => (
 									<>
 										<div
-											key={project.id}
-											className={`carousel-item w-100 border-0  ${
+											key={index}
+											className={`carousel-item border-0  ${
 												images.indexOf(img) === 0 && "active"
 											}`}
 										>
-											<img
-												src={img}
-												className="img-fluid"
+											<div
 												style={{
-													maxHeight: "433px",
+													backgroundImage: `url(${img})`,
+													height: "400px",
+													minWidth: "100%",
+													backgroundPosition: "center",
+													backgroundSize: "cover",
+													backgroundRepeat: "no-repeat",
+												}}
+											></div>
+											{/* <img
+												src={img}
+												className="mw-100"
+												style={{
+													minWidth: "100%",
+													height: "400px",
 												}}
 												alt={project.description}
-											/>
+											/> */}
 										</div>
 									</>
 								))}
 							</div>
+							{/* Carousel Controls */}
 							<button
 								className="carousel-control-prev"
 								type="button"
@@ -98,9 +110,24 @@ function Project() {
 								data-bs-slide="prev"
 							>
 								<span
-									className="carousel-control-prev-icon"
+									className="bg-primary-alt border-1 me-3"
+									style={{ borderRadius: "50%" }}
 									aria-hidden="true"
-								></span>
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="35"
+										height="35"
+										fill="currentColor"
+										className="bi bi-arrow-left-short text-white"
+										viewBox="0 0 16 16"
+									>
+										<path
+											fillRule="evenodd"
+											d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"
+										/>
+									</svg>
+								</span>
 								<span className="visually-hidden">Previous</span>
 							</button>
 							<button
@@ -110,9 +137,24 @@ function Project() {
 								data-bs-slide="next"
 							>
 								<span
-									className="carousel-control-next-icon"
+									className="bg-primary-alt border-1 ms-3"
+									style={{ borderRadius: "50%" }}
 									aria-hidden="true"
-								></span>
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="35"
+										height="35"
+										fill="currentColor"
+										className="bi bi-arrow-right-short text-white"
+										viewBox="0 0 16 16"
+									>
+										<path
+											fillRule="evenodd"
+											d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+										/>
+									</svg>
+								</span>
 								<span className="visually-hidden">Next</span>
 							</button>
 						</div>

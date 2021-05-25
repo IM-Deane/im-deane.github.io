@@ -62,7 +62,7 @@ function MobileNav() {
 					<div className="flex-column align-items-center justify-content-center px-4">
 						<button
 							type="button"
-							className="btn btn-tertiary-tca d-flex px-0 w-100"
+							className="btn d-flex px-0 w-100"
 							aria-label="E-mail button. Will open an e-mail and insert the TCA Developments e-mail address."
 						>
 							<a
@@ -88,7 +88,7 @@ function MobileNav() {
 					<div className="flex-column align-items-center justify-content-center">
 						<button
 							type="button"
-							className="btn btn-tertiary-tca d-flex px-0 w-100"
+							className="btn d-flex px-0 w-100"
 							aria-label="Quote button. Will navigate to a contact form."
 						>
 							<HashLink

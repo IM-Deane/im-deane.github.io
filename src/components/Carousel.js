@@ -1,9 +1,16 @@
 import React from "react";
 import ImageWithFallback from "./ImgWithFallback";
 
+import "bootstrap/js/dist/carousel";
+
 const Carousel = ({ imgList, indicatorId }) => {
 	return (
-		<div id={indicatorId} className="carousel slide" data-bs-ride="carousel">
+		<div
+			id={indicatorId}
+			className="carousel slide"
+			data-bs-ride="carousel"
+			data-bs-interval="5000"
+		>
 			<div className="carousel-indicators">
 				{imgList.map((obj, index) => {
 					return (
@@ -45,7 +52,10 @@ const Carousel = ({ imgList, indicatorId }) => {
 				data-bs-target={`#${indicatorId}`}
 				data-bs-slide="prev"
 			>
-				<span className="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span
+					className="carousel-control-prev-icon bg-primary-alt"
+					aria-hidden="true"
+				></span>
 				<span className="visually-hidden">Previous</span>
 			</button>
 			<button
@@ -54,7 +64,10 @@ const Carousel = ({ imgList, indicatorId }) => {
 				data-bs-target={`#${indicatorId}`}
 				data-bs-slide="next"
 			>
-				<span className="carousel-control-next-icon" aria-hidden="true"></span>
+				<span
+					className="carousel-control-next-icon bg-primary-alt"
+					aria-hidden="true"
+				></span>
 				<span className="visually-hidden">Next</span>
 			</button>
 		</div>

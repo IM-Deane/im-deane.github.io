@@ -44,14 +44,14 @@ function ContactForm() {
 		<>
 			<form
 				id="contact-form"
-				className="col w-75 m-auto p-3"
+				className="col col-md-6 m-auto p-3"
 				action="https://formspree.io/f/xzbydlkw"
 				method="POST"
 				// onSubmit={handleSubmission}
 			>
 				<input type="hidden" name="_subject" value="TCA Contact Form" />
 				{/* <!-- Thank you page redirect --> */}
-				<input type="hidden" name="_next" value="./thanks.html" />
+				{/* <input type="hidden" name="_next" value="./thanks.html" /> */}
 				<fieldset className="row m-auto justify-content-md-center">
 					{/* <!-- Name input --> */}
 					<div className="row mb-3">
@@ -82,7 +82,6 @@ function ContactForm() {
 									maxLength="25"
 									required
 									value={inputName}
-									// onChange={handleChange}
 									onChange={(e) => setInputName(e.target.value)}
 								/>
 							</div>
@@ -191,8 +190,8 @@ function ContactForm() {
 								placeholder="Your message"
 								maxLength="500"
 								required
-								value={message}
-								onChange={(e) => setMessage(e.target.value)}
+								// value={message}
+								// onChange={(e) => setMessage(e.target.value)}
 							></textarea>
 						</div>
 					</div>
@@ -203,7 +202,6 @@ function ContactForm() {
 							type="submit"
 							className="btn btn-lg btn-primary"
 							disabled={state.submitting}
-							// onClick={handleSubmit}
 						>
 							<span className="d-flex align-items-center">
 								Send <FaChevronRight className="ms-1" />

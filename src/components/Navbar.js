@@ -56,7 +56,6 @@ function Navbar() {
 					<button
 						className="navbar-toggler"
 						type="button"
-						// data-bs-toggle="collapse"
 						data-bs-target="#navbarCollapse"
 						aria-controls="navbarCollapse"
 						aria-expanded={isCollapsed ? false : true}
