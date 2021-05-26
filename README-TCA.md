@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 URL: https://www.tcadevelopments.com/
 
-Current Version: **1.0.7**
+Current Version: **1.0.8**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,15 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.8:
+
+Optimized the TCA contact page by converting the embeded Google map to a static
+image. This decision was made because the company doesn't usually have people
+stop by their main office. Therefore, it doesn't make sense to slow the page
+down for a feature that will be used infrequently.
+
+This will also remove the cost of using the embedded map.
 
 ## Version 1.0.7:
 

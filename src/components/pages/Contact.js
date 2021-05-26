@@ -72,7 +72,7 @@ function Contact() {
 											</span>
 											<span className="card-text py-2 ps-1">
 												<a
-													className="link-accent-blue-tca"
+													className="link-primary-alt"
 													href="tel:(825) 401-2404"
 												>
 													(825) 401-2404
@@ -98,7 +98,7 @@ function Contact() {
 											<span className="card-text ps-1">
 												<a
 													href="mailto:info@tcadevelopments.com?subject=General Inquiry"
-													className="link-light text-accent-blue-tca"
+													className="link-primary-alt"
 												>
 													info@tcadevelopments.com
 												</a>
@@ -142,11 +142,10 @@ function Contact() {
 						Send us a message
 					</h2>
 					<p className="lead">
-						For all inquiries, please call our office at
-						<a href="tel:(825) 401-2404" className="text-accent-blue-tca">
-							{" "}
-							825-401-2404{" "}
-						</a>
+						For all inquiries, please call our office at{" "}
+						<a href="tel:(825) 401-2404" className="link-primary-alt">
+							825-401-2404
+						</a>{" "}
 						or fill out the following form.
 					</p>
 					<ContactForm />
