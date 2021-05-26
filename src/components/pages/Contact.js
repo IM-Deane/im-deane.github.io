@@ -1,8 +1,13 @@
 import React, { useEffect } from "react";
 import ContactForm from "../ContactForm";
+import { importAll, parseObject } from "../Images";
 
-// Add Contact Form functionality
-// import ContactForm from "../App";
+// Import Google Maps iamge
+const contactMap = {
+	images: parseObject(
+		importAll(require.context("../../imgs/tca-map/", false, /\.(webp|jpe?g)$/))
+	),
+};
 
 function Contact() {
 	// Update page title
@@ -12,14 +17,14 @@ function Contact() {
 
 	return (
 		<main className="container-fluid px-0">
-			<header className="row site-banner pt-5 mx-0">
+			<header className="row site-banner pt-5 mx-0 mb-5">
 				<h1 className="display-6 fw-bold p-4">CONTACT</h1>
 			</header>
 			<div className="container">
 				<section className="py-3 mt-5">
-					<aside className="row">
-						<div className="col-3 card" style={{ width: "30rem" }}>
-							<div className="card-body text-center">
+					<aside className="row justify-content-center">
+						<div className="col-sm col-md-5 card">
+							<div className="card-body px-0 text-center w-100">
 								<h2 className="h4 card-title pb-2" style={{ color: "#7d6e80" }}>
 									EDMONTON OFFICE
 								</h2>
@@ -100,85 +105,36 @@ function Contact() {
 											</span>
 										</div>
 									</li>
-									{/* <!-- TCA Hours --> */}
-									{/* <li className="list-group-item">
-											<div className="d-flex align-items-baseline">
-												<span className="badge bg-primary-tca p-2 mx-2">
-													<svg
-														xmlns="http://www.w3.org/2000/svg"
-														width="16"
-														height="16"
-														fill="currentColor"
-														className="bi bi-clock-fill"
-														viewBox="0 0 16 16"
-													>
-														<path
-															d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
-														/>
-													</svg>
-												</span>
-												<span className="card-text m-3">
-													<table className="table table-sm table-bordered">
-														<thead className="table-light">
-															<tr>
-																<th scope="col" colspan="4">
-																	Hours of operation
-																</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<th scope="row">Monday</th>
-																<td colspan="2">8 am</td>
-																<td colspan="3">5 pm</td>
-															</tr>
-															<tr>
-																<th scope="row">Tuesday</th>
-																<td colspan="2">8 am</td>
-																<td colspan="2">5 pm</td>
-															</tr>
-															<tr>
-																<th scope="row">Wednesday</th>
-																<td colspan="2">8 am</td>
-																<td colspan="2">5 pm</td>
-															</tr>
-															<tr>
-																<th scope="row">Thursday</th>
-																<td colspan="2">8 am</td>
-																<td colspan="2">5 pm</td>
-															</tr>
-															<tr>
-																<th scope="row">Friday</th>
-																<td colspan="2">8 am</td>
-																<td colspan="2">5 pm</td>
-															</tr>
-															<tr>
-																<th scope="row">Saturday</th>
-																<td colspan="2">8 am</td>
-																<td colspan="2">5 pm</td>
-															</tr>
-															<tr>
-																<th scope="row">Sunday</th>
-																<td colspan="2">8 am</td>
-																<td colspan="2">5 pm</td>
-															</tr>
-														</tbody>
-													</table>
-												</span>
-											</div>
-										</li> */}
 								</ul>
 							</div>
 						</div>
-						{/* <!-- Google maps api --> */}
-						<aside className="col ratio ratio-4x3">
+						{/* <!-- Google maps image --> */}
+						<aside className="col-sm col-lg-5 px-1">
+							<picture>
+								{/* WEBP format */}
+								<source
+									className="img-fluid"
+									srcSet={`${contactMap.images[1]} 320w, ${contactMap.images[3]} 660w`}
+									type="image/webp"
+								/>
+								{/* Fallback */}
+								<img
+									className="img-fluid"
+									src={contactMap.images[0]}
+									srcSet={`${contactMap.images[0]} 320w, ${contactMap.images[2]} 660w`}
+									alt="TCA Google Map"
+								/>
+							</picture>
+						</aside>
+
+						{/* <aside className="col ratio ratio-4x3">
 							<iframe
 								title={`Google Maps API`}
 								style={{ border: "0" }}
 								src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAYBtxVWVGtUF3eBnx_qiNXizLh5ETvw_o&q=16065+132+Ave+NW,Edmonton,Alberta&zoom=12"
 								allowFullScreen
 							></iframe>
-						</aside>
+						</aside> */}
 					</aside>
 				</section>
 				<article className="row justify-content-center text-center mb-5">
