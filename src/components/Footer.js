@@ -46,7 +46,9 @@ function Footer() {
 					<div className="col">
 						<h5 className="text-white-tca pb-2">CONNECT WITH US</h5>
 						<a
-							href="#instagram"
+							href="https://www.instagram.com/tcadevelopments/"
+							target="_blank"
+							rel="noreferrer"
 							aria-label="The Instagram account for TCA Developments."
 						>
 							<FaInstagramSquare className="social" />

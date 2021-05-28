@@ -144,8 +144,8 @@ function Services() {
 							attention to detail through every phase of the project.
 						</p>
 						<p className="lead lh-base fs-5">
-							Whether its a basic office renovation or the construction of a new
-							free-standing building, TCA is the general contractor for you.
+							Whether it's a basic office renovation or the construction of a
+							new free-standing building, TCA is the general contractor for you.
 						</p>
 						<p className="lead lh-base fs-5 pt-4">
 							Please <Link to="./contact.html">contact us</Link> if you have any
@@ -764,7 +764,6 @@ function Services() {
 						align-items-center
 						text-center
 						p-5
-						bg-light
 					"
 			>
 				<header className="d-flex flex-column align-items-center pb-4">
