@@ -13,8 +13,8 @@ Current Version: **1.0.8**
 
 ## II. Analysis & Design
 
-I've been commissioned to revamp TCA's existing website. My plan is to modernize
-the site using mobile-first principles.
+I've been commissioned to redesign TCA's existing website. My plan is to
+modernize the site using mobile-first principles.
 
 ### Problems:
 
