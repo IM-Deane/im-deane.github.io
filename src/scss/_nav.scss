@@ -15,6 +15,21 @@
 	transition: 0.5s;
 }
 
+// Get started btn
+.getStarted {
+	background-color: #82b8d5;
+	color: #fff;
+	font-size: 0.875rem;
+	text-decoration: none;
+	padding: 0.4rem 0.5rem;
+	border-radius: 0.2rem;
+
+	&:hover {
+		color: #fff;
+		background-color: #69afd5;
+	}
+}
+
 // TCA logo
 .logo {
 	width: 100px;

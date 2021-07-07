@@ -157,7 +157,7 @@ function ServiceCards() {
                                                 service-card
 											"
 							style={{
-								background: `url(${serviceImgs.nextGen[3]}) no-repeat center left`,
+								background: `url(${serviceImgs.legacy[5]}) no-repeat center left`,
 								backgroundSize: "cover",
 							}}
 						>
@@ -195,6 +195,7 @@ function ServiceCards() {
 											"
 							style={{
 								background: `url(${serviceImgs.legacy[0]}) center no-repeat`,
+								backgroundSize: "cover",
 							}}
 						>
 							<HashLink to="/services#concreteSection">

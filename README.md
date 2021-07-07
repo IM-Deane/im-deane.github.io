@@ -106,6 +106,29 @@ should also emphasis that job quote requests should go here.
 
 ## III. Version History
 
+## Version 1.0.9:
+
+**Major:** Began implementing a review form.
+
+TCA would like to add a review form that former clients can use to leave us a
+review.
+
+The new design modifies the contact link on the navbar into a dropdown menu.
+
+This menu diplays the contact us link as well as the new review page link.
+
+I will be creating a MongoDB database to store any reviews that the client's
+submit.
+
+This will mean I need to create a server to handle the form submissions.
+
+**Minor:**
+
+Fixed Minor bugs with service card pictures.
+
+Changed the Home page hero button from "Free Estimate" to "Request a
+Consultation"
+
 ## Version 1.0.8:
 
 Optimized the TCA contact page by converting the embeded Google map to a static

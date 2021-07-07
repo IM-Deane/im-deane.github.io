@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import {
 	FaFire,
@@ -8,7 +9,9 @@ import {
 } from "react-icons/fa";
 
 function Footer() {
-	return (
+	const location = useLocation();
+	// Hide footer on reviews path
+	return location.pathname === "/reviews" ? null : (
 		<div className="row m-0 w-100">
 			<footer className="footer py-5 m-0 text-center navbar-light bg-primary-alt w-100">
 				<section className="row w-100 mb-4">

@@ -68,8 +68,9 @@ function Home() {
 													smooth
 													to="/contact#contactForm"
 													className="hero-btn btn-primary fs-6 mt-3"
+													style={{ color: "white" }}
 												>
-													Free estimate
+													Request a Consultation
 												</HashLink>
 											</p>
 										</div>

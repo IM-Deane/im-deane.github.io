@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Link, NavLink } from "react-router-dom";
 
+import { NavDropdown } from "react-bootstrap";
+
 import { FaCanadianMapleLeaf } from "react-icons/fa";
 
 function Navbar() {
 	const [isCollapsed, setIsCollapsed] = useState(true);
+	const setReviewToken = () => {
+		localStorage.setItem("reviewToken", "review");
+	};
 
 	return (
 		<header className="row w-100">
@@ -104,14 +109,31 @@ function Navbar() {
 							>
 								Services
 							</NavLink>
-							<NavLink
-								onClick={() => setIsCollapsed(!isCollapsed)}
-								className="nav-link text-uppercase"
-								activeClassName="active"
-								to="/contact"
-							>
-								Contact Us
-							</NavLink>
+							<NavDropdown id="contact-dropdown" title="CONTACT">
+								<NavDropdown.Item>
+									<NavLink
+										onClick={() => setIsCollapsed(!isCollapsed)}
+										className="nav-link"
+										activeClassName="active"
+										to="/contact"
+									>
+										Contact Us
+									</NavLink>
+								</NavDropdown.Item>
+								<NavDropdown.Item>
+									<NavLink
+										onClick={() => {
+											setReviewToken();
+											setIsCollapsed(!isCollapsed);
+										}}
+										className="nav-link"
+										activeClassName="active"
+										to="/reviews"
+									>
+										Reviews
+									</NavLink>
+								</NavDropdown.Item>
+							</NavDropdown>
 							<span className="ms-3 d-none d-lg-inline-block">
 								<HashLink
 									onClick={() => setIsCollapsed(!isCollapsed)}
