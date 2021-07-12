@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import { FaChevronRight } from "react-icons/fa";
-import VideoPlayer from "../ReactPlayer";
+
+import RequestEstimate from "../components/request-estimate.component";
+import VideoPlayer from "../components/ReactPlayer";
 
 function About() {
 	useEffect(() => {
@@ -187,7 +189,10 @@ function About() {
 							Frequently Asked Questions
 						</h4>
 						<section className="row justify-content-center text-center mx-auto">
-							<div className="row row-cols-1 mt-4 p-4">
+							<div
+								className="row row-cols-1 mt-4 p-4 text-start"
+								style={{ width: "620px" }}
+							>
 								<div className="col pb-3">
 									<details>
 										<summary className="h3" style={{ outline: "none" }}>
@@ -199,7 +204,7 @@ function About() {
 											No matter what type of job it is, we take the same care
 											and detail with every project that comes our way.
 										</p>
-										<div className="row text-center pb-3">
+										<div className="row pb-3">
 											<div className="col">
 												<HashLink
 													smooth
@@ -224,7 +229,7 @@ function About() {
 											would love it if you added us to your commercial
 											construction bid list.
 										</p>
-										<div className="row text-center pb-3">
+										<div className="row pb-3">
 											<div className="col">
 												<HashLink
 													smooth
@@ -253,7 +258,7 @@ function About() {
 											</strong>
 											allows us to sole source projects when required.
 										</p>
-										<div className="row text-center">
+										<div className="row">
 											<div className="col">
 												<HashLink
 													smooth
@@ -282,7 +287,7 @@ function About() {
 											offer an array of budgeting solutions that are suitable
 											for projects of every scope.
 										</p>
-										<div className="row text-center">
+										<div className="row">
 											<div className="col">
 												<HashLink
 													smooth
@@ -300,7 +305,7 @@ function About() {
 									</details>
 								</div>
 								<div className="col">
-									<details className="text-center">
+									<details>
 										<summary className="h3" style={{ outline: "none" }}>
 											How quickly can TCA construct our new office?
 										</summary>
@@ -312,7 +317,7 @@ function About() {
 											constraints are municipality development and building
 											permit requirements.
 										</p>
-										<div className="row text-center">
+										<div className="row">
 											<div className="col">
 												<HashLink
 													smooth
@@ -334,32 +339,7 @@ function About() {
 					</header>
 				</article>
 			</div>
-			<article
-				className="
-						row row-cols-1
-						justify-content-center
-						align-items-center
-						text-center
-						py-5
-						bg-secondary-tca
-						mx-0
-					"
-			>
-				<header className="col">
-					<h5 className="h3 py-4 text-light">Choose the right course.</h5>
-				</header>
-				<div className="col pb-4">
-					<HashLink
-						smooth
-						to="/contact#top"
-						className="btn btn-outline-light text-uppercase"
-					>
-						<span className="d-flex align-items-center">
-							Request an estimate <FaChevronRight className="ms-2" />
-						</span>
-					</HashLink>
-				</div>
-			</article>
+			<RequestEstimate />
 		</main>
 	);
 }

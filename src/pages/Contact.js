@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import ContactForm from "../ContactForm";
-import { importAll, parseObject } from "../Images";
+import ContactForm from "../components/ContactForm";
+import { importAll, parseObject } from "../components/Images";
 
 // Import Google Maps iamge
 const contactMap = {
 	images: parseObject(
-		importAll(require.context("../../imgs/tca-map/", false, /\.(webp|jpe?g)$/))
+		importAll(require.context("../imgs/tca-map/", false, /\.(webp|jpe?g)$/))
 	),
 };
 

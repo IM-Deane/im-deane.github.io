@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 URL: https://www.tcadevelopments.com/
 
-Current Version: **1.0.10**
+Current Version: **1.0.12**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,24 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.12:
+
+Began factoring the site's file structure and various components.
+
+Because I switched to React mid-project, I essentially copy and pasted some
+aspects of the site.
+
+After working with React over the last few months, i've decided to come back and
+update the site. Over the next few versions I will align the site with React
+best practices.
+
+## Version 1.0.11:
+
+Adjusted the size of the "Request a consultation" button on smaller screens.
+
+After updating the buttons text, I needed to adjust its font and width sizes to
+accomodate the longer text.
 
 ## Version 1.0.10:
 

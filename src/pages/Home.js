@@ -3,24 +3,26 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 import { FaChevronRight } from "react-icons/fa";
-import ServiceCards from "../ServiceCards";
-import FeaturedProjects from "../FeaturedProjects";
-import ContactForm from "../ContactForm";
-import { importAll, parseObject } from "../Images";
+import ServiceCards from "../components/ServiceCards";
+import FeaturedProjects from "../components/FeaturedProjects";
+import ContactForm from "../components/ContactForm";
+import { importAll, parseObject } from "../components/Images";
 
-import ImageWithFallback from "../ImgWithFallback";
+import ImageWithFallback from "../components/ImgWithFallback";
+
+import { clientList } from "../components/client-list";
 
 import "bootstrap/js/dist/carousel";
 
 const heroImgs = {
 	nextGen: parseObject(
 		importAll(
-			require.context("../../imgs/heroes/nextgen/", false, /\.(webp|jxr|jpx)$/)
+			require.context("../imgs/heroes/nextgen/", false, /\.(webp|jxr|jpx)$/)
 		)
 	),
 	legacy: parseObject(
 		importAll(
-			require.context("../../imgs/heroes/legacy/", false, /\.(png|jpe?g|svg)$/)
+			require.context("../imgs/heroes/legacy/", false, /\.(png|jpe?g|svg)$/)
 		)
 	),
 };
@@ -63,15 +65,16 @@ function Home() {
 											<p className="fst-italic fw-bold pt-3">
 												The Right Course to Great Developments
 											</p>
-											<p>
+											<p id="hero-consult-container">
 												<HashLink
 													smooth
 													to="/contact#contactForm"
-													className="hero-btn btn-primary fs-6 mt-3 text-white d-flex align-items-center"
-													style={{ width: "260px" }}
+													className="hero-btn btn-primary mt-3 text-white w-100"
 												>
-													Request a Consultation{" "}
-													<FaChevronRight className="ms-2" />
+													<span className="d-flex align-items-center text-white">
+														Request a Consultation{" "}
+														<FaChevronRight className="ms-2" />
+													</span>
 												</HashLink>
 											</p>
 										</div>
@@ -232,36 +235,9 @@ function Home() {
 								{/* <!-- Substitue Client names --> */}
 								<div className="col py-2 clients-list w-100 fs-5">
 									<ul>
-										<li>Scotiabank</li>
-										<li>Goodwill</li>
-										<li>Alberta Health Services</li>
-										<li>Norquest College</li>
-										<li>Atco Gas</li>
-										<li>Direct Energy</li>
-										<li>Skyview Dental</li>
-										<li>Blackwood Partners</li>
-										<li>Structube</li>
-										<li>Bentall Green Oak</li>
-										<li>Trane Supply</li>
-										<li>Xtreme</li>
-										<li>Finning</li>
-										<li>Huntswood Custom Cabinets</li>
-										<li>Ford Credit</li>
-										<li>Ernst and Young</li>
-										<li>Summit Memorials</li>
-										<li>Apegga</li>
-										<li>Procura</li>
-										<li>Belterra Corporation</li>
-										<li>Trydor Insulation</li>
-										{/* <!-- Repeat --> */}
-										<li>Scotiabank</li>
-										<li>Goodwill</li>
-										<li>Alberta Health Services</li>
-										<li>Norquest College</li>
-										<li>Atco Gas</li>
-										<li>Direct Energy</li>
-										<li>Skyview Dental Clinic</li>
-										<li>Blackwood Partners</li>
+										{clientList.map(({ name }, index) => (
+											<li key={index}>{name}</li>
+										))}
 									</ul>
 								</div>
 								<ul id="output"></ul>
@@ -385,112 +361,6 @@ function Home() {
 					</div>
 				</article>
 			</section>
-			{/* <!-- Testimonials --> */}
-			{/* Remember to import FONT AWESOME STAR ICON WHEN IMPLEMENTING THIS SECTION */}
-			{/* <!-- <section className="row">
-					<section className="container py-5 text-center bg-light">
-						<div className="sections">
-							<div className="row">
-								<header
-									className="d-flex pb-5 justify-content-center justify-content-md-between align-items-end"
-								>
-									<div className="text-center text-md-left">
-										<small className="text-uppercase text-muted fw-bold"
-											>What our clients are saying</small
-										>
-										<h2 className="display-5 text-primary-alt">Testimonials</h2>
-									</div>
-								</header>
-								<section className="card-group w-100">
-									<div
-										className="card mx-2 py-3 border border-3 border-top-0 border-end-0 border-bottom-0 rounded-0 border-primary"
-									>
-										<div className="card-body">
-											<h5 className="card-title">Jerry Seinfeld</h5>
-											<h6 className="card-subtitle mb-2 text-muted">
-												Denizen, Monk's Cafe
-											</h6>
-											<blockquote className="card-text">
-												"Lorem ipsum dolor, sit amet consectetur adipisicing
-												elit. Nemo, fugiat."
-											</blockquote>
-											<div className="d-flex justify-content-center">
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-											</div>
-										</div>
-									</div>
-									<div
-										className="card mx-2 py-3 border border-3 border-top-0 border-end-0 border-bottom-0 rounded-0 border-primary"
-									>
-										<div className="card-body">
-											<h5 className="card-title">George Costanza</h5>
-											<h6 className="card-subtitle mb-2 text-muted">
-												Sales Manager, Vandelay Industries
-											</h6>
-											<blockquote className="card-text">
-												"Lorem ipsum dolor, sit amet consectetur adipisicing
-												elit. Nemo, fugiat."
-											</blockquote>
-											<div className="d-flex justify-content-center">
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star-half-alt checked"></span>
-											</div>
-										</div>
-									</div>
-									<div
-										className="card mx-2 py-3 border border-3 border-top-0 border-end-0 border-bottom-0 rounded-0 border-primary"
-									>
-										<div className="card-body">
-											<h5 className="card-title">Elaine Benes</h5>
-											<h6 className="card-subtitle mb-2 text-muted">
-												Editor, Pendant Publishing
-											</h6>
-											<blockquote className="card-text">
-												"Lorem ipsum dolor, sit amet consectetur adipisicing
-												elit. Nemo, fugiat."
-											</blockquote>
-											<div className="d-flex justify-content-center">
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-											</div>
-										</div>
-									</div>
-									<div
-										className="card mx-2 py-3 border border-3 border-top-0 border-end-0 border-bottom-0 rounded-0 border-primary"
-									>
-										<div className="card-body">
-											<h5 className="card-title">Cosmo Kramer</h5>
-											<h6 className="card-subtitle mb-2 text-muted">
-												CEO, Kramerica
-											</h6>
-											<blockquote className="card-text">
-												"Lorem ipsum dolor, sit amet consectetur adipisicing
-												elit. Nemo, fugiat."
-											</blockquote>
-											<div className="d-flex justify-content-center">
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-												<span className="fas fa-star checked"></span>
-												<span className="far fa-star checked"></span>
-											</div>
-										</div>
-									</div>
-								</section>
-							</div>
-						</div>
-					</section>
-				</section> --> */}
 			{/* <!-- Contact --> */}
 			<article className="row py-5 bg-secondary-tca w-100 mx-0">
 				<div

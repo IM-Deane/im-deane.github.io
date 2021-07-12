@@ -55,5 +55,29 @@
 				color: white;
 			}
 		}
+
+		// Main hero button container
+		#hero-consult-container {
+			width: 260px;
+		}
+		// Larger mobile devices
+		@media screen and (max-width: 460px) {
+			#hero-consult-container {
+				width: 235px;
+				.hero-btn {
+					font-size: 14px;
+				}
+			}
+		}
+
+		// Small mobile devices
+		@media screen and (max-width: 320px) {
+			#hero-consult-container {
+				width: 220px;
+				.hero-btn {
+					font-size: 13px;
+				}
+			}
+		}
 	}
 }

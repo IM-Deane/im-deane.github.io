@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import data from "../ProjectData";
+import data from "../components/ProjectData";
 import { FaChevronRight } from "react-icons/fa";
-import RelevantProjects from "../RelevantProjects";
+import RelevantProjects from "../components/RelevantProjects";
 
 function Project() {
 	const [project, setProject] = useState("Default Project");

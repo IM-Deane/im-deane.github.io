@@ -2,15 +2,19 @@ import React, { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { FaChevronRight, FaTools, FaBolt, FaSnowflake } from "react-icons/fa";
-import { GiConcreteBag } from "react-icons/gi";
-import FeaturedProjects from "../FeaturedProjects";
+
+import FeaturedProjects from "../components/FeaturedProjects";
 import LazyLoad from "react-lazyload";
 
-import { importAll, parseObject } from "../Images";
-import ImageWithFallback from "../ImgWithFallback";
-import Carousel from "../Carousel";
+import { importAll, parseObject } from "../components/Images";
+import ImageWithFallback from "../components/ImgWithFallback";
+import Carousel from "../components/Carousel";
 
+// Icons
+import { FaChevronRight, FaTools, FaBolt, FaSnowflake } from "react-icons/fa";
+import { GiConcreteBag } from "react-icons/gi";
+
+// Bootstrap
 import "bootstrap/js/dist/carousel";
 import "bootstrap/js/dist/modal";
 
@@ -18,7 +22,7 @@ const officeImgs = {
 	nextgen: parseObject(
 		importAll(
 			require.context(
-				"../../imgs/service-page/offices/nextgen/",
+				"../imgs/service-page/offices/nextgen/",
 				false,
 				/\.(webp|jxr|jpx)$/
 			)
@@ -27,7 +31,7 @@ const officeImgs = {
 	legacy: parseObject(
 		importAll(
 			require.context(
-				"../../imgs/service-page/offices/legacy/",
+				"../imgs/service-page/offices/legacy/",
 				false,
 				/\.(png|jpe?g|svg)$/
 			)
@@ -38,7 +42,7 @@ const electricalImgs = {
 	nextgen: parseObject(
 		importAll(
 			require.context(
-				"../../imgs/service-page/electrical/nextgen/",
+				"../imgs/service-page/electrical/nextgen/",
 				false,
 				/\.(webp|jxr|jpx)$/
 			)
@@ -47,7 +51,7 @@ const electricalImgs = {
 	legacy: parseObject(
 		importAll(
 			require.context(
-				"../../imgs/service-page/electrical/legacy/",
+				"../imgs/service-page/electrical/legacy/",
 				false,
 				/\.(png|jpe?g|svg)$/
 			)
@@ -58,7 +62,7 @@ const mechanicalImgs = {
 	nextgen: parseObject(
 		importAll(
 			require.context(
-				"../../imgs/service-page/mechanical/nextgen/",
+				"../imgs/service-page/mechanical/nextgen/",
 				false,
 				/\.(webp|jxr|jpx)$/
 			)
@@ -67,7 +71,7 @@ const mechanicalImgs = {
 	legacy: parseObject(
 		importAll(
 			require.context(
-				"../../imgs/service-page/mechanical/legacy/",
+				"../imgs/service-page/mechanical/legacy/",
 				false,
 				/\.(png|jpe?g|svg)$/
 			)
@@ -78,7 +82,7 @@ const concreteImgs = {
 	nextgen: parseObject(
 		importAll(
 			require.context(
-				"../../imgs/service-page/concrete/nextgen",
+				"../imgs/service-page/concrete/nextgen",
 				false,
 				/\.(webp|jxr|jpx)$/
 			)
@@ -87,7 +91,7 @@ const concreteImgs = {
 	legacy: parseObject(
 		importAll(
 			require.context(
-				"../../imgs/service-page/concrete/legacy",
+				"../imgs/service-page/concrete/legacy",
 				false,
 				/\.(png|jpe?g|svg)$/
 			)
