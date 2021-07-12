@@ -52,7 +52,7 @@ function Footer() {
 						{/* Google Review */}
 						<a
 							href="https://g.page/r/CZxhm26y8EAzEAg/review"
-							className="link-light text-white text-uppercase"
+							className="link-light text-white"
 							target="_blank"
 							rel="noreferrer"
 							aria-label="Review form for TCA Development's Google Business profile."
