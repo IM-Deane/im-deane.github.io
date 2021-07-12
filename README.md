@@ -7,7 +7,7 @@ company that specializes in commerical construction and rennovation.
 
 **Author:** Tristan Deane <email>contact.alchemizedsoftware.com</email>
 
-URL: https://www.tcadevelopments.com/
+Live link to [TCA Developments website](https://www.tcadevelopments.com/)
 
 Current Version: **1.0.14**
 
