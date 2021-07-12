@@ -2,15 +2,11 @@ import React, { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Link, NavLink } from "react-router-dom";
 
-import { NavDropdown } from "react-bootstrap";
-
+// Icons
 import { FaCanadianMapleLeaf } from "react-icons/fa";
 
 function Navbar() {
 	const [isCollapsed, setIsCollapsed] = useState(true);
-	const setReviewToken = () => {
-		localStorage.setItem("reviewToken", "review");
-	};
 
 	return (
 		<header className="row w-100">

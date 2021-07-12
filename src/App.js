@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./scss/app.scss";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import MobileNav from "./components/MobileNav";
+import Navbar from "./components/nav-bar.component";
+import Footer from "./components/footer.component";
+import MobileNav from "./components/mobile-nav.component";
 
 // Pages
 import Home from "./pages/Home";

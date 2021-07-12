@@ -3,12 +3,12 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-import FeaturedProjects from "../components/FeaturedProjects";
+import FeaturedProjects from "../components/featured-projects.component";
 import LazyLoad from "react-lazyload";
 
 import { importAll, parseObject } from "../components/Images";
-import ImageWithFallback from "../components/ImgWithFallback";
-import Carousel from "../components/Carousel";
+import ImageWithFallback from "../components/fallback-img.component";
+import Carousel from "../components/carousel.component.jsx";
 
 // Icons
 import { FaChevronRight, FaTools, FaBolt, FaSnowflake } from "react-icons/fa";

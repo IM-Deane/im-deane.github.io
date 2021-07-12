@@ -4,7 +4,7 @@ import { FaChevronRight } from "react-icons/fa";
 
 import RequestEstimate from "../components/request-estimate.component";
 import { FAQList } from "../components/faq-list";
-import VideoPlayer from "../components/ReactPlayer";
+import VideoPlayer from "../components/react-player.component";
 
 function About() {
 	useEffect(() => {

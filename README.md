@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 URL: https://www.tcadevelopments.com/
 
-Current Version: **1.0.13**
+Current Version: **1.0.14**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,15 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.14:
+
+Updated the file names to explicitly state the component's purpose. All
+converted the file extensions of components with jsx to reflect their contents.
+
+This is file structure is something i've recently implemented in my projects.
+Although it's not always necessary for smaller projects, I believe this will be
+a valuable addition as the project begins to grow.
 
 ## Version 1.0.13:
 

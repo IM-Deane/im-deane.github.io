@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 import { FaChevronRight } from "react-icons/fa";
-import ServiceCards from "../components/ServiceCards";
-import FeaturedProjects from "../components/FeaturedProjects";
-import ContactForm from "../components/ContactForm";
+import ServiceCards from "../components/service-cards.component";
+import FeaturedProjects from "../components/featured-projects.component";
+import ContactForm from "../components/contact-form.component";
 import { importAll, parseObject } from "../components/Images";
 
-import ImageWithFallback from "../components/ImgWithFallback";
+import ImageWithFallback from "../components/fallback-img.component";
 
 import { clientList } from "../components/client-list";
 
@@ -174,65 +174,7 @@ function Home() {
 									We are honoured to have worked with a variety of companies
 									over the years.
 								</p>
-								{/* <!-- Client logos (Hide until we recieve approval) --> */}
-								{/* <div
-										className="col d-flex justify-content-center align-items-center pt-3 flex-wrap"
-									>
-										<ul
-											className="list-group list-group-flush list-group-horizontal-lg"
-										>
-											<li className="list-group-item mb-2 pb-3">
-												<img
-													className="img-fluid"
-													src="../src/imgs/clients/scotiabank-logo.png"
-													alt="Scotiabank company logo"
-												/>
-											</li>
-											<li className="list-group-item mb-2 pb-3">
-												<img
-													className="img-fluid"
-													src="../src/imgs/clients/ahs-logo.png"
-													alt="Alberta Health Services logo"
-												/>
-											</li>
-											<li className="list-group-item mb-2 pb-3">
-												<img
-													className="img-fluid"
-													src="../src/imgs/clients/goodwill-logo.png"
-													alt="Goodwill company logo"
-												/>
-											</li>
-											<li className="list-group-item mb-2 pb-3">
-												<img
-													className="img-fluid"
-													src="../src/imgs/clients/norquest-logo.png"
-													alt="Norquest College logo"
-												/>
-											</li>
-											<li className="list-group-item mb-2 pb-3">
-												<img
-													className="img-fluid"
-													src="../src/imgs/clients/atco-logo.png"
-													alt="Atco Gas company logo"
-												/>
-											</li>
-											<li className="list-group-item mb-2 pb-3">
-												<img
-													className="img-fluid"
-													src="../src/imgs/clients/direct-energy-logo.png"
-													alt="Direct Energy company logo"
-												/>
-											</li>
-											<li className="list-group-item mb-2 pb-3">
-												<img
-													className="img-fluid"
-													src="../src/imgs/clients/ing-real-estate-logo.png"
-													alt="ING Real Estate company logo"
-												/>
-											</li>
-										</ul>
-									</div> --> */}
-								{/* <!-- Substitue Client names --> */}
+								{/* Client list */}
 								<div className="col py-2 clients-list w-100 fs-5">
 									<ul>
 										{clientList.map(({ name }, index) => (

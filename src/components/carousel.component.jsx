@@ -1,5 +1,5 @@
 import React from "react";
-import ImageWithFallback from "./ImgWithFallback";
+import ImageWithFallback from "./fallback-img.component";
 
 import "bootstrap/js/dist/carousel";
 

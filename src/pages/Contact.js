@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/contact-form.component";
 import { importAll, parseObject } from "../components/Images";
 
 // Import Google Maps iamge
@@ -126,15 +126,6 @@ function Contact() {
 								/>
 							</picture>
 						</aside>
-
-						{/* <aside className="col ratio ratio-4x3">
-							<iframe
-								title={`Google Maps API`}
-								style={{ border: "0" }}
-								src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAYBtxVWVGtUF3eBnx_qiNXizLh5ETvw_o&q=16065+132+Ave+NW,Edmonton,Alberta&zoom=12"
-								allowFullScreen
-							></iframe>
-						</aside> */}
 					</aside>
 				</section>
 				<article className="row justify-content-center text-center mb-5 mx-auto">

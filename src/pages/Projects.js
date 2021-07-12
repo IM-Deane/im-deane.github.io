@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 // Project Gallery
-import Gallery from "../components/Gallery";
+import Gallery from "../components/gallery.component";
 import RequestEstimate from "../components/request-estimate.component";
 
 import { clientList } from "../components/client-list";

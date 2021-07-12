@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-// import Categories from "./Categories";
-import ProjectData from "./ProjectData";
-import Project from "./Project";
+// import Categories from "./categories.component.jsx";
+import ProjectData from "./project-data";
+import Project from "./project.component";
 
 // Create an array of unique category names
 // const allProjects = [
