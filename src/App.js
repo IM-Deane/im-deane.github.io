@@ -12,8 +12,10 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 // import ReviewForm from "./pages/Reviews";
-import Template from "./pages/Template";
 import Projects from "./pages/Projects";
+import ProjectPage from "./pages/ProjectPage";
+
+// Error
 import Error from "./pages/Error";
 
 function App() {
@@ -26,19 +28,19 @@ function App() {
 					<Route path="/about" component={About} />
 					<Route exact path="/projects" component={Projects} />
 					<Route path="/services" component={Services} />
-					<Route path="/Template" component={Template} />
+					<Route path="/Template" component={ProjectPage} />
 					<Route path="/contact#contactForm" component={Contact} />
 					<Route exact path="/contact" component={Contact} />
 					{/* <Route path="/reviews" component={ReviewForm} /> */}
-					<Route exact path="/home/:id" childern={<Template />}>
-						<Template />
+					<Route exact path="/home/:id" childern={<ProjectPage />}>
+						<ProjectPage />
 					</Route>
-					<Route exact path="/services/:id" childern={<Template />}>
-						<Template />
+					<Route exact path="/services/:id" childern={<ProjectPage />}>
+						<ProjectPage />
 					</Route>
 					{/* Handle relevant projects paths */}
-					<Route exact path={"/projects/:id"} children={<Template />}>
-						<Template />
+					<Route exact path={"/projects/:id"} children={<ProjectPage />}>
+						<ProjectPage />
 					</Route>
 					<Route path="*" component={Error} />
 				</Switch>

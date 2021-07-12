@@ -3,6 +3,7 @@ import { HashLink } from "react-router-hash-link";
 import { FaChevronRight } from "react-icons/fa";
 
 import RequestEstimate from "../components/request-estimate.component";
+import { FAQList } from "../components/faq-list";
 import VideoPlayer from "../components/ReactPlayer";
 
 function About() {
@@ -193,147 +194,30 @@ function About() {
 								className="row row-cols-1 mt-4 p-4 text-start"
 								style={{ width: "620px" }}
 							>
-								<div className="col pb-3">
-									<details>
-										<summary className="h3" style={{ outline: "none" }}>
-											What size of projects do you typically manage?
-										</summary>
-										<p className="text-body pt-3 fs-5">
-											We manage properties of every size including small-scale
-											offices and multi-million dollar buildings. <br />
-											No matter what type of job it is, we take the same care
-											and detail with every project that comes our way.
-										</p>
-										<div className="row pb-3">
-											<div className="col">
-												<HashLink
-													smooth
-													to="/projects#top"
-													className="btn btn-primary btn-sm text-uppercase"
-												>
-													<span className="d-flex align-items-center">
-														View our work <FaChevronRight className="ms-2" />
-													</span>
-												</HashLink>
+								{FAQList.map((faq, index) => (
+									<div key={index} className="col pb-3">
+										<details>
+											<summary className="h3" style={{ outline: "none" }}>
+												{faq.question}
+											</summary>
+											<p className="text-body pt-3 fs-5">{faq.answer}</p>
+											<div className="row pb-3">
+												<div className="col">
+													<HashLink
+														smooth
+														to={faq.cta.link}
+														aria-label={faq.cta.ariaLabel}
+														className="btn btn-primary btn-sm text-uppercase"
+													>
+														<span className="d-flex align-items-center">
+															{faq.cta.text} <FaChevronRight className="ms-2" />
+														</span>
+													</HashLink>
+												</div>
 											</div>
-										</div>
-									</details>
-								</div>
-								<div className="col pb-3">
-									<details>
-										<summary className="h3" style={{ outline: "none" }}>
-											Does TCA bid on contracts?
-										</summary>
-										<p className="text-body pt-3 fs-5">
-											We sure do! Most of our contracts are bid-build, and we
-											would love it if you added us to your commercial
-											construction bid list.
-										</p>
-										<div className="row pb-3">
-											<div className="col">
-												<HashLink
-													smooth
-													to="/contact#contact-form"
-													className="btn btn-primary btn-sm text-uppercase"
-												>
-													<span className="d-flex align-items-center">
-														Let's Chat <FaChevronRight className="ms-2" />
-													</span>
-												</HashLink>
-											</div>
-										</div>
-									</details>
-								</div>
-								<div className="col pb-3">
-									<details>
-										<summary className="h3" style={{ outline: "none" }}>
-											Does TCA Developments perform design-build projects?
-										</summary>
-										<p className="text-body pt-3 fs-5">
-											Absolutely! After 30 years in the commercial development
-											industry, we have established a strong connection with
-											many building owners and management companies. This
-											<strong className="fw-bold text-primary-alt">
-												{" trust "}
-											</strong>
-											allows us to sole source projects when required.
-										</p>
-										<div className="row">
-											<div className="col">
-												<HashLink
-													smooth
-													to="/services#top"
-													className="btn btn-primary btn-sm text-uppercase"
-													aria-label="Will navigate to the services page of the TCA Developments website."
-												>
-													<span className="d-flex align-items-center">
-														Discover more of our services{" "}
-														<FaChevronRight className="ms-2" />
-													</span>
-												</HashLink>
-											</div>
-										</div>
-									</details>
-								</div>
-								<div className="col pb-3">
-									<details>
-										<summary className="h3" style={{ outline: "none" }}>
-											Does TCA perform preliminary budget pricing for a
-											commercial renovation?
-										</summary>
-										<p className="text-body pt-3 fs-5">
-											Always! Our estimators are committed to providing precise
-											cost estimates for all your commercial needs. We also
-											offer an array of budgeting solutions that are suitable
-											for projects of every scope.
-										</p>
-										<div className="row">
-											<div className="col">
-												<HashLink
-													smooth
-													to="/services#top"
-													className="btn btn-primary btn-sm text-uppercase"
-													aria-label="Will navigate to the services page of the TCA Developments website."
-												>
-													<span className="d-flex align-items-center">
-														Discover more of our services{" "}
-														<FaChevronRight className="ms-2" />
-													</span>
-												</HashLink>
-											</div>
-										</div>
-									</details>
-								</div>
-								<div className="col">
-									<details>
-										<summary className="h3" style={{ outline: "none" }}>
-											How quickly can TCA construct our new office?
-										</summary>
-										<p className="text-body pt-3 fs-5">
-											Rush orders and tight deadlines are not an issue. Our
-											in-house specialists allow us to respond quickly to
-											time-sensitive scenarios. This unique advantage ensures
-											every project is on time and under budget. Our only
-											constraints are municipality development and building
-											permit requirements.
-										</p>
-										<div className="row">
-											<div className="col">
-												<HashLink
-													smooth
-													to="/services#top"
-													className="btn btn-primary btn-sm text-uppercase"
-													aria-label="Will navigate to the services page of the TCA Developments website."
-												>
-													<span className="d-flex align-items-center">
-														Discover more of our services{" "}
-														<FaChevronRight className="ms-2" />
-													</span>
-												</HashLink>
-											</div>
-										</div>
-									</details>
-								</div>
+										</details>
+									</div>
+								))}
 							</div>
 						</section>
 					</header>

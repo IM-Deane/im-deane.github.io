@@ -5,7 +5,7 @@ import data from "../components/ProjectData";
 import { FaChevronRight } from "react-icons/fa";
 import RelevantProjects from "../components/RelevantProjects";
 
-function Project() {
+function ProjectPage() {
 	const [project, setProject] = useState("Default Project");
 	const [images, setImages] = useState([]);
 
@@ -89,15 +89,6 @@ function Project() {
 													backgroundRepeat: "no-repeat",
 												}}
 											></div>
-											{/* <img
-												src={img}
-												className="mw-100"
-												style={{
-													minWidth: "100%",
-													height: "400px",
-												}}
-												alt={project.description}
-											/> */}
 										</div>
 									</>
 								))}
@@ -310,4 +301,4 @@ function Project() {
 	);
 }
 
-export default Project;
+export default ProjectPage;

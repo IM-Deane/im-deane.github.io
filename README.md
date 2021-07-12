@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 URL: https://www.tcadevelopments.com/
 
-Current Version: **1.0.12**
+Current Version: **1.0.13**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,17 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.13:
+
+Refactored the client lists found on the Home and Project pages into a single
+list module.
+
+This enables me to use the list without re-writing it in each component.
+
+Also refactored the FAQ list on the about page using the same methodology. In
+this case, the total amount of code on the about page was reduced by about 140
+lines.
 
 ## Version 1.0.12:
 

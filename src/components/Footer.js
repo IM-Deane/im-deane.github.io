@@ -1,6 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+
+// Icons
 import {
 	FaFire,
 	FaFacebookSquare,
@@ -8,7 +10,6 @@ import {
 	FaTwitterSquare,
 	FaGooglePlusSquare,
 } from "react-icons/fa";
-
 import { MdRateReview } from "react-icons/md";
 
 function Footer() {
