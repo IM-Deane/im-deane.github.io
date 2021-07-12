@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 Live link to [TCA Developments website](https://www.tcadevelopments.com/)
 
-Current Version: **1.0.14**
+Current Version: **1.0.15**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,13 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.15:
+
+Implemented a service worker that enables the app to be installed on desktop and
+mobile devices.
+
+This should make the website a modern PWA.
 
 ## Version 1.0.14:
 

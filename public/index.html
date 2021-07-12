@@ -43,34 +43,26 @@
 			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
 			rel="stylesheet"
 		/>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<!-- <script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=G-N3BXW117RS"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-
-			gtag("config", "G-N3BXW117RS");
-		</script> -->
-		<!-- Google Maps Embed -->
-		<link
-			rel="preconnect"
-			href="https://www.google.com/maps/embed/v1/place?key=AIzaSyAYBtxVWVGtUF3eBnx_qiNXizLh5ETvw_o&q=16065+132+Ave+NW,Edmonton,Alberta&zoom=12"
-		/>
-		<link
-			rel="dns-prefetch"
-			href="https://www.google.com/maps/embed/v1/place?key=AIzaSyAYBtxVWVGtUF3eBnx_qiNXizLh5ETvw_o&q=16065+132+Ave+NW,Edmonton,Alberta&zoom=12"
-		/>
+		<!-- Manifest -->
+		<link rel="manifest" href="./manifest.json" />
 		<title>
 			TCA Developments - Construction Consultant & General Contractor
 		</title>
 	</head>
 	<body>
 		<div id="root"></div>
+		<script>
+			// Check if serviceWorker is supported by browser
+			if ("serviceWorker" in navigator) {
+				window.addEventListener("load", () => {
+					// Create serviceWorker (JS.file)
+					navigator.serviceWorker
+						.register("./serviceworker.js")
+						// show URL
+						.then((reg) => console.log("Success: ", reg.scope))
+						.catch((err) => console.log("Failure", err));
+				});
+			}
+		</script>
 	</body>
 </html>
