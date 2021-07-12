@@ -21,7 +21,7 @@ function Navbar() {
 				<div className="container">
 					<span className="ps-2">
 						Celebrating 30 years of Canadian business!{" "}
-						<FaCanadianMapleLeaf style={{ color: "red" }} />
+						<FaCanadianMapleLeaf className="text-danger" />
 					</span>
 					<div className="d-none d-md-flex align-items-baseline">
 						<a href="tel:(825) 401-2404" className="btn btn-sm text-white">
@@ -109,7 +109,17 @@ function Navbar() {
 							>
 								Services
 							</NavLink>
-							<NavDropdown id="contact-dropdown" title="CONTACT">
+							<NavLink
+								onClick={() => setIsCollapsed(!isCollapsed)}
+								className="nav-link text-uppercase"
+								activeClassName="active"
+								to="/contact"
+							>
+								Contact Us
+							</NavLink>
+
+							{/* Hide until we determine whether google reviews is the right approach */}
+							{/* <NavDropdown id="contact-dropdown" title="CONTACT">
 								<NavDropdown.Item>
 									<NavLink
 										onClick={() => setIsCollapsed(!isCollapsed)}
@@ -133,7 +143,7 @@ function Navbar() {
 										Reviews
 									</NavLink>
 								</NavDropdown.Item>
-							</NavDropdown>
+							</NavDropdown> */}
 							<span className="ms-3 d-none d-lg-inline-block">
 								<HashLink
 									onClick={() => setIsCollapsed(!isCollapsed)}

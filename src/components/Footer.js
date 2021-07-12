@@ -6,7 +6,10 @@ import {
 	FaFacebookSquare,
 	FaInstagramSquare,
 	FaTwitterSquare,
+	FaGooglePlusSquare,
 } from "react-icons/fa";
+
+import { MdRateReview } from "react-icons/md";
 
 function Footer() {
 	const location = useLocation();
@@ -45,6 +48,17 @@ function Footer() {
 							<p className="text-light">16065 132 Ave NW</p>
 							<p className="text-light">Edmonton AB T5V 1H8</p>
 						</div>
+						{/* Google Review */}
+						<a
+							href="https://g.page/r/CZxhm26y8EAzEAg/review"
+							className="link-light text-accent-blue-tca"
+							target="_blank"
+							rel="noreferrer"
+							aria-label="Review form for TCA Development's Google Business profile."
+						>
+							<MdRateReview className="text-white me-2 fs-4" />
+							Leave us a review
+						</a>
 					</div>
 					<div className="col">
 						<h5 className="text-white-tca pb-2">CONNECT WITH US</h5>
@@ -55,6 +69,14 @@ function Footer() {
 							aria-label="The Instagram account for TCA Developments."
 						>
 							<FaInstagramSquare className="social" />
+						</a>
+						<a
+							href="https://g.page/r/CZxhm26y8EAzEAE"
+							target="_blank"
+							rel="noreferrer"
+							aria-label="Google Business profile for TCA Developments."
+						>
+							<FaGooglePlusSquare className="social ms-2" />
 						</a>
 						<a
 							href="#facebook"

@@ -137,17 +137,38 @@ function Contact() {
 						</aside> */}
 					</aside>
 				</section>
-				<article className="row justify-content-center text-center mb-5">
-					<h2 id="contactForm" className="h1 my-4 p-2">
-						Send us a message
-					</h2>
-					<p className="lead">
-						For all inquiries, please call our office at{" "}
-						<a href="tel:(825) 401-2404" className="link-primary-alt">
-							825-401-2404
-						</a>{" "}
-						or fill out the following form.
-					</p>
+				<article className="row justify-content-center text-center mb-5 mx-auto">
+					<section className="mx-auto text-start" style={{ width: "800px" }}>
+						<h2 id="contactForm" className="h1 my-4 p-2">
+							Send us a message
+						</h2>
+						<p className="lead">
+							For all inquiries, please call our office at{" "}
+							<a
+								href="tel:(825) 401-2404"
+								className="link-light text-accent-blue-tca"
+							>
+								825-401-2404
+							</a>{" "}
+							or fill out the following form.
+						</p>
+						<p className="lead">
+							Have you have worked with us before? We would love it if you let
+							the world know about your experiences. <br />
+							<br />
+							You can leave us a review{" "}
+							<a
+								href="https://g.page/r/CZxhm26y8EAzEAg/review"
+								className="link-light text-accent-blue-tca"
+								target="_blank"
+								rel="noreferrer"
+								aria-label="Review form for TCA Development's Google Business profile."
+							>
+								here
+							</a>
+							.
+						</p>
+					</section>
 					<ContactForm />
 				</article>
 			</div>

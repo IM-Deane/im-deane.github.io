@@ -11,7 +11,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import ReviewForm from "./pages/Reviews";
+// import ReviewForm from "./pages/Reviews";
 import Template from "./pages/Template";
 import Projects from "./pages/Projects";
 import Error from "./pages/Error";
@@ -29,7 +29,7 @@ function App() {
 					<Route path="/Template" component={Template} />
 					<Route path="/contact#contactForm" component={Contact} />
 					<Route exact path="/contact" component={Contact} />
-					<Route path="/reviews" component={ReviewForm} />
+					{/* <Route path="/reviews" component={ReviewForm} /> */}
 					<Route exact path="/home/:id" childern={<Template />}>
 						<Template />
 					</Route>

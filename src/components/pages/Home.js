@@ -67,10 +67,11 @@ function Home() {
 												<HashLink
 													smooth
 													to="/contact#contactForm"
-													className="hero-btn btn-primary fs-6 mt-3"
-													style={{ color: "white" }}
+													className="hero-btn btn-primary fs-6 mt-3 text-white d-flex align-items-center"
+													style={{ width: "260px" }}
 												>
-													Request a Consultation
+													Request a Consultation{" "}
+													<FaChevronRight className="ms-2" />
 												</HashLink>
 											</p>
 										</div>
@@ -96,10 +97,10 @@ function Home() {
 											are suitable for properties of every scope
 										</p>
 										<Link
-											className="hero-btn btn-primary fs-6 mt-3"
+											className="hero-btn btn-primary fs-6 mt-3 text-white"
 											to="/services"
 										>
-											<span className="d-flex align-items-center">
+											<span className="d-flex align-items-center text-white">
 												View our Services <FaChevronRight className="ms-2" />
 											</span>
 										</Link>
@@ -116,7 +117,7 @@ function Home() {
 										}
 									/>
 									<div className="carousel-caption text-end">
-										<h1 className="display-6 fw-bold text-uppercase">
+										<h1 className="display-6 fw-bold text-uppercase text-white">
 											See our Work
 										</h1>
 										<p className="lead fs-5 py-3">
@@ -125,10 +126,10 @@ function Home() {
 											of experience in the commercial development industry
 										</p>
 										<Link
-											className="hero-btn btn-primary fs-6 mt-3"
+											className="hero-btn btn-primary fs-6 mt-3 text-white"
 											to="/projects"
 										>
-											<span className="d-flex align-items-center">
+											<span className="d-flex align-items-center text-white">
 												Browse Gallery <FaChevronRight className="ms-2" />
 											</span>
 										</Link>

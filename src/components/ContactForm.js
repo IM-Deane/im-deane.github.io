@@ -19,14 +19,6 @@ function ContactForm() {
 		);
 	}
 
-	// const [person, setPerson] = useState({
-	// 	inputName: "",
-	// 	email: "",
-	// 	phone: "",
-	// 	subject: "",
-	// 	message: "",
-	// });
-
 	// Handle mulitple inputs
 
 	const handleSubmission = (e) => {
@@ -44,7 +36,7 @@ function ContactForm() {
 		<>
 			<form
 				id="contact-form"
-				className="col col-md-6 m-auto p-3"
+				className="col col-md-12 col-lg-11 col-xl-8 m-auto p-3"
 				action="https://formspree.io/f/xzbydlkw"
 				method="POST"
 				// onSubmit={handleSubmission}

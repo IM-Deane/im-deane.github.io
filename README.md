@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 URL: https://www.tcadevelopments.com/
 
-Current Version: **1.0.8**
+Current Version: **1.0.10**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,22 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+## Version 1.0.10:
+
+Disabled the custom review form for the time being. After researching Google
+reviews, i've decided to simply add links to the TCA profile and Google review
+form.
+
+These links are located in the footer of the site and on the contact page.
+
+After we have received about 10 reviews, I will add a review widget to the home
+page.
+
+I believe going this route will provide a more credible form of social proof to
+potential clients.
+
+It will also help the site's SEO ranking and move it futher up the results page.
 
 ## Version 1.0.9:
 
