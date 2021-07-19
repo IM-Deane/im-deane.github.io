@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 Live link to [TCA Developments website](https://www.tcadevelopments.com/)
 
-Current Version: **1.0.15**
+Current Version: **1.0.16**
 
 ## II. Analysis & Design
 
@@ -106,14 +106,23 @@ should also emphasis that job quote requests should go here.
 
 ## III. Version History
 
-## Version 1.0.15:
+**Version 1.0.16:**
+
+Utilized code-splitting via React.Lazy and Suspense Lazy to optimize the
+website.
+
+The goal is to break the main javascript chunk into smaller pieces. By chunking
+the site's routes, I hope to decrease the inital payload size. This should allow
+the app to only load the javascript that's necessary for the app to function.
+
+**Version 1.0.15:**
 
 Implemented a service worker that enables the app to be installed on desktop and
 mobile devices.
 
 This should make the website a modern PWA.
 
-## Version 1.0.14:
+**Version 1.0.14:**
 
 Updated the file names to explicitly state the component's purpose. All
 converted the file extensions of components with jsx to reflect their contents.
@@ -122,7 +131,7 @@ This is file structure is something i've recently implemented in my projects.
 Although it's not always necessary for smaller projects, I believe this will be
 a valuable addition as the project begins to grow.
 
-## Version 1.0.13:
+**Version 1.0.13:**
 
 Refactored the client lists found on the Home and Project pages into a single
 list module.
@@ -133,7 +142,7 @@ Also refactored the FAQ list on the about page using the same methodology. In
 this case, the total amount of code on the about page was reduced by about 140
 lines.
 
-## Version 1.0.12:
+**Version 1.0.12:**
 
 Began factoring the site's file structure and various components.
 
@@ -144,14 +153,14 @@ After working with React over the last few months, i've decided to come back and
 update the site. Over the next few versions I will align the site with React
 best practices.
 
-## Version 1.0.11:
+**Version 1.0.11:**
 
 Adjusted the size of the "Request a consultation" button on smaller screens.
 
 After updating the buttons text, I needed to adjust its font and width sizes to
 accomodate the longer text.
 
-## Version 1.0.10:
+**Version 1.0.10:**
 
 Disabled the custom review form for the time being. After researching Google
 reviews, i've decided to simply add links to the TCA profile and Google review
@@ -167,7 +176,7 @@ potential clients.
 
 It will also help the site's SEO ranking and move it futher up the results page.
 
-## Version 1.0.9:
+**Version 1.0.9:**
 
 **Major:** Began implementing a review form.
 
@@ -190,7 +199,7 @@ Fixed Minor bugs with service card pictures.
 Changed the Home page hero button from "Free Estimate" to "Request a
 Consultation"
 
-## Version 1.0.8:
+**Version 1.0.8:**
 
 Optimized the TCA contact page by converting the embeded Google map to a static
 image. This decision was made because the company doesn't usually have people
@@ -199,7 +208,7 @@ down for a feature that will be used infrequently.
 
 This will also remove the cost of using the embedded map.
 
-## Version 1.0.7:
+**Version 1.0.7:**
 
 Optimized the site content
 
@@ -219,7 +228,7 @@ Bugs:
 - Fixed a positioning issue with the home page carousel on mobile. The image
   overlay was not properly adjusting to the smaller screen.
 
-## Version 1.0.6:
+**Version 1.0.6:**
 
 Optimized the Services page.
 
@@ -233,7 +242,7 @@ Minor:
 
 - Update the styling of the "view more" buttons to reduce the contrast ratio.
 
-## Version 1.0.5:
+**Version 1.0.5:**
 
 This update is focused on optimizing the website.
 
@@ -247,7 +256,7 @@ Major:
 - Update the image file structure. There are now folders for legacy and nextgen
   images
 
-## Version 1.0.4:
+**Version 1.0.4:**
 
 Refactored the project cards to address the alignment issues.
 
@@ -257,14 +266,14 @@ these cards.
 
 In a future update I may refactor the template page carousel as well.
 
-## Version 1.0.3:
+**Version 1.0.3:**
 
 Refactored the navbar, footer, and mobile navbar into separate components.
 
 This new layout has made the App.js file much easier to navigate and also makes
 the application compliant with the general styling of React apps.
 
-## Version 1.0.2:
+**Version 1.0.2:**
 
 This update is concerned with optimizing the site. After performing a Google
 page insight test, I found that the images were drastically effecting the page
@@ -289,7 +298,7 @@ Minor:
   need to call a CDN.
 - Adjusted styling of various site content
 
-## Version 1.0.1:
+**Version 1.0.1:**
 
 Removed the project gallery controls per the client's request. As the site only
 has 10 projects, we have deactivated the controls for now. Once we've added 20+
@@ -297,7 +306,7 @@ projects we will activate them.
 
 Updated the site home page to reflect the newly secured site.
 
-## Version 1.0.0:
+**Version 1.0.0:**
 
 This version features the official launch of the TCA site. I have successfully
 recreated the site in react and everything is in working order.
@@ -310,7 +319,7 @@ Minor:
 
 - Cleaned up numerous warnings from the website components.
 
-## Version 0.18:
+**Version 0.18:**
 
 In this update I decided to migrate the TCA website to a React app. I made this
 decision to have better control over the backend code and the project gallery.
@@ -320,18 +329,18 @@ of the images in one go.
 
 I should have it solved in the next patch.
 
-## Version 0.17.2:
+**Version 0.17.2:**
 
 Updated the hero content to include more visually appealing images. Although
 they're not TCA's, they make the site pop and mesh well with the hero text. I
 believe that is the most important aspect.
 
-## Version 0.17.1:
+**Version 0.17.1:**
 
 Updated the service cards on the home page as well as some content on the
 services page.
 
-## Version 0.17:
+**Version 0.17:**
 
 Refactored the home page hero content into a jumbotron slider. After researching
 rival construction companies, I found that the vast majority had this feature.
@@ -344,17 +353,17 @@ Minor:
 - Updated a majority of the site's cta buttons to include a chevron icon. I feel
   this makes them more visually appealing.
 
-## Version 0.16.5:
+**Version 0.16.5:**
 
 Modified the service cards on the home page. Each card now acts as a link that
 is tied to a specific section on the services page.
 
-## Version 0.16.4:
+**Version 0.16.4:**
 
 Finished updating the featurette sections on the service page. The page now
 features two new services and an updated projects area.
 
-## Version 0.16.3:
+**Version 0.16.3:**
 
 This update includes major additions to the home, project, and service pages.
 
@@ -372,7 +381,7 @@ Major:
 
 - Also a
 
-## Version 0.16.2:
+**Version 0.16.2:**
 
 Overview: Refactored the project gallery page and project cards.
 
@@ -398,7 +407,7 @@ Minor:
 - Added a full client list to the project gallery. I believe this will act as
   social proof for visitors who are unaware of TCA's history.
 
-## Version 0.16.1:
+**Version 0.16.1:**
 
 Modified the client list slider. It now includes more clients, better styling,
 and a longer duration.
@@ -406,7 +415,7 @@ and a longer duration.
 The loop still needs to be smoother during the start and finish transitions. I
 will attempt to modify this in a future patch.
 
-## Version 0.16:
+**Version 0.16:**
 
 This update was focused on the site contact forms.
 
@@ -424,7 +433,7 @@ Minor:
 - Also began implementing a client list auto-scroller. The goal is to have it
   display some of TCA's more prominent clients on a loop.
 
-## Version 0.15.4:
+**Version 0.15.4:**
 
 This version features several content updates.
 
@@ -433,7 +442,7 @@ This version features several content updates.
 - Updated the site font styles.
 - Modified the CTA text of the home page hero section.
 
-## Version 0.15.3:
+**Version 0.15.3:**
 
 Updated the service section of the home page.
 
@@ -447,7 +456,7 @@ This is a rough draft as the formatting of the last slide needs some work.
 
 Overall, I feel this content is more engaging than the previous ones.
 
-## Version 0.15.2:
+**Version 0.15.2:**
 
 Updated various aspects of the site's theme and content.
 
@@ -468,12 +477,12 @@ General:
 - Modified the coloring of the site page banners to fit within overall color
   theme.
 
-## Version 0.15.1:
+**Version 0.15.1:**
 
 Added first version of copy content to the service page and updated the styling
 of the page.
 
-## Version 0.15:
+**Version 0.15:**
 
 Updated the styling and various aspects of content throughout the site.
 
@@ -505,12 +514,12 @@ Services:
 - Fixed a bug where the CTA buttons where not linking to the bottom contact
   form.
 
-## Version 0.14.4:
+**Version 0.14.4:**
 
 Updated the colors of all primary buttons and the mobile nav to match the client
 colors.
 
-## Version 0.14.3:
+**Version 0.14.3:**
 
 This updated is concerned with styling and additional content.
 
@@ -525,7 +534,7 @@ Minor:
 - Updated the address spacing for the contact page location card.
 - Updated the section headers to reflect the client colors
 
-## Version 0.14.2:
+**Version 0.14.2:**
 
 The previous update seems to have successfully resolved the "scroll-bounce" bug.
 Therefore this update is rolling that solution out to the rest of the site.
@@ -536,7 +545,7 @@ Minor:
 
 - Adjusted the text and size of the CTA button on the desktop nav.
 
-## Version 0.14.1:
+**Version 0.14.1:**
 
 This update was mainly about addressing some persistent site layout issues.
 Going forward I hope to route out all of these minor bugs.
@@ -552,7 +561,7 @@ Minor:
 - Adjusted the font size on the contact form button. Certain words are hidden on
   smaller screens for better formatting.
 
-## Version 0.14:
+**Version 0.14:**
 
 Began updating the some of the site styling upon the request of the client.
 
@@ -564,14 +573,14 @@ Previously the screen would "bounce" once a boundary was reached. I have added a
 small change to the CSS that should address this issue. Further testing is
 needed before I can confirm the bug has been patched.
 
-## Version 0.13.5:
+**Version 0.13.5:**
 
 Added labels to the bottom mobile navbar. This should explicitly describe the
 role of each button.
 
 Updated the text content of the final section on the services page.
 
-## Version 0.13.4:
+**Version 0.13.4:**
 
 Updated about.html
 
@@ -593,7 +602,7 @@ Known bugs: The services and project-pages have a layout issue. Currently the
 main content does not extend the entire viewport width. This will be addressed
 in a future update.
 
-## Version 0.13.3:
+**Version 0.13.3:**
 
 Added a CTA to the top navbar. It will tranport the user directly to the contact
 form on contact.html.
@@ -601,7 +610,7 @@ form on contact.html.
 Updated the styling of the contact CTA buttons. The text uses more descriptive
 language to entice the visitor to click.
 
-## Version 0.13.2:
+**Version 0.13.2:**
 
 Main update: Disabled the fixed top navbar for now. I found too many layout
 issues were stemming from it.
@@ -617,7 +626,7 @@ Other updates: Modified the styling on several pages.
 - Project page: I missed updating the layout in the last patch. The page's
   structure now matches the rest of the site.
 
-## Version 0.13.1:
+**Version 0.13.1:**
 
 Expanded the services.html layout. It now has a more sturctured user journey.
 Upon arriving at the page, the user will be taken along a funnel that pushes
@@ -642,7 +651,7 @@ that its presence is pushing the viewport past its intended destination.
 The solution might simply involve adding a minimum height to the bookmark
 target. This may compensate for the height of the navbar.
 
-## Version 0.13:
+**Version 0.13:**
 
 Overhauled the index.html page design. It now acts as more of a landing page.
 The vision for the page is to funnel the vistors into a free consultation.
@@ -681,7 +690,7 @@ Known Issues:
   expand. This causes content to jump on mobile screens. Will hopefully address
   this issues in the next update.
 
-## Version 0.12.1:
+**Version 0.12.1:**
 
 Updated the styling of the about.html page. The page's main content is now
 contained within an accordion component. This will ensure the user can quickly
@@ -690,7 +699,7 @@ navigate the pages various sections.
 Note: The team section is still a work in progress. I have not finalized the
 layout yet.
 
-## Version 0.12:
+**Version 0.12:**
 
 Updated the service.html page to include rough draft of content. In the future,
 the client will need to specify what they would like to change.
@@ -709,7 +718,7 @@ bottom of the page.
 Finally, I added a small contact section on each page of the website. I believe
 the more call's to action the user sees, the higher the conversion rate will be.
 
-# Version 0.11.2:
+**Version 0.11.2:**
 
 Fixed a layout issue for the project gallery and individual project pages.
 Originally, the project images were not rendering properly on smaller screens.
@@ -717,13 +726,13 @@ They were showing up way too small. Currently, I've added responsive breakpoints
 on the images' parent containers. The containers now respond correctly to mobile
 devices.
 
-## Version 0.11.1:
+**Version 0.11.1:**
 
 Fixed a bug in the mobile bottom nav where the buttons were showing up
 transparent in safari browsers. I had to nest each link in a button container
 and pass the button styling onto the parent.
 
-## Version 0.11:
+**Version 0.11:**
 
 Updated the styling of the contact.html location card. It now displays its
 contents properly on both mobile and desktop.
@@ -737,7 +746,7 @@ Unfortunately, I still have not configured the navbar to stop at the very bottom
 of the website. I believe I will have to reconfigure the site footer anyway. So
 I'll deal with this bug then.
 
-## Version 0.10.1:
+**Version 0.10.1:**
 
 Updated the projects.html page to match the client specified categories.
 
@@ -749,7 +758,7 @@ in the site nav header.
 
 Also began adding icons to the contact location card. Still needs some work.
 
-## Version 0.9:
+**Version 0.9:**
 
 Began implementing an individual project-page html-template page. This page will
 act as a standalone template for each of TCA's construction projects. My goal is
@@ -767,20 +776,20 @@ Using a template will cut down on the overall site size. I hope it will save me
 valuable developmebt time. Who wants to create 20+ html pages? Not this guy
 that's for sure.
 
-## Version 0.8.1:
+**Version 0.8.1:**
 
 Updated the maple leaf icon to a red version.
 
 Updated page footer to include Alchemized branding.
 
-## Version 0.8:
+**Version 0.8:**
 
 Created a filter system for the project page. The projects can now be sorted by
 various categories.
 
 Modified the styling of the website.
 
-## Version 0.7:
+**Version 0.7:**
 
 Began some overhaul behind the scenes. After starting the projects gallery, I
 realized I needed to use soem basic JS. This lead to me eventually installing
@@ -801,7 +810,7 @@ the new source files for scss.
 Sass has allowed me to begin consolidating all of my css styling into a central
 folder. This will make it much easier to change the site themes from now on.
 
-## Version 0.6.3:
+**Version 0.6.3:**
 
 The client requested that a second navbar be added to the top of the page. Its
 purpose is to let users know that TCA is a Canadian business.
@@ -809,41 +818,41 @@ purpose is to let users know that TCA is a Canadian business.
 For the moment, this second bar is messing with the "fixed-top" functionality of
 the original. I have disabled that feature until a solution is found.
 
-## Version 0.6.2:
+**Version 0.6.2:**
 
 Updated nav theme to confrom with the new logo's color scheme. The new styling
 is currently found on the git branch **nav-bar-white**
 
-## Version 0.6.1:
+**Version 0.6.1:**
 
 Updated the rest of the site to include the new nav theme.
 
 NOTE: The current logo is not optimized for the web. The graphic designer will
 need to provide a copy with smaller dimensions (16x16, 32x32, 152x152).
 
-## Version 0.6:
+**Version 0.6:**
 
 After recieving the company logo I found that it's colors clashed with the
 navbar styling. So I created a new git branch with an updated site theme.
 
-## Version 0.5.1:
+**Version 0.5.1:**
 
 Updated README.md to include the latest version of the website.
 
-## Version 0.5:
+**Version 0.5:**
 
 Updated the websites general framework. The basic structure for the project,
 service, and career pages is now available. This also means that the site's
 navigation bar is now fully functional.
 
-## Version 0.4:
+**Version 0.4:**
 
 Added a .gitignore file. The file system should be less bloated now.
 
 Added about.html. The page briefly describes TCA's history, values, and
 leadership team.
 
-## Version 0.3:
+**Version 0.3:**
 
 Added embedded google maps feature to contact page. The map displays TCA's
 office location.
@@ -851,7 +860,7 @@ office location.
 Updated the index.html and contact.html styling. Contact page is now consistent
 with the rest of the site.
 
-### Version 0.0:
+**Version 0.0:**
 
 Added basic site file structure and began documenting site analysis & design
 methodology.

@@ -62,7 +62,7 @@ function Footer() {
 						</a>
 					</div>
 					<div className="col">
-						<h5 className="text-white-tca pb-2">CONNECT WITH US</h5>
+						<h6 className="text-white-tca pb-2">CONNECT WITH US</h6>
 						<a
 							href="https://www.instagram.com/tcadevelopments/"
 							target="_blank"

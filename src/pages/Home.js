@@ -36,6 +36,7 @@ function Home() {
 		<main className="container-fluid px-0 m-0">
 			<div className="row">
 				{/* <!-- Hero carousel --> */}
+
 				<div
 					id="myCarousel"
 					className="hero-carousel slide"
