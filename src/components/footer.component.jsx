@@ -96,19 +96,26 @@ function Footer() {
 				<section className="justify-content-center pb-3 w-100">
 					<div className="container pt-2">
 						<hr className="text-white" />
-						<p className="text-accent-tca py-3 d-flex justify-content-center align-items-center">
-							&copy; 2021 TCA Developments & Consultants Ltd |
-							<a
-								className="alchemized text-white ms-1"
-								href="http://alchemizedsoftware.com/"
-								aria-label="Links to the website for Alchemized Software."
-							>
-								<span className="d-flex align-items-center">
-									Crafted by Alchemized Software
-									<FaFire className="text-accent-blue-tca ms-1" />
+						<div className="row justify-content-center align-items-center">
+							<div className="col-sm-12 col-md-7">
+								<span className="text-accent-tca">
+									&copy; 2021 TCA Developments & Consultants Ltd{" "}
 								</span>
-							</a>
-						</p>
+							</div>
+
+							<div className="col-sm-12 col-md-5 d-flex align-items-center justify-content-center">
+								<a
+									className="alchemized text-white ms-1 mt-sm-3 mt-md-0"
+									href="http://alchemizedsoftware.com/"
+									aria-label="Links to the website for Alchemized Software."
+								>
+									<span className="d-flex align-items-center">
+										Crafted by Alchemized Software
+										<FaFire className="text-accent-blue-tca ms-1" />
+									</span>
+								</a>
+							</div>
+						</div>
 					</div>
 				</section>
 			</footer>
