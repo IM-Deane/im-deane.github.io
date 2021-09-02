@@ -1,0 +1,37 @@
+import React, { useState, useEffect } from "react";
+import ProjectData from "./project-data";
+import Project from "./project.component";
+
+// Module will get projects within the same category
+
+function RelevantProjects({ project }) {
+	const [projects, setProjects] = useState([]);
+
+	const getRelevantProjects = () => {
+		const relevantProjects = ProjectData.filter(
+			(proj) => proj.id !== project.id && proj.category === project.category
+		);
+
+		// TRY FILTERING OUT ELEMENTS THAT ARE NOT THE FIRST FOUR (BY INDEX)
+		//  Only grab up to 4 projects
+		if (relevantProjects.length > 4) {
+			setProjects(relevantProjects.splice(0, 4));
+		} else {
+			setProjects(relevantProjects);
+		}
+	};
+
+	useEffect(() => {
+		getRelevantProjects();
+	}, []);
+
+	return (
+		<>
+			{projects.map((proj) => (
+				<Project key={proj.id} project={proj} />
+			))}
+		</>
+	);
+}
+
+export default RelevantProjects;
