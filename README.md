@@ -9,7 +9,7 @@ company that specializes in commerical construction and rennovation.
 
 Live link to [TCA Developments website](https://www.tcadevelopments.com/)
 
-Current Version: **1.0.16**
+Current Version: **1.1.0**
 
 ## II. Analysis & Design
 
@@ -105,6 +105,13 @@ VII. **Contact:** only displays information and should be converted to a form.
 should also emphasis that job quote requests should go here.
 
 ## III. Version History
+
+**Version 1.1.0:** Encountered an error with the Sass complier that was causing
+some of the site's theme to break. To address this issue I created several css
+classes to as substitutes.
+
+I have also begun researching AWS and whether we should migrate the site to one
+of their hosting plans. More to follow in the next updates.
 
 **Version 1.0.16:**
 

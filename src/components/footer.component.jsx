@@ -1,5 +1,4 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 // Icons
@@ -13,11 +12,9 @@ import {
 import { MdRateReview } from "react-icons/md";
 
 function Footer() {
-	const location = useLocation();
-	// Hide footer on reviews path
-	return location.pathname === "/reviews" ? null : (
+	return (
 		<div className="row m-0 w-100">
-			<footer className="footer py-5 m-0 text-center navbar-light bg-primary-alt w-100">
+			<footer className="footer footer-bg py-5 m-0 text-center navbar-light w-100">
 				<section className="row w-100 mb-4">
 					<div className="col w-25">
 						<HashLink
@@ -33,7 +30,7 @@ function Footer() {
 					<div className="col">
 						<h5 className="pb-2 text-white-tca">TCA DEVELOPMENTS LTD</h5>
 						<p className="ft ft-phone">
-							<a className="link-accent-blue-tca" href="tel:(825) 401-2404">
+							<a className="link-light" href="tel:(825) 401-2404">
 								825-401-2404
 							</a>
 						</p>
@@ -102,8 +99,8 @@ function Footer() {
 									&copy; 2021 TCA Developments & Consultants Ltd{" "}
 								</span>
 							</div>
-
-							<div className="col-sm-12 col-md-5 d-flex align-items-center justify-content-center">
+							{/* TODO: Hide section until alchemized website is finished */}
+							{/* <div className="col-sm-12 col-md-5 d-flex align-items-center justify-content-center">
 								<a
 									className="alchemized text-white ms-1 mt-sm-3 mt-md-0"
 									href="http://alchemizedsoftware.com/"
@@ -114,7 +111,7 @@ function Footer() {
 										<FaFire className="text-accent-blue-tca ms-1" />
 									</span>
 								</a>
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</section>

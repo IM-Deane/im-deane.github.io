@@ -135,10 +135,7 @@ function Contact() {
 						</h2>
 						<p className="lead">
 							For all inquiries, please call our office at{" "}
-							<a
-								href="tel:(825) 401-2404"
-								className="link-light text-accent-blue-tca"
-							>
+							<a href="tel:(825) 401-2404" className="link-accent-blue">
 								825-401-2404
 							</a>{" "}
 							or fill out the following form.
@@ -150,7 +147,7 @@ function Contact() {
 							You can leave us a review{" "}
 							<a
 								href="https://g.page/r/CZxhm26y8EAzEAg/review"
-								className="link-light text-accent-blue-tca"
+								className="link-accent-blue"
 								target="_blank"
 								rel="noreferrer"
 								aria-label="Review form for TCA Development's Google Business profile."

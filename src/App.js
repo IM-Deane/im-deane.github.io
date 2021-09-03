@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import "./scss/app.scss";
 import Navbar from "./components/nav-bar.component";
 import Footer from "./components/footer.component";
 import MobileNav from "./components/mobile-nav.component";

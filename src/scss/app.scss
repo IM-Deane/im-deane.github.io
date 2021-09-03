@@ -171,6 +171,25 @@ button {
 	}
 }
 
+.text-primary-alt {
+	color: $primary-alt;
+}
+
+.link-accent-blue {
+	color: $accent-blue;
+}
+
+// Home page contact form
+#home-contact-form {
+	background-color: $secondary;
+}
+
+// Footer
+.footer-bg {
+	background-color: $primary-alt;
+	color: white;
+}
+
 // UTILITIES
 .social {
 	font-size: 2rem;

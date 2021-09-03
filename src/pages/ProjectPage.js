@@ -11,25 +11,6 @@ function ProjectPage() {
 
 	const { id } = useParams();
 
-	//  Convert category id's to names
-	// const categoryNames = (category) => {
-	// 	let name = null;
-	// 	switch (category) {
-	// 		case 0:
-	// 			name = "Interior";
-	// 			break;
-	// 		case 1:
-	// 			name = "Exterior";
-	// 			break;
-	// 		case 2:
-	// 			name = "Misc";
-	// 			break;
-	// 		default:
-	// 			name = "All";
-	// 	}
-	// 	return name;
-	// };
-
 	useEffect(() => {
 		const newProject = data.find((project) => project.id === parseInt(id));
 		document.title = `${newProject.name} - TCA Developments`;
@@ -44,22 +25,6 @@ function ProjectPage() {
 				<h1 className="display-6 pt-4 text-center project-name text-uppercase fw-bold">
 					{project.name}
 				</h1>
-				{/* BREADCRUMBS */}
-				{/* <nav className="col-6 mx-auto" aria-label="breadcrumb">
-					<ol className="breadcrumb justify-content-end">
-						<li className="breadcrumb-item">
-							<Link className="link-accent-tca" to="/projects">
-								Projects
-							</Link>
-						</li>
-						<li
-							className="project-name breadcrumb-item text-accent-tca"
-							aria-current="page"
-						>
-							{project.name}
-						</li>
-					</ol>
-				</nav> */}
 			</header>
 			<section className="container project-body">
 				<div className="row my-5 mx-0  pt-4">

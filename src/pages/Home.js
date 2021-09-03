@@ -305,7 +305,7 @@ function Home() {
 				</article>
 			</section>
 			{/* <!-- Contact --> */}
-			<article className="row py-5 bg-secondary-tca w-100 mx-0">
+			<articl id="home-contact-form" className="row py-5 w-100 mx-0">
 				<div
 					className="
 							container
@@ -322,7 +322,7 @@ function Home() {
 					</header>
 					<ContactForm />
 				</div>
-			</article>
+			</articl>
 		</main>
 	);
 }
